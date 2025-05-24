@@ -17,8 +17,20 @@ namespace HealthyMealPlanning
         public ProfileControl()
         {
             InitializeComponent();
+            SetUsernameLabel();
         }
 
+        private void SetUsernameLabel()
+        {
+            if (!string.IsNullOrEmpty(Session.Username))
+            {
+                lblUsername.Text = Session.Username;
+            }
+            else
+            {
+                lblUsername.Text = "Користувач не авторизований";
+            }
+        }
 
         // Кнопка Вийти з акаунту
         private void btnLogout_Click(object sender, EventArgs e)
@@ -132,7 +144,7 @@ namespace HealthyMealPlanning
             selectedImagePath = null;
         }
 
-
+        // Завантаження даних користувача
         // Сторінка Перегляду рецептів користувача
         private void LoadUserRecipes()
         {
@@ -208,12 +220,144 @@ namespace HealthyMealPlanning
             }
         }
 
+        private void LoadUserProfile()
+        {
+            int userId = Session.UserId;
+            if (userId == 0)
+            {
+                MessageBox.Show("Сесія недійсна. Увійдіть знову.");
+                return;
+            }
+
+            MySqlConnection conn = DBUtils.GetDBConnection();
+
+            try
+            {
+                conn.Open();
+
+                string sql = "select username, full_name, email from users where id = @UserId";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@UserId", userId);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        txtChangeUsername.Text = reader["username"].ToString();
+                        txtChangeFullname.Text = reader["full_name"].ToString();
+                        txtChangeEmail.Text = reader["email"].ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Користувача не знайдено.");
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Помилка при завантаженні профілю: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (tabControl1.SelectedTab.Text == "View own recipes")
             {
                 LoadUserRecipes();
             }
+
+            if (tabControl1.SelectedTab.Text == "Manage profile")
+            {
+                LoadUserProfile();
+            }
         }
+
+        // Сторінка Змінити налаштування профілю
+        private void btnChangeSave_Click(object sender, EventArgs e)
+        {
+            int userId = Session.UserId;
+            if (userId == 0)
+            {
+                MessageBox.Show("Сесія недійсна. Увійдіть знову.");
+                return;
+            }
+
+            string newUsername = txtChangeUsername.Text.Trim();
+            string newFullName = txtChangeFullname.Text.Trim();
+            string newEmail = txtChangeEmail.Text.Trim();
+            string newPassword = txtChangePassword.Text.Trim();
+
+            List<string> updates = new List<string>();
+            MySqlCommand cmd = new MySqlCommand();
+
+            if (!string.IsNullOrEmpty(newUsername))
+            {
+                updates.Add("username = @Username");
+                cmd.Parameters.AddWithValue("@Username", newUsername);
+            }
+
+            if (!string.IsNullOrEmpty(newFullName))
+            {
+                updates.Add("full_name = @FullName");
+                cmd.Parameters.AddWithValue("@FullName", newFullName);
+            }
+
+            if (!string.IsNullOrEmpty(newEmail))
+            {
+                updates.Add("email = @Email");
+                cmd.Parameters.AddWithValue("@Email", newEmail);
+            }
+
+            if (!string.IsNullOrEmpty(newPassword))
+            {
+                updates.Add("password = @Password");
+                cmd.Parameters.AddWithValue("@Password", newPassword);
+            }
+
+            if (updates.Count == 0)
+            {
+                MessageBox.Show("Будь ласка, введіть хоча б одне поле для зміни.");
+                return;
+            }
+
+            string updateQuery = $"update users set {string.Join(", ", updates)} where id = @UserId";
+            cmd.Parameters.AddWithValue("@UserId", userId);
+            cmd.CommandText = updateQuery;
+
+            MySqlConnection conn = DBUtils.GetDBConnection();
+            try
+            {
+                conn.Open();
+                cmd.Connection = conn;
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Дані успішно оновлено!");
+
+                    // Оновлюємо сесію, якщо потрібно
+                    if (!string.IsNullOrEmpty(newUsername)) Session.Username = newUsername;
+                    if (!string.IsNullOrEmpty(newFullName)) Session.FullName = newFullName;
+                }
+                else
+                {
+                    MessageBox.Show("Оновлення не вдалося. Спробуйте ще раз.");
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Помилка БД: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
     }
 }
