@@ -71,16 +71,25 @@
             this.txtChangeUsername = new System.Windows.Forms.TextBox();
             this.lblChangeUsername = new System.Windows.Forms.Label();
             this.lblChangePicture = new System.Windows.Forms.Label();
-            this.pbChangePicture = new System.Windows.Forms.PictureBox();
-            this.btnLogout = new System.Windows.Forms.Button();
+            this.lblFavoriteRecipes = new System.Windows.Forms.Label();
+            this.lblSavedRecipes = new System.Windows.Forms.Label();
+            this.lblReview = new System.Windows.Forms.Label();
+            this.lblRecentlyViewed = new System.Windows.Forms.Label();
+            this.pnlFavoriteRecipes = new System.Windows.Forms.Panel();
+            this.pnlSavedRecipes = new System.Windows.Forms.Panel();
+            this.pnlReview = new System.Windows.Forms.Panel();
+            this.pnlRecentlyViewed = new System.Windows.Forms.Panel();
             this.pbPicture = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.pbChangePicture = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownPortionsNumber)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbChangePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChangePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsername
@@ -108,6 +117,14 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.lblRecentlyViewed);
+            this.tabPage1.Controls.Add(this.lblReview);
+            this.tabPage1.Controls.Add(this.lblSavedRecipes);
+            this.tabPage1.Controls.Add(this.lblFavoriteRecipes);
+            this.tabPage1.Controls.Add(this.pnlFavoriteRecipes);
+            this.tabPage1.Controls.Add(this.pnlSavedRecipes);
+            this.tabPage1.Controls.Add(this.pnlReview);
+            this.tabPage1.Controls.Add(this.pnlRecentlyViewed);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -147,7 +164,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(958, 693);
+            this.tabPage2.Size = new System.Drawing.Size(958, 684);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Create new recipe";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -393,7 +410,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(958, 693);
+            this.tabPage3.Size = new System.Drawing.Size(958, 684);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "View own recipes";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -421,7 +438,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(958, 693);
+            this.tabPage4.Size = new System.Drawing.Size(958, 684);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Manage profile";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -509,13 +526,83 @@
             this.lblChangePicture.TabIndex = 1;
             this.lblChangePicture.Text = "Change picture";
             // 
-            // pbChangePicture
+            // lblFavoriteRecipes
             // 
-            this.pbChangePicture.Location = new System.Drawing.Point(26, 26);
-            this.pbChangePicture.Name = "pbChangePicture";
-            this.pbChangePicture.Size = new System.Drawing.Size(100, 50);
-            this.pbChangePicture.TabIndex = 0;
-            this.pbChangePicture.TabStop = false;
+            this.lblFavoriteRecipes.AutoSize = true;
+            this.lblFavoriteRecipes.Location = new System.Drawing.Point(17, 16);
+            this.lblFavoriteRecipes.Name = "lblFavoriteRecipes";
+            this.lblFavoriteRecipes.Size = new System.Drawing.Size(104, 16);
+            this.lblFavoriteRecipes.TabIndex = 0;
+            this.lblFavoriteRecipes.Text = "Favorite recipes";
+            // 
+            // lblSavedRecipes
+            // 
+            this.lblSavedRecipes.AutoSize = true;
+            this.lblSavedRecipes.Location = new System.Drawing.Point(24, 141);
+            this.lblSavedRecipes.Name = "lblSavedRecipes";
+            this.lblSavedRecipes.Size = new System.Drawing.Size(95, 16);
+            this.lblSavedRecipes.TabIndex = 1;
+            this.lblSavedRecipes.Text = "Saved recipes";
+            // 
+            // lblReview
+            // 
+            this.lblReview.AutoSize = true;
+            this.lblReview.Location = new System.Drawing.Point(24, 272);
+            this.lblReview.Name = "lblReview";
+            this.lblReview.Size = new System.Drawing.Size(52, 16);
+            this.lblReview.TabIndex = 2;
+            this.lblReview.Text = "Review";
+            // 
+            // lblRecentlyViewed
+            // 
+            this.lblRecentlyViewed.AutoSize = true;
+            this.lblRecentlyViewed.Location = new System.Drawing.Point(24, 446);
+            this.lblRecentlyViewed.Name = "lblRecentlyViewed";
+            this.lblRecentlyViewed.Size = new System.Drawing.Size(106, 16);
+            this.lblRecentlyViewed.TabIndex = 3;
+            this.lblRecentlyViewed.Text = "Recently viewed";
+            // 
+            // pnlFavoriteRecipes
+            // 
+            this.pnlFavoriteRecipes.AutoScroll = true;
+            this.pnlFavoriteRecipes.Location = new System.Drawing.Point(6, 35);
+            this.pnlFavoriteRecipes.Name = "pnlFavoriteRecipes";
+            this.pnlFavoriteRecipes.Size = new System.Drawing.Size(946, 95);
+            this.pnlFavoriteRecipes.TabIndex = 4;
+            // 
+            // pnlSavedRecipes
+            // 
+            this.pnlSavedRecipes.AutoScroll = true;
+            this.pnlSavedRecipes.Location = new System.Drawing.Point(6, 160);
+            this.pnlSavedRecipes.Name = "pnlSavedRecipes";
+            this.pnlSavedRecipes.Size = new System.Drawing.Size(946, 99);
+            this.pnlSavedRecipes.TabIndex = 5;
+            // 
+            // pnlReview
+            // 
+            this.pnlReview.AutoScroll = true;
+            this.pnlReview.Location = new System.Drawing.Point(6, 291);
+            this.pnlReview.Name = "pnlReview";
+            this.pnlReview.Size = new System.Drawing.Size(946, 135);
+            this.pnlReview.TabIndex = 6;
+            // 
+            // pnlRecentlyViewed
+            // 
+            this.pnlRecentlyViewed.AutoScroll = true;
+            this.pnlRecentlyViewed.Location = new System.Drawing.Point(6, 432);
+            this.pnlRecentlyViewed.Name = "pnlRecentlyViewed";
+            this.pnlRecentlyViewed.Size = new System.Drawing.Size(946, 233);
+            this.pnlRecentlyViewed.TabIndex = 7;
+            // 
+            // pbPicture
+            // 
+            this.pbPicture.ErrorImage = global::HealthyMealPlanning.Properties.Resources.placeholder;
+            this.pbPicture.InitialImage = global::HealthyMealPlanning.Properties.Resources.profile;
+            this.pbPicture.Location = new System.Drawing.Point(51, 3);
+            this.pbPicture.Name = "pbPicture";
+            this.pbPicture.Size = new System.Drawing.Size(100, 50);
+            this.pbPicture.TabIndex = 4;
+            this.pbPicture.TabStop = false;
             // 
             // btnLogout
             // 
@@ -527,15 +614,13 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // pbPicture
+            // pbChangePicture
             // 
-            this.pbPicture.ErrorImage = global::HealthyMealPlanning.Properties.Resources.placeholder;
-            this.pbPicture.InitialImage = global::HealthyMealPlanning.Properties.Resources.profile;
-            this.pbPicture.Location = new System.Drawing.Point(51, 3);
-            this.pbPicture.Name = "pbPicture";
-            this.pbPicture.Size = new System.Drawing.Size(100, 50);
-            this.pbPicture.TabIndex = 4;
-            this.pbPicture.TabStop = false;
+            this.pbChangePicture.Location = new System.Drawing.Point(26, 26);
+            this.pbChangePicture.Name = "pbChangePicture";
+            this.pbChangePicture.Size = new System.Drawing.Size(100, 50);
+            this.pbChangePicture.TabIndex = 0;
+            this.pbChangePicture.TabStop = false;
             // 
             // ProfileControl
             // 
@@ -548,14 +633,16 @@
             this.Name = "ProfileControl";
             this.Size = new System.Drawing.Size(966, 786);
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownPortionsNumber)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbChangePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbChangePicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -609,5 +696,13 @@
         private System.Windows.Forms.Button btnChangeSave;
         private System.Windows.Forms.TextBox txtChangePassword;
         private System.Windows.Forms.Label lblChangePassword;
+        private System.Windows.Forms.Label lblSavedRecipes;
+        private System.Windows.Forms.Label lblFavoriteRecipes;
+        private System.Windows.Forms.Label lblReview;
+        private System.Windows.Forms.Label lblRecentlyViewed;
+        private System.Windows.Forms.Panel pnlFavoriteRecipes;
+        private System.Windows.Forms.Panel pnlSavedRecipes;
+        private System.Windows.Forms.Panel pnlReview;
+        private System.Windows.Forms.Panel pnlRecentlyViewed;
     }
 }
