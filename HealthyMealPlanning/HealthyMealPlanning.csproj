@@ -127,11 +127,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmCreateRecipe.cs">
+    <Compile Include="Forms\frmCreateRecipe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCreateRecipe.Designer.cs">
+    <Compile Include="Forms\frmCreateRecipe.Designer.cs">
       <DependentUpon>frmCreateRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddToMealPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddToMealPlan.Designer.cs">
+      <DependentUpon>frmAddToMealPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectRecipe.Designer.cs">
+      <DependentUpon>frmSelectRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RecipeCard.Designer.cs">
+      <DependentUpon>RecipeCard.cs</DependentUpon>
     </Compile>
     <Compile Include="Сlasses\DBMySQLUtil.cs" />
     <Compile Include="Сlasses\DBUtils.cs" />
@@ -228,8 +246,14 @@
     <EmbeddedResource Include="Forms\frmReview.resx">
       <DependentUpon>frmReview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCreateRecipe.resx">
+    <EmbeddedResource Include="Forms\frmCreateRecipe.resx">
       <DependentUpon>frmCreateRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddToMealPlan.resx">
+      <DependentUpon>frmAddToMealPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectRecipe.resx">
+      <DependentUpon>frmSelectRecipe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -241,6 +265,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="RecipeCard.resx">
+      <DependentUpon>RecipeCard.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="HealthyMealPlanning_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -318,6 +345,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\favorite_filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HealthyMealPlanningIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

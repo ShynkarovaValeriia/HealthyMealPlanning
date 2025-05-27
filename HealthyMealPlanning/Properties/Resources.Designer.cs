@@ -63,6 +63,16 @@ namespace HealthyMealPlanning.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add {
+            get {
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap addplan {
             get {
                 object obj = ResourceManager.GetObject("addplan", resourceCulture);
@@ -126,6 +136,16 @@ namespace HealthyMealPlanning.Properties {
         internal static System.Drawing.Bitmap favorite_filled {
             get {
                 object obj = ResourceManager.GetObject("favorite_filled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HealthyMealPlanningIcon {
+            get {
+                object obj = ResourceManager.GetObject("HealthyMealPlanningIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
