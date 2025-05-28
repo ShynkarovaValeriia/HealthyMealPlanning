@@ -25,6 +25,18 @@ namespace HealthyMealPlanning
             this.selectedDate = date;
         }
 
+        private void btnLogo_Click(object sender, EventArgs e)
+        {
+            frmHome homeForm = new frmHome();
+            homeForm.Show();
+            this.Close();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void frmAddToMealPlan_Load(object sender, EventArgs e)
         {
             lblRecipeName.Text = recipeName;

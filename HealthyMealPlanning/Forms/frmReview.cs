@@ -39,6 +39,13 @@ namespace HealthyMealPlanning
             LoadReviewData();     // завантажити дані відгуку
         }
 
+        private void btnLogo_Click(object sender, EventArgs e)
+        {
+            frmHome homeForm = new frmHome();
+            homeForm.Show();
+            this.Close();
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -192,6 +199,5 @@ namespace HealthyMealPlanning
                 conn.Close();
             }
         }
-
     }
 }

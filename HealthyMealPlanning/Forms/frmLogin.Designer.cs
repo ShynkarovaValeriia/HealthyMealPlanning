@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblLogin = new System.Windows.Forms.Label();
-            this.lblLocalAcc = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -47,91 +46,96 @@
             // lblLogin
             // 
             this.lblLogin.AutoSize = true;
-            this.lblLogin.Location = new System.Drawing.Point(68, 67);
+            this.lblLogin.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.Location = new System.Drawing.Point(626, 106);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(40, 16);
+            this.lblLogin.Size = new System.Drawing.Size(236, 49);
             this.lblLogin.TabIndex = 0;
-            this.lblLogin.Text = "Login";
-            // 
-            // lblLocalAcc
-            // 
-            this.lblLocalAcc.AutoSize = true;
-            this.lblLocalAcc.Location = new System.Drawing.Point(67, 117);
-            this.lblLocalAcc.Name = "lblLocalAcc";
-            this.lblLocalAcc.Size = new System.Drawing.Size(177, 16);
-            this.lblLocalAcc.TabIndex = 1;
-            this.lblLocalAcc.Text = "Use a local account to log in.";
+            this.lblLogin.Text = "Авторизація";
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(71, 221);
+            this.lblUsername.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(469, 221);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(70, 16);
+            this.lblUsername.Size = new System.Drawing.Size(249, 40);
             this.lblUsername.TabIndex = 2;
-            this.lblUsername.Text = "Username";
+            this.lblUsername.Text = "Ім\'я користувача";
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(70, 252);
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUsername.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(469, 284);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(266, 22);
+            this.txtUsername.Size = new System.Drawing.Size(337, 48);
             this.txtUsername.TabIndex = 3;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(68, 295);
+            this.lblPassword.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(469, 370);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(67, 16);
+            this.lblPassword.Size = new System.Drawing.Size(120, 40);
             this.lblPassword.TabIndex = 4;
-            this.lblPassword.Text = "Password";
+            this.lblPassword.Text = "Пароль";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(70, 327);
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassword.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(469, 425);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(266, 22);
+            this.txtPassword.Size = new System.Drawing.Size(337, 48);
             this.txtPassword.TabIndex = 5;
             // 
             // ckbRemember
             // 
             this.ckbRemember.AutoSize = true;
-            this.ckbRemember.Location = new System.Drawing.Point(70, 396);
+            this.ckbRemember.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbRemember.Location = new System.Drawing.Point(469, 497);
             this.ckbRemember.Name = "ckbRemember";
-            this.ckbRemember.Size = new System.Drawing.Size(126, 20);
+            this.ckbRemember.Size = new System.Drawing.Size(288, 44);
             this.ckbRemember.TabIndex = 6;
-            this.ckbRemember.Text = "Remember me?";
+            this.ckbRemember.Text = "Запам\'ятати мене";
             this.ckbRemember.UseVisualStyleBackColor = true;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(70, 471);
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(145)))), ((int)(((byte)(0)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(469, 603);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(266, 48);
+            this.btnLogin.Size = new System.Drawing.Size(551, 83);
             this.btnLogin.TabIndex = 7;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Text = "Увійти";
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // lblForgotPassword
             // 
             this.lblForgotPassword.AutoSize = true;
-            this.lblForgotPassword.Location = new System.Drawing.Point(68, 585);
+            this.lblForgotPassword.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgotPassword.Location = new System.Drawing.Point(644, 736);
             this.lblForgotPassword.Name = "lblForgotPassword";
-            this.lblForgotPassword.Size = new System.Drawing.Size(144, 16);
+            this.lblForgotPassword.Size = new System.Drawing.Size(200, 35);
             this.lblForgotPassword.TabIndex = 8;
-            this.lblForgotPassword.Text = "Forgot your password?";
+            this.lblForgotPassword.Text = "Забули пароль?";
             // 
             // lblRegisterNow
             // 
             this.lblRegisterNow.AutoSize = true;
             this.lblRegisterNow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblRegisterNow.Location = new System.Drawing.Point(67, 642);
+            this.lblRegisterNow.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegisterNow.Location = new System.Drawing.Point(514, 789);
             this.lblRegisterNow.Name = "lblRegisterNow";
-            this.lblRegisterNow.Size = new System.Drawing.Size(143, 16);
+            this.lblRegisterNow.Size = new System.Drawing.Size(460, 35);
             this.lblRegisterNow.TabIndex = 9;
-            this.lblRegisterNow.Text = "Register as a new user";
+            this.lblRegisterNow.Text = "Зареєструватися як новий користувач";
             this.lblRegisterNow.Click += new System.EventHandler(this.lblRegisterNow_Click);
             // 
             // toolStrip1
@@ -142,7 +146,7 @@
             this.btnClose});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(656, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1500, 27);
             this.toolStrip1.TabIndex = 10;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -152,24 +156,24 @@
             this.btnLogo.Image = global::HealthyMealPlanning.Properties.Resources.HealthyMealPlanningIcon;
             this.btnLogo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLogo.Name = "btnLogo";
-            this.btnLogo.Size = new System.Drawing.Size(29, 28);
-            this.btnLogo.Text = "toolStripButton1";
+            this.btnLogo.Size = new System.Drawing.Size(29, 24);
             // 
             // btnClose
             // 
+            this.btnClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.btnClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.btnClose.Image = global::HealthyMealPlanning.Properties.Resources.close;
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(29, 28);
-            this.btnClose.Text = "toolStripButton1";
+            this.btnClose.Size = new System.Drawing.Size(29, 24);
+            this.btnClose.Text = "Закрити";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(656, 747);
+            this.ClientSize = new System.Drawing.Size(1500, 900);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lblRegisterNow);
             this.Controls.Add(this.lblForgotPassword);
@@ -179,7 +183,6 @@
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblUsername);
-            this.Controls.Add(this.lblLocalAcc);
             this.Controls.Add(this.lblLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
@@ -195,7 +198,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblLogin;
-        private System.Windows.Forms.Label lblLocalAcc;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblPassword;

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlannerControl));
             this.lblMealPlan = new System.Windows.Forms.Label();
             this.lblMonday = new System.Windows.Forms.Label();
             this.lblTuesday = new System.Windows.Forms.Label();
@@ -47,236 +48,174 @@
             this.calendar = new System.Windows.Forms.MonthCalendar();
             this.contextMenuAdd = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addRecipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAddMonday = new System.Windows.Forms.Button();
-            this.btnAddTuesday = new System.Windows.Forms.Button();
-            this.btnAddWednesday = new System.Windows.Forms.Button();
-            this.btnAddThursday = new System.Windows.Forms.Button();
-            this.btnAddFriday = new System.Windows.Forms.Button();
-            this.btnAddSaturday = new System.Windows.Forms.Button();
             this.btnAddSunday = new System.Windows.Forms.Button();
+            this.btnAddSaturday = new System.Windows.Forms.Button();
+            this.btnAddFriday = new System.Windows.Forms.Button();
+            this.btnAddThursday = new System.Windows.Forms.Button();
+            this.btnAddWednesday = new System.Windows.Forms.Button();
+            this.btnAddTuesday = new System.Windows.Forms.Button();
+            this.btnAddMonday = new System.Windows.Forms.Button();
             this.contextMenuAdd.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblMealPlan
             // 
-            this.lblMealPlan.AutoSize = true;
-            this.lblMealPlan.Location = new System.Drawing.Point(280, 40);
+            resources.ApplyResources(this.lblMealPlan, "lblMealPlan");
             this.lblMealPlan.Name = "lblMealPlan";
-            this.lblMealPlan.Size = new System.Drawing.Size(66, 16);
-            this.lblMealPlan.TabIndex = 0;
-            this.lblMealPlan.Text = "Meal plan";
             // 
             // lblMonday
             // 
-            this.lblMonday.AutoSize = true;
-            this.lblMonday.Location = new System.Drawing.Point(281, 80);
+            resources.ApplyResources(this.lblMonday, "lblMonday");
             this.lblMonday.Name = "lblMonday";
-            this.lblMonday.Size = new System.Drawing.Size(56, 16);
-            this.lblMonday.TabIndex = 1;
-            this.lblMonday.Text = "Monday";
             // 
             // lblTuesday
             // 
-            this.lblTuesday.AutoSize = true;
-            this.lblTuesday.Location = new System.Drawing.Point(281, 231);
+            resources.ApplyResources(this.lblTuesday, "lblTuesday");
             this.lblTuesday.Name = "lblTuesday";
-            this.lblTuesday.Size = new System.Drawing.Size(61, 16);
-            this.lblTuesday.TabIndex = 2;
-            this.lblTuesday.Text = "Tuesday";
             // 
             // lblWednesday
             // 
-            this.lblWednesday.AutoSize = true;
-            this.lblWednesday.Location = new System.Drawing.Point(280, 380);
+            resources.ApplyResources(this.lblWednesday, "lblWednesday");
             this.lblWednesday.Name = "lblWednesday";
-            this.lblWednesday.Size = new System.Drawing.Size(81, 16);
-            this.lblWednesday.TabIndex = 3;
-            this.lblWednesday.Text = "Wednesday";
             // 
             // lblThursday
             // 
-            this.lblThursday.AutoSize = true;
-            this.lblThursday.Location = new System.Drawing.Point(280, 536);
+            resources.ApplyResources(this.lblThursday, "lblThursday");
             this.lblThursday.Name = "lblThursday";
-            this.lblThursday.Size = new System.Drawing.Size(64, 16);
-            this.lblThursday.TabIndex = 4;
-            this.lblThursday.Text = "Thursday";
             // 
             // lblFriday
             // 
-            this.lblFriday.AutoSize = true;
-            this.lblFriday.Location = new System.Drawing.Point(281, 710);
+            resources.ApplyResources(this.lblFriday, "lblFriday");
             this.lblFriday.Name = "lblFriday";
-            this.lblFriday.Size = new System.Drawing.Size(45, 16);
-            this.lblFriday.TabIndex = 5;
-            this.lblFriday.Text = "Friday";
             // 
             // lblSaturday
             // 
-            this.lblSaturday.AutoSize = true;
-            this.lblSaturday.Location = new System.Drawing.Point(280, 865);
+            resources.ApplyResources(this.lblSaturday, "lblSaturday");
             this.lblSaturday.Name = "lblSaturday";
-            this.lblSaturday.Size = new System.Drawing.Size(61, 16);
-            this.lblSaturday.TabIndex = 6;
-            this.lblSaturday.Text = "Saturday";
             // 
             // lblSunday
             // 
-            this.lblSunday.AutoSize = true;
-            this.lblSunday.Location = new System.Drawing.Point(280, 1018);
+            resources.ApplyResources(this.lblSunday, "lblSunday");
             this.lblSunday.Name = "lblSunday";
-            this.lblSunday.Size = new System.Drawing.Size(53, 16);
-            this.lblSunday.TabIndex = 7;
-            this.lblSunday.Text = "Sunday";
             // 
             // pnlMonday
             // 
-            this.pnlMonday.Location = new System.Drawing.Point(266, 106);
+            resources.ApplyResources(this.pnlMonday, "pnlMonday");
             this.pnlMonday.Name = "pnlMonday";
-            this.pnlMonday.Size = new System.Drawing.Size(916, 100);
-            this.pnlMonday.TabIndex = 8;
             // 
             // pnlTuesday
             // 
-            this.pnlTuesday.Location = new System.Drawing.Point(266, 258);
+            resources.ApplyResources(this.pnlTuesday, "pnlTuesday");
             this.pnlTuesday.Name = "pnlTuesday";
-            this.pnlTuesday.Size = new System.Drawing.Size(916, 100);
-            this.pnlTuesday.TabIndex = 9;
             // 
             // pnlWednesday
             // 
-            this.pnlWednesday.Location = new System.Drawing.Point(266, 411);
+            resources.ApplyResources(this.pnlWednesday, "pnlWednesday");
             this.pnlWednesday.Name = "pnlWednesday";
-            this.pnlWednesday.Size = new System.Drawing.Size(916, 100);
-            this.pnlWednesday.TabIndex = 10;
             // 
             // pnlThursday
             // 
-            this.pnlThursday.Location = new System.Drawing.Point(266, 576);
+            resources.ApplyResources(this.pnlThursday, "pnlThursday");
             this.pnlThursday.Name = "pnlThursday";
-            this.pnlThursday.Size = new System.Drawing.Size(916, 109);
-            this.pnlThursday.TabIndex = 11;
             // 
             // pnlFriday
             // 
-            this.pnlFriday.Location = new System.Drawing.Point(266, 739);
+            resources.ApplyResources(this.pnlFriday, "pnlFriday");
             this.pnlFriday.Name = "pnlFriday";
-            this.pnlFriday.Size = new System.Drawing.Size(916, 100);
-            this.pnlFriday.TabIndex = 12;
             // 
             // pnlSaturday
             // 
-            this.pnlSaturday.Location = new System.Drawing.Point(266, 898);
+            resources.ApplyResources(this.pnlSaturday, "pnlSaturday");
             this.pnlSaturday.Name = "pnlSaturday";
-            this.pnlSaturday.Size = new System.Drawing.Size(916, 100);
-            this.pnlSaturday.TabIndex = 13;
             // 
             // pnlSunday
             // 
-            this.pnlSunday.Location = new System.Drawing.Point(266, 1051);
+            resources.ApplyResources(this.pnlSunday, "pnlSunday");
             this.pnlSunday.Name = "pnlSunday";
-            this.pnlSunday.Size = new System.Drawing.Size(916, 100);
-            this.pnlSunday.TabIndex = 14;
             // 
             // calendar
             // 
-            this.calendar.Location = new System.Drawing.Point(25, 40);
+            resources.ApplyResources(this.calendar, "calendar");
             this.calendar.MaxSelectionCount = 1;
             this.calendar.Name = "calendar";
             this.calendar.ShowTodayCircle = false;
-            this.calendar.TabIndex = 15;
             this.calendar.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.calendar_DateChanged);
             // 
             // contextMenuAdd
             // 
+            resources.ApplyResources(this.contextMenuAdd, "contextMenuAdd");
             this.contextMenuAdd.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuAdd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addRecipeToolStripMenuItem});
             this.contextMenuAdd.Name = "contextMenuAdd";
-            this.contextMenuAdd.Size = new System.Drawing.Size(143, 28);
             // 
             // addRecipeToolStripMenuItem
             // 
+            resources.ApplyResources(this.addRecipeToolStripMenuItem, "addRecipeToolStripMenuItem");
             this.addRecipeToolStripMenuItem.Name = "addRecipeToolStripMenuItem";
-            this.addRecipeToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
-            this.addRecipeToolStripMenuItem.Text = "Add food";
             this.addRecipeToolStripMenuItem.Click += new System.EventHandler(this.addRecipeToolStripMenuItem_Click);
-            // 
-            // btnAddMonday
-            // 
-            this.btnAddMonday.Image = global::HealthyMealPlanning.Properties.Resources.add;
-            this.btnAddMonday.Location = new System.Drawing.Point(1132, 73);
-            this.btnAddMonday.Name = "btnAddMonday";
-            this.btnAddMonday.Size = new System.Drawing.Size(38, 27);
-            this.btnAddMonday.TabIndex = 0;
-            this.btnAddMonday.UseVisualStyleBackColor = true;
-            this.btnAddMonday.Click += new System.EventHandler(this.btnAddMonday_Click);
-            // 
-            // btnAddTuesday
-            // 
-            this.btnAddTuesday.Image = global::HealthyMealPlanning.Properties.Resources.add;
-            this.btnAddTuesday.Location = new System.Drawing.Point(1132, 220);
-            this.btnAddTuesday.Name = "btnAddTuesday";
-            this.btnAddTuesday.Size = new System.Drawing.Size(38, 27);
-            this.btnAddTuesday.TabIndex = 3;
-            this.btnAddTuesday.UseVisualStyleBackColor = true;
-            this.btnAddTuesday.Click += new System.EventHandler(this.btnAddTuesday_Click);
-            // 
-            // btnAddWednesday
-            // 
-            this.btnAddWednesday.Image = global::HealthyMealPlanning.Properties.Resources.add;
-            this.btnAddWednesday.Location = new System.Drawing.Point(1132, 375);
-            this.btnAddWednesday.Name = "btnAddWednesday";
-            this.btnAddWednesday.Size = new System.Drawing.Size(38, 27);
-            this.btnAddWednesday.TabIndex = 15;
-            this.btnAddWednesday.UseVisualStyleBackColor = true;
-            this.btnAddWednesday.Click += new System.EventHandler(this.btnAddWednesday_Click);
-            // 
-            // btnAddThursday
-            // 
-            this.btnAddThursday.Image = global::HealthyMealPlanning.Properties.Resources.add;
-            this.btnAddThursday.Location = new System.Drawing.Point(1132, 531);
-            this.btnAddThursday.Name = "btnAddThursday";
-            this.btnAddThursday.Size = new System.Drawing.Size(38, 27);
-            this.btnAddThursday.TabIndex = 16;
-            this.btnAddThursday.UseVisualStyleBackColor = true;
-            this.btnAddThursday.Click += new System.EventHandler(this.btnAddThursday_Click);
-            // 
-            // btnAddFriday
-            // 
-            this.btnAddFriday.Image = global::HealthyMealPlanning.Properties.Resources.add;
-            this.btnAddFriday.Location = new System.Drawing.Point(1132, 699);
-            this.btnAddFriday.Name = "btnAddFriday";
-            this.btnAddFriday.Size = new System.Drawing.Size(38, 27);
-            this.btnAddFriday.TabIndex = 17;
-            this.btnAddFriday.UseVisualStyleBackColor = true;
-            this.btnAddFriday.Click += new System.EventHandler(this.btnAddFriday_Click);
-            // 
-            // btnAddSaturday
-            // 
-            this.btnAddSaturday.Image = global::HealthyMealPlanning.Properties.Resources.add;
-            this.btnAddSaturday.Location = new System.Drawing.Point(1132, 860);
-            this.btnAddSaturday.Name = "btnAddSaturday";
-            this.btnAddSaturday.Size = new System.Drawing.Size(38, 27);
-            this.btnAddSaturday.TabIndex = 18;
-            this.btnAddSaturday.UseVisualStyleBackColor = true;
-            this.btnAddSaturday.Click += new System.EventHandler(this.btnAddSaturday_Click);
             // 
             // btnAddSunday
             // 
+            resources.ApplyResources(this.btnAddSunday, "btnAddSunday");
             this.btnAddSunday.Image = global::HealthyMealPlanning.Properties.Resources.add;
-            this.btnAddSunday.Location = new System.Drawing.Point(1132, 1013);
             this.btnAddSunday.Name = "btnAddSunday";
-            this.btnAddSunday.Size = new System.Drawing.Size(38, 27);
-            this.btnAddSunday.TabIndex = 19;
             this.btnAddSunday.UseVisualStyleBackColor = true;
             this.btnAddSunday.Click += new System.EventHandler(this.btnAddSunday_Click);
             // 
+            // btnAddSaturday
+            // 
+            resources.ApplyResources(this.btnAddSaturday, "btnAddSaturday");
+            this.btnAddSaturday.Image = global::HealthyMealPlanning.Properties.Resources.add;
+            this.btnAddSaturday.Name = "btnAddSaturday";
+            this.btnAddSaturday.UseVisualStyleBackColor = true;
+            this.btnAddSaturday.Click += new System.EventHandler(this.btnAddSaturday_Click);
+            // 
+            // btnAddFriday
+            // 
+            resources.ApplyResources(this.btnAddFriday, "btnAddFriday");
+            this.btnAddFriday.Image = global::HealthyMealPlanning.Properties.Resources.add;
+            this.btnAddFriday.Name = "btnAddFriday";
+            this.btnAddFriday.UseVisualStyleBackColor = true;
+            this.btnAddFriday.Click += new System.EventHandler(this.btnAddFriday_Click);
+            // 
+            // btnAddThursday
+            // 
+            resources.ApplyResources(this.btnAddThursday, "btnAddThursday");
+            this.btnAddThursday.Image = global::HealthyMealPlanning.Properties.Resources.add;
+            this.btnAddThursday.Name = "btnAddThursday";
+            this.btnAddThursday.UseVisualStyleBackColor = true;
+            this.btnAddThursday.Click += new System.EventHandler(this.btnAddThursday_Click);
+            // 
+            // btnAddWednesday
+            // 
+            resources.ApplyResources(this.btnAddWednesday, "btnAddWednesday");
+            this.btnAddWednesday.Image = global::HealthyMealPlanning.Properties.Resources.add;
+            this.btnAddWednesday.Name = "btnAddWednesday";
+            this.btnAddWednesday.UseVisualStyleBackColor = true;
+            this.btnAddWednesday.Click += new System.EventHandler(this.btnAddWednesday_Click);
+            // 
+            // btnAddTuesday
+            // 
+            resources.ApplyResources(this.btnAddTuesday, "btnAddTuesday");
+            this.btnAddTuesday.Image = global::HealthyMealPlanning.Properties.Resources.add;
+            this.btnAddTuesday.Name = "btnAddTuesday";
+            this.btnAddTuesday.UseVisualStyleBackColor = true;
+            this.btnAddTuesday.Click += new System.EventHandler(this.btnAddTuesday_Click);
+            // 
+            // btnAddMonday
+            // 
+            resources.ApplyResources(this.btnAddMonday, "btnAddMonday");
+            this.btnAddMonday.Image = global::HealthyMealPlanning.Properties.Resources.add;
+            this.btnAddMonday.Name = "btnAddMonday";
+            this.btnAddMonday.UseVisualStyleBackColor = true;
+            this.btnAddMonday.Click += new System.EventHandler(this.btnAddMonday_Click);
+            // 
             // PlannerControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
+            this.Controls.Add(this.pnlSaturday);
             this.Controls.Add(this.btnAddSunday);
             this.Controls.Add(this.btnAddSaturday);
             this.Controls.Add(this.lblSunday);
@@ -298,10 +237,8 @@
             this.Controls.Add(this.pnlWednesday);
             this.Controls.Add(this.pnlThursday);
             this.Controls.Add(this.pnlFriday);
-            this.Controls.Add(this.pnlSaturday);
             this.Controls.Add(this.pnlSunday);
             this.Name = "PlannerControl";
-            this.Size = new System.Drawing.Size(1246, 1228);
             this.Load += new System.EventHandler(this.PlannerControl_Load);
             this.contextMenuAdd.ResumeLayout(false);
             this.ResumeLayout(false);

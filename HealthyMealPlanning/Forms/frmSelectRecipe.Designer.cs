@@ -31,11 +31,15 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.flowLayoutPanelResults = new System.Windows.Forms.FlowLayoutPanel();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnLogo = new System.Windows.Forms.ToolStripButton();
+            this.btnClose = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(77, 66);
+            this.txtSearch.Location = new System.Drawing.Point(299, 131);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(408, 22);
             this.txtSearch.TabIndex = 0;
@@ -43,7 +47,7 @@
             // btnSearch
             // 
             this.btnSearch.Image = global::HealthyMealPlanning.Properties.Resources.explore;
-            this.btnSearch.Location = new System.Drawing.Point(518, 56);
+            this.btnSearch.Location = new System.Drawing.Point(740, 121);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(48, 32);
             this.btnSearch.TabIndex = 1;
@@ -52,16 +56,50 @@
             // 
             // flowLayoutPanelResults
             // 
-            this.flowLayoutPanelResults.Location = new System.Drawing.Point(77, 127);
+            this.flowLayoutPanelResults.Location = new System.Drawing.Point(299, 192);
             this.flowLayoutPanelResults.Name = "flowLayoutPanelResults";
             this.flowLayoutPanelResults.Size = new System.Drawing.Size(827, 535);
             this.flowLayoutPanelResults.TabIndex = 2;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnLogo,
+            this.btnClose});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1500, 27);
+            this.toolStrip1.TabIndex = 3;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnLogo
+            // 
+            this.btnLogo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnLogo.Image = global::HealthyMealPlanning.Properties.Resources.HealthyMealPlanningIcon;
+            this.btnLogo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLogo.Name = "btnLogo";
+            this.btnLogo.Size = new System.Drawing.Size(29, 24);
+            this.btnLogo.Text = "toolStripButton1";
+            this.btnLogo.Click += new System.EventHandler(this.btnLogo_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnClose.Image = global::HealthyMealPlanning.Properties.Resources.close;
+            this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(29, 24);
+            this.btnClose.Text = "toolStripButton1";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmSelectRecipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(993, 713);
+            this.ClientSize = new System.Drawing.Size(1500, 900);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.flowLayoutPanelResults);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
@@ -69,6 +107,8 @@
             this.Name = "frmSelectRecipe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSelectRecipe";
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,5 +119,8 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelResults;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton btnLogo;
+        private System.Windows.Forms.ToolStripButton btnClose;
     }
 }

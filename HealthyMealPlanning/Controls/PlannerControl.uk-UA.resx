@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblMealPlan.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 24pt, style=Bold</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblMealPlan.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMealPlan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>269, 40</value>
+  </data>
+  <data name="lblMealPlan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>321, 49</value>
+  </data>
+  <data name="lblMealPlan.Text" xml:space="preserve">
+    <value>План харчування</value>
+  </data>
+  <data name="lblMonday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="lblMonday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblMonday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>278, 123</value>
+  </data>
+  <data name="lblMonday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 41</value>
+  </data>
+  <data name="lblMonday.Text" xml:space="preserve">
+    <value>Понеділок</value>
+  </data>
+  <data name="lblTuesday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="lblTuesday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblTuesday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>281, 337</value>
+  </data>
+  <data name="lblTuesday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 41</value>
+  </data>
+  <data name="lblTuesday.Text" xml:space="preserve">
+    <value>Вівторок</value>
+  </data>
+  <data name="lblWednesday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="lblWednesday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblWednesday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 553</value>
+  </data>
+  <data name="lblWednesday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 41</value>
+  </data>
+  <data name="lblWednesday.Text" xml:space="preserve">
+    <value>Середа</value>
+  </data>
+  <data name="lblThursday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="lblThursday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblThursday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 766</value>
+  </data>
+  <data name="lblThursday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 41</value>
+  </data>
+  <data name="lblThursday.Text" xml:space="preserve">
+    <value>Четвер</value>
+  </data>
+  <data name="lblFriday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="lblFriday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblFriday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>293, 975</value>
+  </data>
+  <data name="lblFriday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 41</value>
+  </data>
+  <data name="lblFriday.Text" xml:space="preserve">
+    <value>П'ятниця</value>
+  </data>
+  <data name="lblSaturday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="lblSaturday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSaturday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>297, 1185</value>
+  </data>
+  <data name="lblSaturday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 41</value>
+  </data>
+  <data name="lblSaturday.Text" xml:space="preserve">
+    <value>Субота</value>
+  </data>
+  <data name="lblSunday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="lblSunday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lblSunday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>297, 1399</value>
+  </data>
+  <data name="lblSunday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 41</value>
+  </data>
+  <data name="lblSunday.Text" xml:space="preserve">
+    <value>Неділя</value>
+  </data>
+  <data name="pnlMonday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="pnlMonday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>278, 167</value>
+  </data>
+  <data name="pnlMonday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1038, 150</value>
+  </data>
+  <data name="pnlTuesday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="pnlTuesday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>278, 381</value>
+  </data>
+  <data name="pnlTuesday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1038, 150</value>
+  </data>
+  <data name="pnlWednesday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="pnlWednesday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>278, 597</value>
+  </data>
+  <data name="pnlWednesday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1038, 150</value>
+  </data>
+  <data name="pnlThursday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="pnlThursday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>278, 810</value>
+  </data>
+  <data name="pnlThursday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1038, 150</value>
+  </data>
+  <data name="pnlFriday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="pnlFriday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>278, 1019</value>
+  </data>
+  <data name="pnlFriday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1038, 150</value>
+  </data>
+  <data name="pnlSaturday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="pnlSaturday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>278, 1229</value>
+  </data>
+  <data name="pnlSaturday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1038, 150</value>
+  </data>
+  <data name="pnlSunday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="pnlSunday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>278, 1443</value>
+  </data>
+  <data name="pnlSunday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1038, 150</value>
+  </data>
+  <data name="calendar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="calendar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="calendar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>39, 40</value>
+  </data>
+  <data name="btnAddSunday.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAddSunday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="btnAddSunday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAddSunday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1255, 1390</value>
+  </data>
+  <data name="btnAddSunday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="btnAddSaturday.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAddSaturday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="btnAddSaturday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAddSaturday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1255, 1176</value>
+  </data>
+  <data name="btnAddSaturday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="btnAddFriday.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAddFriday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="btnAddFriday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAddFriday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1255, 966</value>
+  </data>
+  <data name="btnAddFriday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="btnAddThursday.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAddThursday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="btnAddThursday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAddThursday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1255, 757</value>
+  </data>
+  <data name="btnAddThursday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="btnAddWednesday.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAddWednesday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="btnAddWednesday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAddWednesday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1255, 544</value>
+  </data>
+  <data name="btnAddWednesday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="btnAddTuesday.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAddTuesday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="btnAddTuesday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAddTuesday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1255, 328</value>
+  </data>
+  <data name="btnAddTuesday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="btnAddMonday.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAddMonday.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Calibri, 19.8000011pt</value>
+  </data>
+  <data name="btnAddMonday.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAddMonday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1255, 114</value>
+  </data>
+  <data name="btnAddMonday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1416, 900</value>
+  </data>
+</root>

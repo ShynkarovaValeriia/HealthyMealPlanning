@@ -17,6 +17,18 @@ namespace HealthyMealPlanning
             selectedDate = date;
         }
 
+        private void btnLogo_Click(object sender, EventArgs e)
+        {
+            frmHome homeForm = new frmHome();
+            homeForm.Show();
+            this.Close();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             LoadRecipes(txtSearch.Text.Trim());

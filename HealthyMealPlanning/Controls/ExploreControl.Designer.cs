@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExploreControl));
             this.lblDiscoverRecipes = new System.Windows.Forms.Label();
             this.lblInfoRecipes = new System.Windows.Forms.Label();
             this.pnlDiscoverRecipes = new System.Windows.Forms.Panel();
@@ -45,112 +46,122 @@
             // lblDiscoverRecipes
             // 
             this.lblDiscoverRecipes.AutoSize = true;
-            this.lblDiscoverRecipes.Location = new System.Drawing.Point(93, 574);
+            this.lblDiscoverRecipes.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiscoverRecipes.Location = new System.Drawing.Point(72, 846);
             this.lblDiscoverRecipes.Name = "lblDiscoverRecipes";
-            this.lblDiscoverRecipes.Size = new System.Drawing.Size(109, 16);
+            this.lblDiscoverRecipes.Size = new System.Drawing.Size(422, 40);
             this.lblDiscoverRecipes.TabIndex = 0;
-            this.lblDiscoverRecipes.Text = "Discover recipes";
+            this.lblDiscoverRecipes.Text = "Відкрийте для себе рецепти";
             // 
             // lblInfoRecipes
             // 
-            this.lblInfoRecipes.AutoSize = true;
-            this.lblInfoRecipes.Location = new System.Drawing.Point(93, 607);
+            this.lblInfoRecipes.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoRecipes.Location = new System.Drawing.Point(72, 887);
             this.lblInfoRecipes.Name = "lblInfoRecipes";
-            this.lblInfoRecipes.Size = new System.Drawing.Size(966, 16);
+            this.lblInfoRecipes.Size = new System.Drawing.Size(1313, 97);
             this.lblInfoRecipes.TabIndex = 1;
-            this.lblInfoRecipes.Text = "Find and share everyday cooking inspiration with ratings and reviews you can trus" +
-    "t. Recipes for easy dinners, healthy eating, fast and cheap, kid-friendly, and m" +
-    "ore.";
+            this.lblInfoRecipes.Text = resources.GetString("lblInfoRecipes.Text");
             // 
             // pnlDiscoverRecipes
             // 
             this.pnlDiscoverRecipes.AutoScroll = true;
-            this.pnlDiscoverRecipes.Location = new System.Drawing.Point(101, 646);
+            this.pnlDiscoverRecipes.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlDiscoverRecipes.Location = new System.Drawing.Point(76, 959);
             this.pnlDiscoverRecipes.Name = "pnlDiscoverRecipes";
-            this.pnlDiscoverRecipes.Size = new System.Drawing.Size(961, 180);
+            this.pnlDiscoverRecipes.Size = new System.Drawing.Size(1309, 150);
             this.pnlDiscoverRecipes.TabIndex = 2;
             // 
             // lblRecipeCategories
             // 
             this.lblRecipeCategories.AutoSize = true;
-            this.lblRecipeCategories.Location = new System.Drawing.Point(92, 56);
+            this.lblRecipeCategories.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecipeCategories.Location = new System.Drawing.Point(69, 47);
             this.lblRecipeCategories.Name = "lblRecipeCategories";
-            this.lblRecipeCategories.Size = new System.Drawing.Size(118, 16);
+            this.lblRecipeCategories.Size = new System.Drawing.Size(279, 40);
             this.lblRecipeCategories.TabIndex = 3;
-            this.lblRecipeCategories.Text = "Recipe categories";
+            this.lblRecipeCategories.Text = "Категорії рецептів";
             // 
             // lblPopularCreators
             // 
             this.lblPopularCreators.AutoSize = true;
-            this.lblPopularCreators.Location = new System.Drawing.Point(92, 188);
+            this.lblPopularCreators.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPopularCreators.Location = new System.Drawing.Point(72, 319);
             this.lblPopularCreators.Name = "lblPopularCreators";
-            this.lblPopularCreators.Size = new System.Drawing.Size(106, 16);
+            this.lblPopularCreators.Size = new System.Drawing.Size(265, 40);
             this.lblPopularCreators.TabIndex = 4;
-            this.lblPopularCreators.Text = "Popular creators";
+            this.lblPopularCreators.Text = "Популярні творці";
             // 
             // lblPopularIngredients
             // 
             this.lblPopularIngredients.AutoSize = true;
-            this.lblPopularIngredients.Location = new System.Drawing.Point(93, 375);
+            this.lblPopularIngredients.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPopularIngredients.Location = new System.Drawing.Point(72, 583);
             this.lblPopularIngredients.Name = "lblPopularIngredients";
-            this.lblPopularIngredients.Size = new System.Drawing.Size(123, 16);
+            this.lblPopularIngredients.Size = new System.Drawing.Size(336, 40);
             this.lblPopularIngredients.TabIndex = 5;
-            this.lblPopularIngredients.Text = "Popular ingredients";
+            this.lblPopularIngredients.Text = "Популярні інгредієнти";
             // 
             // lblInfoIngredients
             // 
             this.lblInfoIngredients.AutoSize = true;
-            this.lblInfoIngredients.Location = new System.Drawing.Point(93, 408);
+            this.lblInfoIngredients.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoIngredients.Location = new System.Drawing.Point(73, 624);
             this.lblInfoIngredients.Name = "lblInfoIngredients";
-            this.lblInfoIngredients.Size = new System.Drawing.Size(450, 16);
+            this.lblInfoIngredients.Size = new System.Drawing.Size(1122, 35);
             this.lblInfoIngredients.TabIndex = 6;
-            this.lblInfoIngredients.Text = "Get nutritional info, substitutes, tips, facts, and recipes for popular ingredien" +
-    "t.";
+            this.lblInfoIngredients.Text = "Отримайте інформацію про харчову цінність, поради та рецепти для популярних інгре" +
+    "дієнтів";
             // 
             // pnlPopularIngredients
             // 
-            this.pnlPopularIngredients.Location = new System.Drawing.Point(96, 440);
+            this.pnlPopularIngredients.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlPopularIngredients.Location = new System.Drawing.Point(76, 662);
             this.pnlPopularIngredients.Name = "pnlPopularIngredients";
-            this.pnlPopularIngredients.Size = new System.Drawing.Size(966, 114);
+            this.pnlPopularIngredients.Size = new System.Drawing.Size(1309, 150);
             this.pnlPopularIngredients.TabIndex = 7;
             // 
             // lblInfoCreators
             // 
             this.lblInfoCreators.AutoSize = true;
-            this.lblInfoCreators.Location = new System.Drawing.Point(92, 217);
+            this.lblInfoCreators.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoCreators.Location = new System.Drawing.Point(73, 360);
             this.lblInfoCreators.Name = "lblInfoCreators";
-            this.lblInfoCreators.Size = new System.Drawing.Size(535, 16);
+            this.lblInfoCreators.Size = new System.Drawing.Size(1006, 35);
             this.lblInfoCreators.TabIndex = 8;
-            this.lblInfoCreators.Text = "Get inspired with recipe ideas and tips from your favorite food creators on Samsu" +
-    "ng Food.";
+            this.lblInfoCreators.Text = "Надихайтеся ідеями рецептів та порадами від ваших улюблених кулінарних знавців";
             // 
             // pnlPopularCreators
             // 
-            this.pnlPopularCreators.Location = new System.Drawing.Point(96, 250);
+            this.pnlPopularCreators.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlPopularCreators.Location = new System.Drawing.Point(76, 398);
             this.pnlPopularCreators.Name = "pnlPopularCreators";
-            this.pnlPopularCreators.Size = new System.Drawing.Size(966, 105);
+            this.pnlPopularCreators.Size = new System.Drawing.Size(1309, 150);
             this.pnlPopularCreators.TabIndex = 9;
             // 
             // lblInfoCategories
             // 
             this.lblInfoCategories.AutoSize = true;
-            this.lblInfoCategories.Location = new System.Drawing.Point(95, 87);
+            this.lblInfoCategories.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoCategories.Location = new System.Drawing.Point(74, 88);
             this.lblInfoCategories.Name = "lblInfoCategories";
-            this.lblInfoCategories.Size = new System.Drawing.Size(454, 16);
+            this.lblInfoCategories.Size = new System.Drawing.Size(1017, 35);
             this.lblInfoCategories.TabIndex = 10;
-            this.lblInfoCategories.Text = "Find new and old favorites with Samsung Food users\' top recipe categories.";
+            this.lblInfoCategories.Text = "Знайдіть нові та старі улюблені страви в категоріях найкращих рецептів користувач" +
+    "ів";
             // 
             // pnlRecipeCategories
             // 
-            this.pnlRecipeCategories.Location = new System.Drawing.Point(95, 116);
+            this.pnlRecipeCategories.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlRecipeCategories.Location = new System.Drawing.Point(76, 126);
             this.pnlRecipeCategories.Name = "pnlRecipeCategories";
-            this.pnlRecipeCategories.Size = new System.Drawing.Size(967, 51);
+            this.pnlRecipeCategories.Size = new System.Drawing.Size(1309, 150);
             this.pnlRecipeCategories.TabIndex = 11;
             // 
             // ExploreControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.Controls.Add(this.pnlRecipeCategories);
             this.Controls.Add(this.lblInfoCategories);
             this.Controls.Add(this.pnlPopularCreators);
@@ -164,7 +175,7 @@
             this.Controls.Add(this.lblInfoRecipes);
             this.Controls.Add(this.lblDiscoverRecipes);
             this.Name = "ExploreControl";
-            this.Size = new System.Drawing.Size(1239, 888);
+            this.Size = new System.Drawing.Size(1458, 900);
             this.ResumeLayout(false);
             this.PerformLayout();
 

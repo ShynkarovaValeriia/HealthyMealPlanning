@@ -54,7 +54,6 @@ namespace HealthyMealPlanning
                     Session.Username = reader.GetString("username");
                     Session.FullName = reader.GetString("full_name");
 
-                    MessageBox.Show("Вхід виконано успішно!");
                     this.Hide();
                     new frmHome().Show();
                 }

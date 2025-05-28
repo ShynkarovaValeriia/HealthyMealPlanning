@@ -52,131 +52,155 @@
             // lblRegister
             // 
             this.lblRegister.AutoSize = true;
-            this.lblRegister.Location = new System.Drawing.Point(39, 62);
+            this.lblRegister.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegister.ForeColor = System.Drawing.Color.Black;
+            this.lblRegister.Location = new System.Drawing.Point(595, 34);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(58, 16);
+            this.lblRegister.Size = new System.Drawing.Size(308, 49);
             this.lblRegister.TabIndex = 0;
-            this.lblRegister.Text = "Register";
+            this.lblRegister.Text = "Зареєструватися";
             // 
             // lblNewAcc
             // 
             this.lblNewAcc.AutoSize = true;
-            this.lblNewAcc.Location = new System.Drawing.Point(39, 94);
+            this.lblNewAcc.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewAcc.Location = new System.Drawing.Point(517, 93);
             this.lblNewAcc.Name = "lblNewAcc";
-            this.lblNewAcc.Size = new System.Drawing.Size(138, 16);
+            this.lblNewAcc.Size = new System.Drawing.Size(465, 40);
             this.lblNewAcc.TabIndex = 1;
-            this.lblNewAcc.Text = "Create a new account.";
+            this.lblNewAcc.Text = "Створіть новий обліковий запис";
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(43, 164);
+            this.lblEmail.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(474, 151);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(41, 16);
+            this.lblEmail.Size = new System.Drawing.Size(274, 40);
             this.lblEmail.TabIndex = 2;
-            this.lblEmail.Text = "Email";
+            this.lblEmail.Text = "Електронна пошта";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(42, 196);
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(474, 194);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(240, 22);
+            this.txtEmail.Size = new System.Drawing.Size(326, 48);
             this.txtEmail.TabIndex = 3;
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(40, 245);
+            this.lblUsername.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(474, 261);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(70, 16);
+            this.lblUsername.Size = new System.Drawing.Size(249, 40);
             this.lblUsername.TabIndex = 4;
-            this.lblUsername.Text = "Username";
+            this.lblUsername.Text = "Ім\'я користувача";
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(42, 275);
+            this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUsername.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(474, 304);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(240, 22);
+            this.txtUsername.Size = new System.Drawing.Size(326, 48);
             this.txtUsername.TabIndex = 5;
             // 
             // lblFullName
             // 
             this.lblFullName.AutoSize = true;
-            this.lblFullName.Location = new System.Drawing.Point(44, 320);
+            this.lblFullName.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.Location = new System.Drawing.Point(474, 373);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(65, 16);
+            this.lblFullName.Size = new System.Drawing.Size(165, 40);
             this.lblFullName.TabIndex = 6;
-            this.lblFullName.Text = "Full name";
+            this.lblFullName.Text = "Повне ім\'я";
             // 
             // txtFullName
             // 
-            this.txtFullName.Location = new System.Drawing.Point(42, 355);
+            this.txtFullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFullName.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFullName.Location = new System.Drawing.Point(474, 416);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(240, 22);
+            this.txtFullName.Size = new System.Drawing.Size(326, 48);
             this.txtFullName.TabIndex = 7;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(43, 403);
+            this.lblPassword.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(474, 486);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(67, 16);
+            this.lblPassword.Size = new System.Drawing.Size(120, 40);
             this.lblPassword.TabIndex = 8;
-            this.lblPassword.Text = "Password";
+            this.lblPassword.Text = "Пароль";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(42, 434);
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassword.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(474, 529);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(240, 22);
+            this.txtPassword.Size = new System.Drawing.Size(326, 48);
             this.txtPassword.TabIndex = 9;
             // 
             // lblConfirmPassword
             // 
             this.lblConfirmPassword.AutoSize = true;
-            this.lblConfirmPassword.Location = new System.Drawing.Point(40, 477);
+            this.lblConfirmPassword.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPassword.Location = new System.Drawing.Point(474, 602);
             this.lblConfirmPassword.Name = "lblConfirmPassword";
-            this.lblConfirmPassword.Size = new System.Drawing.Size(114, 16);
+            this.lblConfirmPassword.Size = new System.Drawing.Size(293, 40);
             this.lblConfirmPassword.TabIndex = 10;
-            this.lblConfirmPassword.Text = "Confirm password";
+            this.lblConfirmPassword.Text = "Підтвердьте пароль";
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(43, 514);
+            this.txtConfirmPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtConfirmPassword.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmPassword.Location = new System.Drawing.Point(474, 645);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(239, 22);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(326, 48);
             this.txtConfirmPassword.TabIndex = 11;
             // 
             // rbMale
             // 
             this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(43, 571);
+            this.rbMale.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMale.Location = new System.Drawing.Point(474, 709);
             this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(58, 20);
+            this.rbMale.Size = new System.Drawing.Size(145, 44);
             this.rbMale.TabIndex = 12;
             this.rbMale.TabStop = true;
-            this.rbMale.Text = "Male";
+            this.rbMale.Text = "Чоловік";
             this.rbMale.UseVisualStyleBackColor = true;
             // 
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(138, 571);
+            this.rbFemale.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFemale.Location = new System.Drawing.Point(657, 709);
             this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(74, 20);
+            this.rbFemale.Size = new System.Drawing.Size(121, 44);
             this.rbFemale.TabIndex = 13;
             this.rbFemale.TabStop = true;
-            this.rbFemale.Text = "Female";
+            this.rbFemale.Text = "Жінка";
             this.rbFemale.UseVisualStyleBackColor = true;
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(42, 639);
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(145)))), ((int)(((byte)(0)))));
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
+            this.btnRegister.Location = new System.Drawing.Point(474, 792);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(240, 46);
+            this.btnRegister.Size = new System.Drawing.Size(551, 83);
             this.btnRegister.TabIndex = 14;
-            this.btnRegister.Text = "Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Text = "Зареєструватися";
+            this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // toolStrip1
@@ -187,7 +211,7 @@
             this.btnClose});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(594, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1500, 27);
             this.toolStrip1.TabIndex = 15;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -197,24 +221,25 @@
             this.btnLogo.Image = global::HealthyMealPlanning.Properties.Resources.HealthyMealPlanningIcon;
             this.btnLogo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLogo.Name = "btnLogo";
-            this.btnLogo.Size = new System.Drawing.Size(29, 28);
-            this.btnLogo.Text = "toolStripButton1";
+            this.btnLogo.Size = new System.Drawing.Size(29, 24);
             // 
             // btnClose
             // 
+            this.btnClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.btnClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.btnClose.Image = global::HealthyMealPlanning.Properties.Resources.close;
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(29, 28);
+            this.btnClose.Size = new System.Drawing.Size(29, 24);
             this.btnClose.Text = "toolStripButton1";
+            this.btnClose.ToolTipText = "Закрити";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 775);
+            this.ClientSize = new System.Drawing.Size(1500, 900);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.rbFemale);

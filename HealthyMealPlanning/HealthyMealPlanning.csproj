@@ -133,16 +133,16 @@
     <Compile Include="Forms\frmCreateRecipe.Designer.cs">
       <DependentUpon>frmCreateRecipe.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddToMealPlan.cs">
+    <Compile Include="Forms\frmAddToMealPlan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddToMealPlan.Designer.cs">
+    <Compile Include="Forms\frmAddToMealPlan.Designer.cs">
       <DependentUpon>frmAddToMealPlan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSelectRecipe.cs">
+    <Compile Include="Forms\frmSelectRecipe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSelectRecipe.Designer.cs">
+    <Compile Include="Forms\frmSelectRecipe.Designer.cs">
       <DependentUpon>frmSelectRecipe.cs</DependentUpon>
     </Compile>
     <Compile Include="RecipeCard.cs">
@@ -219,6 +219,9 @@
     <EmbeddedResource Include="Controls\ExploreControl.resx">
       <DependentUpon>ExploreControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PlannerControl.uk-UA.resx">
+      <DependentUpon>PlannerControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,10 +252,10 @@
     <EmbeddedResource Include="Forms\frmCreateRecipe.resx">
       <DependentUpon>frmCreateRecipe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddToMealPlan.resx">
+    <EmbeddedResource Include="Forms\frmAddToMealPlan.resx">
       <DependentUpon>frmAddToMealPlan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSelectRecipe.resx">
+    <EmbeddedResource Include="Forms\frmSelectRecipe.resx">
       <DependentUpon>frmSelectRecipe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -335,12 +338,6 @@
     <None Include="Resources\star_filled.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\star_half.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\star_empty.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\save_filled.png" />
   </ItemGroup>
   <ItemGroup>
@@ -351,6 +348,34 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_24dp_FFC92A_FILL1_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star_half.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

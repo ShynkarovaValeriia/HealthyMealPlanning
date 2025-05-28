@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btnLogo = new System.Windows.Forms.ToolStripButton();
+            this.btnClose = new System.Windows.Forms.ToolStripButton();
             this.pnlHome = new System.Windows.Forms.Panel();
-            this.pnlMain = new System.Windows.Forms.Panel();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnPlanner = new System.Windows.Forms.Button();
             this.btnExplore = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.btnLogo = new System.Windows.Forms.ToolStripButton();
-            this.btnClose = new System.Windows.Forms.ToolStripButton();
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             this.pnlHome.SuspendLayout();
             this.SuspendLayout();
@@ -49,9 +49,30 @@
             this.btnClose});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1400, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1500, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btnLogo
+            // 
+            this.btnLogo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnLogo.Image = global::HealthyMealPlanning.Properties.Resources.HealthyMealPlanningIcon;
+            this.btnLogo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLogo.Name = "btnLogo";
+            this.btnLogo.Size = new System.Drawing.Size(29, 24);
+            this.btnLogo.Text = "На головне меню";
+            this.btnLogo.Click += new System.EventHandler(this.btnLogo_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnClose.Image = global::HealthyMealPlanning.Properties.Resources.close;
+            this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(29, 24);
+            this.btnClose.Text = "Закрити";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // pnlHome
             // 
@@ -60,18 +81,10 @@
             this.pnlHome.Controls.Add(this.btnExplore);
             this.pnlHome.Controls.Add(this.btnHome);
             this.pnlHome.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlHome.Location = new System.Drawing.Point(0, 750);
+            this.pnlHome.Location = new System.Drawing.Point(0, 800);
             this.pnlHome.Name = "pnlHome";
-            this.pnlHome.Size = new System.Drawing.Size(1400, 100);
+            this.pnlHome.Size = new System.Drawing.Size(1500, 100);
             this.pnlHome.TabIndex = 1;
-            // 
-            // pnlMain
-            // 
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(0, 31);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1400, 719);
-            this.pnlMain.TabIndex = 2;
             // 
             // btnProfile
             // 
@@ -79,7 +92,7 @@
             this.btnProfile.Image = global::HealthyMealPlanning.Properties.Resources.profile;
             this.btnProfile.Location = new System.Drawing.Point(1119, 0);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(281, 100);
+            this.btnProfile.Size = new System.Drawing.Size(378, 100);
             this.btnProfile.TabIndex = 3;
             this.btnProfile.UseVisualStyleBackColor = true;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
@@ -117,30 +130,19 @@
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // btnLogo
+            // pnlMain
             // 
-            this.btnLogo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnLogo.Image = global::HealthyMealPlanning.Properties.Resources.HealthyMealPlanningIcon;
-            this.btnLogo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnLogo.Name = "btnLogo";
-            this.btnLogo.Size = new System.Drawing.Size(29, 28);
-            this.btnLogo.Text = "toolStripButton1";
-            // 
-            // btnClose
-            // 
-            this.btnClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnClose.Image = global::HealthyMealPlanning.Properties.Resources.close;
-            this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(29, 28);
-            this.btnClose.Text = "toolStripButton1";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.Location = new System.Drawing.Point(0, 27);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(1500, 773);
+            this.pnlMain.TabIndex = 2;
             // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1400, 850);
+            this.ClientSize = new System.Drawing.Size(1500, 900);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.pnlHome);
             this.Controls.Add(this.toolStrip1);

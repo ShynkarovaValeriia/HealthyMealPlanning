@@ -31,18 +31,11 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnLogo = new System.Windows.Forms.ToolStripButton();
             this.btnClose = new System.Windows.Forms.ToolStripButton();
-            this.lblSelectCategory = new System.Windows.Forms.Label();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.lblCategory = new System.Windows.Forms.Label();
-            this.lblSelectDifficulty = new System.Windows.Forms.Label();
             this.cbDifficulty = new System.Windows.Forms.ComboBox();
             this.lblDifficulty = new System.Windows.Forms.Label();
-            this.lblSelectCookingTime = new System.Windows.Forms.Label();
-            this.lblServings = new System.Windows.Forms.Label();
-            this.lblSelectIngredients = new System.Windows.Forms.Label();
-            this.lblSelectDescription = new System.Windows.Forms.Label();
             this.btnAddPhoto = new System.Windows.Forms.Button();
-            this.lblSelectName = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.lblportions = new System.Windows.Forms.Label();
             this.numUpDownPortionsNumber = new System.Windows.Forms.NumericUpDown();
@@ -69,7 +62,7 @@
             this.btnClose});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1067, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1500, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -79,30 +72,24 @@
             this.btnLogo.Image = global::HealthyMealPlanning.Properties.Resources.HealthyMealPlanningIcon;
             this.btnLogo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLogo.Name = "btnLogo";
-            this.btnLogo.Size = new System.Drawing.Size(29, 28);
-            this.btnLogo.Text = "toolStripButton1";
+            this.btnLogo.Size = new System.Drawing.Size(29, 24);
+            this.btnLogo.Text = "На головне меню";
+            this.btnLogo.Click += new System.EventHandler(this.btnLogo_Click);
             // 
             // btnClose
             // 
+            this.btnClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.btnClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.btnClose.Image = global::HealthyMealPlanning.Properties.Resources.close;
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(29, 28);
-            this.btnClose.Text = "toolStripButton2";
+            this.btnClose.Size = new System.Drawing.Size(29, 24);
+            this.btnClose.Text = "Скасувати";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // lblSelectCategory
-            // 
-            this.lblSelectCategory.AutoSize = true;
-            this.lblSelectCategory.Location = new System.Drawing.Point(49, 647);
-            this.lblSelectCategory.Name = "lblSelectCategory";
-            this.lblSelectCategory.Size = new System.Drawing.Size(101, 16);
-            this.lblSelectCategory.TabIndex = 54;
-            this.lblSelectCategory.Text = "Select category";
             // 
             // cbCategory
             // 
+            this.cbCategory.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Items.AddRange(new object[] {
             "Dessert",
@@ -111,239 +98,209 @@
             "Salads",
             "Soups",
             "Vegetables"});
-            this.cbCategory.Location = new System.Drawing.Point(51, 620);
+            this.cbCategory.Location = new System.Drawing.Point(810, 648);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(121, 24);
+            this.cbCategory.Size = new System.Drawing.Size(326, 48);
             this.cbCategory.TabIndex = 53;
             // 
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(48, 601);
+            this.lblCategory.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategory.Location = new System.Drawing.Point(803, 575);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(62, 16);
+            this.lblCategory.Size = new System.Drawing.Size(149, 40);
             this.lblCategory.TabIndex = 52;
-            this.lblCategory.Text = "Category";
-            // 
-            // lblSelectDifficulty
-            // 
-            this.lblSelectDifficulty.AutoSize = true;
-            this.lblSelectDifficulty.Location = new System.Drawing.Point(55, 570);
-            this.lblSelectDifficulty.Name = "lblSelectDifficulty";
-            this.lblSelectDifficulty.Size = new System.Drawing.Size(95, 16);
-            this.lblSelectDifficulty.TabIndex = 51;
-            this.lblSelectDifficulty.Text = "Select difficulty";
+            this.lblCategory.Text = "Категорія";
             // 
             // cbDifficulty
             // 
+            this.cbDifficulty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbDifficulty.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDifficulty.FormattingEnabled = true;
             this.cbDifficulty.Items.AddRange(new object[] {
             "Easy",
             "Medium",
             "Difficult"});
-            this.cbDifficulty.Location = new System.Drawing.Point(51, 543);
+            this.cbDifficulty.Location = new System.Drawing.Point(810, 483);
             this.cbDifficulty.Name = "cbDifficulty";
-            this.cbDifficulty.Size = new System.Drawing.Size(121, 24);
+            this.cbDifficulty.Size = new System.Drawing.Size(326, 48);
             this.cbDifficulty.TabIndex = 50;
             // 
             // lblDifficulty
             // 
             this.lblDifficulty.AutoSize = true;
-            this.lblDifficulty.Location = new System.Drawing.Point(48, 524);
+            this.lblDifficulty.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDifficulty.Location = new System.Drawing.Point(803, 422);
             this.lblDifficulty.Name = "lblDifficulty";
-            this.lblDifficulty.Size = new System.Drawing.Size(56, 16);
+            this.lblDifficulty.Size = new System.Drawing.Size(170, 40);
             this.lblDifficulty.TabIndex = 49;
-            this.lblDifficulty.Text = "Difficulty";
-            // 
-            // lblSelectCookingTime
-            // 
-            this.lblSelectCookingTime.AutoSize = true;
-            this.lblSelectCookingTime.Location = new System.Drawing.Point(48, 488);
-            this.lblSelectCookingTime.Name = "lblSelectCookingTime";
-            this.lblSelectCookingTime.Size = new System.Drawing.Size(253, 16);
-            this.lblSelectCookingTime.TabIndex = 48;
-            this.lblSelectCookingTime.Text = "How long does it take to cook this recipe?";
-            // 
-            // lblServings
-            // 
-            this.lblServings.AutoSize = true;
-            this.lblServings.Location = new System.Drawing.Point(44, 415);
-            this.lblServings.Name = "lblServings";
-            this.lblServings.Size = new System.Drawing.Size(392, 16);
-            this.lblServings.TabIndex = 47;
-            this.lblServings.Text = "This is used to scale the recipe and calculate nutrition per serving";
-            // 
-            // lblSelectIngredients
-            // 
-            this.lblSelectIngredients.AutoSize = true;
-            this.lblSelectIngredients.Location = new System.Drawing.Point(44, 335);
-            this.lblSelectIngredients.Name = "lblSelectIngredients";
-            this.lblSelectIngredients.Size = new System.Drawing.Size(202, 16);
-            this.lblSelectIngredients.TabIndex = 46;
-            this.lblSelectIngredients.Text = "Add one or pasete multiple items";
-            // 
-            // lblSelectDescription
-            // 
-            this.lblSelectDescription.AutoSize = true;
-            this.lblSelectDescription.Location = new System.Drawing.Point(44, 256);
-            this.lblSelectDescription.Name = "lblSelectDescription";
-            this.lblSelectDescription.Size = new System.Drawing.Size(435, 16);
-            this.lblSelectDescription.TabIndex = 45;
-            this.lblSelectDescription.Text = "Introduce your recipe, add notes, cooking tips, serving suggestions, etc...";
+            this.lblDifficulty.Text = "Складність";
             // 
             // btnAddPhoto
             // 
-            this.btnAddPhoto.Location = new System.Drawing.Point(43, 149);
+            this.btnAddPhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(145)))), ((int)(((byte)(0)))));
+            this.btnAddPhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPhoto.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddPhoto.ForeColor = System.Drawing.Color.White;
+            this.btnAddPhoto.Location = new System.Drawing.Point(275, 261);
             this.btnAddPhoto.Name = "btnAddPhoto";
-            this.btnAddPhoto.Size = new System.Drawing.Size(148, 46);
+            this.btnAddPhoto.Size = new System.Drawing.Size(326, 129);
             this.btnAddPhoto.TabIndex = 44;
-            this.btnAddPhoto.Text = "Add photo";
-            this.btnAddPhoto.UseVisualStyleBackColor = true;
+            this.btnAddPhoto.Text = "Додати фото";
+            this.btnAddPhoto.UseVisualStyleBackColor = false;
             this.btnAddPhoto.Click += new System.EventHandler(this.btnAddPhoto_Click);
-            // 
-            // lblSelectName
-            // 
-            this.lblSelectName.AutoSize = true;
-            this.lblSelectName.Location = new System.Drawing.Point(42, 120);
-            this.lblSelectName.Name = "lblSelectName";
-            this.lblSelectName.Size = new System.Drawing.Size(153, 16);
-            this.lblSelectName.TabIndex = 43;
-            this.lblSelectName.Text = "Give your recipe a name";
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(340, 663);
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(145)))), ((int)(((byte)(0)))));
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(494, 763);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(235, 51);
+            this.btnSave.Size = new System.Drawing.Size(474, 90);
             this.btnSave.TabIndex = 42;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Text = "Зберегти";
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // lblportions
             // 
             this.lblportions.AutoSize = true;
-            this.lblportions.Location = new System.Drawing.Point(268, 392);
+            this.lblportions.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblportions.Location = new System.Drawing.Point(1160, 183);
             this.lblportions.Name = "lblportions";
-            this.lblportions.Size = new System.Drawing.Size(55, 16);
+            this.lblportions.Size = new System.Drawing.Size(102, 40);
             this.lblportions.TabIndex = 41;
-            this.lblportions.Text = "portions";
+            this.lblportions.Text = "порції";
             // 
             // numUpDownPortionsNumber
             // 
-            this.numUpDownPortionsNumber.Location = new System.Drawing.Point(46, 390);
+            this.numUpDownPortionsNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numUpDownPortionsNumber.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numUpDownPortionsNumber.Location = new System.Drawing.Point(810, 181);
             this.numUpDownPortionsNumber.Name = "numUpDownPortionsNumber";
-            this.numUpDownPortionsNumber.Size = new System.Drawing.Size(197, 22);
+            this.numUpDownPortionsNumber.Size = new System.Drawing.Size(326, 48);
             this.numUpDownPortionsNumber.TabIndex = 40;
             // 
             // lblPortionsNumber
             // 
             this.lblPortionsNumber.AutoSize = true;
-            this.lblPortionsNumber.Location = new System.Drawing.Point(43, 371);
+            this.lblPortionsNumber.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPortionsNumber.Location = new System.Drawing.Point(803, 120);
             this.lblPortionsNumber.Name = "lblPortionsNumber";
-            this.lblPortionsNumber.Size = new System.Drawing.Size(107, 16);
+            this.lblPortionsNumber.Size = new System.Drawing.Size(244, 40);
             this.lblPortionsNumber.TabIndex = 39;
-            this.lblPortionsNumber.Text = "Portions Number";
+            this.lblPortionsNumber.Text = "Кількість порцій";
             // 
             // txtCookingTime
             // 
-            this.txtCookingTime.Location = new System.Drawing.Point(47, 463);
+            this.txtCookingTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCookingTime.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCookingTime.Location = new System.Drawing.Point(810, 331);
             this.txtCookingTime.Name = "txtCookingTime";
-            this.txtCookingTime.Size = new System.Drawing.Size(281, 22);
+            this.txtCookingTime.Size = new System.Drawing.Size(326, 48);
             this.txtCookingTime.TabIndex = 38;
             // 
             // lblCookingTime
             // 
             this.lblCookingTime.AutoSize = true;
-            this.lblCookingTime.Location = new System.Drawing.Point(48, 444);
+            this.lblCookingTime.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCookingTime.Location = new System.Drawing.Point(803, 267);
             this.lblCookingTime.Name = "lblCookingTime";
-            this.lblCookingTime.Size = new System.Drawing.Size(91, 16);
+            this.lblCookingTime.Size = new System.Drawing.Size(264, 40);
             this.lblCookingTime.TabIndex = 37;
-            this.lblCookingTime.Text = "Cooking Time";
+            this.lblCookingTime.Text = "Час приготування";
             // 
             // lblminutes
             // 
             this.lblminutes.AutoSize = true;
-            this.lblminutes.Location = new System.Drawing.Point(352, 466);
+            this.lblminutes.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblminutes.Location = new System.Drawing.Point(1160, 336);
             this.lblminutes.Name = "lblminutes";
-            this.lblminutes.Size = new System.Drawing.Size(53, 16);
+            this.lblminutes.Size = new System.Drawing.Size(118, 40);
             this.lblminutes.TabIndex = 36;
-            this.lblminutes.Text = "minutes";
+            this.lblminutes.Text = "хвилин";
             // 
             // txtIngredients
             // 
-            this.txtIngredients.Location = new System.Drawing.Point(43, 310);
+            this.txtIngredients.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtIngredients.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIngredients.Location = new System.Drawing.Point(275, 648);
             this.txtIngredients.Name = "txtIngredients";
-            this.txtIngredients.Size = new System.Drawing.Size(148, 22);
+            this.txtIngredients.Size = new System.Drawing.Size(342, 48);
             this.txtIngredients.TabIndex = 35;
             // 
             // lblIngredients
             // 
             this.lblIngredients.AutoSize = true;
-            this.lblIngredients.Location = new System.Drawing.Point(42, 291);
+            this.lblIngredients.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngredients.Location = new System.Drawing.Point(268, 575);
             this.lblIngredients.Name = "lblIngredients";
-            this.lblIngredients.Size = new System.Drawing.Size(73, 16);
+            this.lblIngredients.Size = new System.Drawing.Size(177, 40);
             this.lblIngredients.TabIndex = 34;
-            this.lblIngredients.Text = "Ingredients";
+            this.lblIngredients.Text = "Інгредієнти";
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(43, 231);
+            this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDescription.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(275, 484);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(158, 22);
+            this.txtDescription.Size = new System.Drawing.Size(342, 48);
             this.txtDescription.TabIndex = 33;
             // 
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(42, 212);
+            this.lblDescription.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescription.Location = new System.Drawing.Point(268, 422);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(75, 16);
+            this.lblDescription.Size = new System.Drawing.Size(88, 40);
             this.lblDescription.TabIndex = 32;
-            this.lblDescription.Text = "Description";
+            this.lblDescription.Text = "Опис";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(43, 95);
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(275, 175);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(156, 22);
+            this.txtName.Size = new System.Drawing.Size(326, 48);
             this.txtName.TabIndex = 31;
+            this.txtName.Text = "\r\n";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(42, 76);
+            this.lblName.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(268, 114);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(44, 16);
+            this.lblName.Size = new System.Drawing.Size(100, 40);
             this.lblName.TabIndex = 30;
-            this.lblName.Text = "Name";
+            this.lblName.Text = "Назва";
             // 
             // lblAddRecipe
             // 
             this.lblAddRecipe.AutoSize = true;
-            this.lblAddRecipe.Location = new System.Drawing.Point(42, 45);
+            this.lblAddRecipe.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddRecipe.Location = new System.Drawing.Point(266, 36);
             this.lblAddRecipe.Name = "lblAddRecipe";
-            this.lblAddRecipe.Size = new System.Drawing.Size(73, 16);
+            this.lblAddRecipe.Size = new System.Drawing.Size(280, 49);
             this.lblAddRecipe.TabIndex = 29;
-            this.lblAddRecipe.Text = "Add recipe";
+            this.lblAddRecipe.Text = "Додати рецепт";
             // 
             // frmCreateRecipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 736);
-            this.Controls.Add(this.lblSelectCategory);
+            this.ClientSize = new System.Drawing.Size(1500, 900);
             this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.lblCategory);
-            this.Controls.Add(this.lblSelectDifficulty);
             this.Controls.Add(this.cbDifficulty);
             this.Controls.Add(this.lblDifficulty);
-            this.Controls.Add(this.lblSelectCookingTime);
-            this.Controls.Add(this.lblServings);
-            this.Controls.Add(this.lblSelectIngredients);
-            this.Controls.Add(this.lblSelectDescription);
             this.Controls.Add(this.btnAddPhoto);
-            this.Controls.Add(this.lblSelectName);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.lblportions);
             this.Controls.Add(this.numUpDownPortionsNumber);
@@ -376,18 +333,11 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnLogo;
         private System.Windows.Forms.ToolStripButton btnClose;
-        private System.Windows.Forms.Label lblSelectCategory;
         private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.Label lblCategory;
-        private System.Windows.Forms.Label lblSelectDifficulty;
         private System.Windows.Forms.ComboBox cbDifficulty;
         private System.Windows.Forms.Label lblDifficulty;
-        private System.Windows.Forms.Label lblSelectCookingTime;
-        private System.Windows.Forms.Label lblServings;
-        private System.Windows.Forms.Label lblSelectIngredients;
-        private System.Windows.Forms.Label lblSelectDescription;
         private System.Windows.Forms.Button btnAddPhoto;
-        private System.Windows.Forms.Label lblSelectName;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label lblportions;
         private System.Windows.Forms.NumericUpDown numUpDownPortionsNumber;
