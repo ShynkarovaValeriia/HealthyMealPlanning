@@ -99,6 +99,7 @@
             this.btnFavorite.Name = "btnFavorite";
             this.btnFavorite.Size = new System.Drawing.Size(50, 50);
             this.btnFavorite.TabIndex = 10;
+            this.toolTip3.SetToolTip(this.btnFavorite, "Сподобалось");
             this.btnFavorite.UseVisualStyleBackColor = true;
             this.btnFavorite.Click += new System.EventHandler(this.btnFavorite_Click);
             // 
@@ -110,6 +111,7 @@
             this.btnAddPlan.Name = "btnAddPlan";
             this.btnAddPlan.Size = new System.Drawing.Size(50, 50);
             this.btnAddPlan.TabIndex = 9;
+            this.toolTip2.SetToolTip(this.btnAddPlan, "Додати до плану");
             this.btnAddPlan.UseVisualStyleBackColor = true;
             // 
             // btnSave
@@ -120,6 +122,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(50, 50);
             this.btnSave.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.btnSave, "Зберегти");
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -350,18 +353,6 @@
             this.lblReviews.Size = new System.Drawing.Size(129, 40);
             this.lblReviews.TabIndex = 5;
             this.lblReviews.Text = "Відгуки:";
-            // 
-            // toolTip1
-            // 
-            this.toolTip1.ToolTipTitle = "Зберегти";
-            // 
-            // toolTip2
-            // 
-            this.toolTip2.ToolTipTitle = "Додати до плану";
-            // 
-            // toolTip3
-            // 
-            this.toolTip3.ToolTipTitle = "Сподобалось";
             // 
             // frmRecipe
             // 

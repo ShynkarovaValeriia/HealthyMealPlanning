@@ -165,7 +165,7 @@ Way</value>
     <value>NoControl</value>
   </data>
   <data name="lblRegister.Location" type="System.Drawing.Point, System.Drawing">
-    <value>480, 742</value>
+    <value>471, 742</value>
   </data>
   <data name="lblRegister.Size" type="System.Drawing.Size, System.Drawing">
     <value>545, 35</value>

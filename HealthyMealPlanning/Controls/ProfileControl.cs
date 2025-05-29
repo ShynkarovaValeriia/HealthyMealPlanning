@@ -257,7 +257,7 @@ namespace HealthyMealPlanning
 
             if (updates.Count == 0)
             {
-                MessageBox.Show("Будь ласка, введіть хоча б одне поле для зміни.");
+                MessageBox.Show("Введіть хоча б одне поле для зміни.");
                 return;
             }
 
@@ -288,7 +288,7 @@ namespace HealthyMealPlanning
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Помилка БД: " + ex.Message);
+                MessageBox.Show("Помилка: " + ex.Message);
             }
             finally
             {
@@ -479,11 +479,11 @@ namespace HealthyMealPlanning
                     conn.Open();
 
                     string query = @"
-                select r.id, r.name, r.image_path
-                from favorites f
-                join recipes r on f.recipe_id = r.id
-                where f.user_id = @UserId
-                order by f.created_at desc";
+                        select r.id, r.name, r.image_path
+                        from favorites f
+                        join recipes r on f.recipe_id = r.id
+                        where f.user_id = @UserId
+                        order by f.created_at desc";
 
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@UserId", Session.UserId);
@@ -519,11 +519,11 @@ namespace HealthyMealPlanning
                     conn.Open();
 
                     string query = @"
-                select r.id, r.name, r.image_path
-                from saved_recipes s
-                join recipes r on s.recipe_id = r.id
-                where s.user_id = @UserId
-                order by s.created_at desc";
+                        select r.id, r.name, r.image_path
+                        from saved_recipes s
+                        join recipes r on s.recipe_id = r.id
+                        where s.user_id = @UserId
+                        order by s.created_at desc";
 
                     MySqlCommand cmd = new MySqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@UserId", Session.UserId);

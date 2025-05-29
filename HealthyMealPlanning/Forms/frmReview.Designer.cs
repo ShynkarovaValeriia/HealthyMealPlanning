@@ -59,7 +59,7 @@
             this.btnClose});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1500, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1500, 31);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -69,7 +69,7 @@
             this.btnLogo.Image = global::HealthyMealPlanning.Properties.Resources.HealthyMealPlanningIcon;
             this.btnLogo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLogo.Name = "btnLogo";
-            this.btnLogo.Size = new System.Drawing.Size(29, 24);
+            this.btnLogo.Size = new System.Drawing.Size(29, 28);
             this.btnLogo.Text = "На головне меню";
             this.btnLogo.ToolTipText = "На головне меню";
             this.btnLogo.Click += new System.EventHandler(this.btnLogo_Click);
@@ -81,7 +81,7 @@
             this.btnClose.Image = global::HealthyMealPlanning.Properties.Resources.close;
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(29, 24);
+            this.btnClose.Size = new System.Drawing.Size(29, 28);
             this.btnClose.Text = "Скасувати";
             this.btnClose.ToolTipText = "Скасувати";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -90,7 +90,7 @@
             // 
             this.lblYourOpinion.AutoSize = true;
             this.lblYourOpinion.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYourOpinion.Location = new System.Drawing.Point(564, 51);
+            this.lblYourOpinion.Location = new System.Drawing.Point(510, 51);
             this.lblYourOpinion.Name = "lblYourOpinion";
             this.lblYourOpinion.Size = new System.Drawing.Size(484, 49);
             this.lblYourOpinion.TabIndex = 1;

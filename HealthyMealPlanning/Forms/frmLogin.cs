@@ -30,7 +30,7 @@ namespace HealthyMealPlanning
 
             if (username == "" || password == "")
             {
-                MessageBox.Show("Будь ласка, введіть ім'я користувача та пароль.");
+                MessageBox.Show("Будь ласка, введіть ім'я користувача та пароль.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -54,19 +54,19 @@ namespace HealthyMealPlanning
                     Session.Username = reader.GetString("username");
                     Session.FullName = reader.GetString("full_name");
 
-                    this.Hide();
+                    this.Close();
                     new frmHome().Show();
                 }
                 else
                 {
-                    MessageBox.Show("Невірне ім'я користувача або пароль.");
+                    MessageBox.Show("Невірне ім'я користувача або пароль.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 reader.Close();
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Помилка підключення або запиту: " + ex.Message);
+                MessageBox.Show("Помилка підключення або запиту: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

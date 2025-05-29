@@ -35,7 +35,6 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.ckbRemember = new System.Windows.Forms.CheckBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.lblForgotPassword = new System.Windows.Forms.Label();
             this.lblRegisterNow = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnLogo = new System.Windows.Forms.ToolStripButton();
@@ -69,7 +68,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(469, 284);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(337, 48);
+            this.txtUsername.Size = new System.Drawing.Size(551, 48);
             this.txtUsername.TabIndex = 3;
             // 
             // lblPassword
@@ -88,12 +87,13 @@
             this.txtPassword.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(469, 425);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(337, 48);
+            this.txtPassword.Size = new System.Drawing.Size(551, 48);
             this.txtPassword.TabIndex = 5;
             // 
             // ckbRemember
             // 
             this.ckbRemember.AutoSize = true;
+            this.ckbRemember.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ckbRemember.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ckbRemember.Location = new System.Drawing.Point(469, 497);
             this.ckbRemember.Name = "ckbRemember";
@@ -105,6 +105,7 @@
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(145)))), ((int)(((byte)(0)))));
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
@@ -116,22 +117,12 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // lblForgotPassword
-            // 
-            this.lblForgotPassword.AutoSize = true;
-            this.lblForgotPassword.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForgotPassword.Location = new System.Drawing.Point(644, 736);
-            this.lblForgotPassword.Name = "lblForgotPassword";
-            this.lblForgotPassword.Size = new System.Drawing.Size(200, 35);
-            this.lblForgotPassword.TabIndex = 8;
-            this.lblForgotPassword.Text = "Забули пароль?";
-            // 
             // lblRegisterNow
             // 
             this.lblRegisterNow.AutoSize = true;
             this.lblRegisterNow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRegisterNow.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegisterNow.Location = new System.Drawing.Point(514, 789);
+            this.lblRegisterNow.Location = new System.Drawing.Point(514, 736);
             this.lblRegisterNow.Name = "lblRegisterNow";
             this.lblRegisterNow.Size = new System.Drawing.Size(460, 35);
             this.lblRegisterNow.TabIndex = 9;
@@ -140,6 +131,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnLogo,
@@ -173,10 +165,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1500, 900);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lblRegisterNow);
-            this.Controls.Add(this.lblForgotPassword);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.ckbRemember);
             this.Controls.Add(this.txtPassword);
@@ -204,7 +196,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.CheckBox ckbRemember;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Label lblForgotPassword;
         private System.Windows.Forms.Label lblRegisterNow;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton btnClose;

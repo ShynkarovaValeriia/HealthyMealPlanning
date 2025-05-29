@@ -153,11 +153,11 @@
     </Compile>
     <Compile Include="Сlasses\DBMySQLUtil.cs" />
     <Compile Include="Сlasses\DBUtils.cs" />
-    <Compile Include="Controls\ExploreControl.cs">
+    <Compile Include="Controls\HomeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\ExploreControl.Designer.cs">
-      <DependentUpon>ExploreControl.cs</DependentUpon>
+    <Compile Include="Controls\HomeControl.Designer.cs">
+      <DependentUpon>HomeControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmHome.cs">
       <SubType>Form</SubType>
@@ -195,11 +195,11 @@
     <Compile Include="Controls\PlannerControl.Designer.cs">
       <DependentUpon>PlannerControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\HomeControl.cs">
+    <Compile Include="Controls\ExploreControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\HomeControl.Designer.cs">
-      <DependentUpon>HomeControl.cs</DependentUpon>
+    <Compile Include="Controls\ExploreControl.Designer.cs">
+      <DependentUpon>ExploreControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmRecipe.cs">
       <SubType>Form</SubType>
@@ -216,8 +216,8 @@
     <Compile Include="Сlasses\Session.cs" />
     <Compile Include="Сlasses\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Controls\ExploreControl.resx">
-      <DependentUpon>ExploreControl.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\HomeControl.resx">
+      <DependentUpon>HomeControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\PlannerControl.uk-UA.resx">
       <DependentUpon>PlannerControl.cs</DependentUpon>
@@ -243,8 +243,8 @@
     <EmbeddedResource Include="Controls\PlannerControl.resx">
       <DependentUpon>PlannerControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\HomeControl.resx">
-      <DependentUpon>HomeControl.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\ExploreControl.resx">
+      <DependentUpon>ExploreControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmReview.resx">
       <DependentUpon>frmReview.cs</DependentUpon>
@@ -376,6 +376,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\star_half.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\account_circle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
