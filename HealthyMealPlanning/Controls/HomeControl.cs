@@ -14,6 +14,8 @@ namespace HealthyMealPlanning
 {
     public partial class HomeControl : UserControl
     {
+        public Panel MainPanel { get; set; }
+
         public HomeControl()
         {
             InitializeComponent();
@@ -73,8 +75,7 @@ namespace HealthyMealPlanning
 
                             picture.Click += (s, e) =>
                             {
-                                MessageBox.Show("Успішне відкриття!");
-                                // Тут можна буде викликати форму з профілем користувача
+                                ShowExploreWithUserRecipes(userId);
                             };
 
                             panel.Controls.Add(picture);
@@ -88,6 +89,16 @@ namespace HealthyMealPlanning
                     MessageBox.Show("Помилка при завантаженні авторів: " + ex.Message);
                 }
             }
+        }
+
+        private void ShowExploreWithUserRecipes(int userId)
+        {
+            ExploreControl explore = new ExploreControl();
+            explore.Dock = DockStyle.Fill;
+            explore.LoadUserRecipes(userId);
+
+            MainPanel.Controls.Clear(); // використовуємо передану панель
+            MainPanel.Controls.Add(explore);
         }
 
         // Відображення рецептів
@@ -150,6 +161,21 @@ namespace HealthyMealPlanning
                                 Width = 130,
                                 Height = 30,
                                 TextAlign = ContentAlignment.TopCenter
+                            };
+
+                            recipeImage.Cursor = Cursors.Hand;
+                            lblName.Cursor = Cursors.Hand;
+
+                            recipeImage.Click += (s, e) =>
+                            {
+                                frmRecipe recipeForm = new frmRecipe(recipeId);
+                                recipeForm.ShowDialog();
+                            };
+
+                            lblName.Click += (s, e) =>
+                            {
+                                frmRecipe recipeForm = new frmRecipe(recipeId);
+                                recipeForm.ShowDialog();
                             };
 
                             Button btnFavorite = new Button

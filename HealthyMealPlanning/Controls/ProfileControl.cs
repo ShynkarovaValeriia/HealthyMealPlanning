@@ -70,16 +70,12 @@ namespace HealthyMealPlanning
                     string recipeName = reader.GetString("name");
                     string imagePath = reader.GetString("image_path");
 
-                    // Створення панелі
                     Panel panel = new Panel();
                     panel.Width = 150;
-                    panel.Height = 200;
+                    panel.Height = 240;
                     panel.Margin = new Padding(10);
                     panel.Tag = recipeId;
-                    panel.Cursor = Cursors.Hand;
-
-                    // Обробник кліку
-                    panel.Click += PanelRecipe_Click;
+                    panel.BorderStyle = BorderStyle.FixedSingle;
 
                     // Картинка
                     PictureBox pictureBox = new PictureBox();
@@ -87,16 +83,14 @@ namespace HealthyMealPlanning
                     pictureBox.Height = 140;
                     pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
                     pictureBox.Tag = recipeId;
-                    pictureBox.Cursor = Cursors.Hand;
-                    pictureBox.Click += PanelRecipe_Click; // також обробник
+                    pictureBox.Click += PanelRecipe_Click;
 
                     try
                     {
                         string fullPath = Path.Combine(Application.StartupPath, imagePath);
-                        if (File.Exists(fullPath))
-                            pictureBox.Image = Image.FromFile(fullPath);
-                        else
-                            pictureBox.Image = Properties.Resources.placeholder;
+                        pictureBox.Image = File.Exists(fullPath)
+                            ? Image.FromFile(fullPath)
+                            : Properties.Resources.placeholder;
                     }
                     catch
                     {
@@ -107,17 +101,46 @@ namespace HealthyMealPlanning
                     Label label = new Label();
                     label.Text = recipeName;
                     label.TextAlign = ContentAlignment.MiddleCenter;
-                    label.Dock = DockStyle.Bottom;
+                    label.Dock = DockStyle.Top;
                     label.Height = 40;
                     label.Font = new Font("Segoe UI", 10, FontStyle.Bold);
                     label.MaximumSize = new Size(140, 40);
                     label.AutoEllipsis = true;
                     label.Tag = recipeId;
                     label.Click += PanelRecipe_Click;
-                    label.Cursor = Cursors.Hand;
 
-                    panel.Controls.Add(pictureBox);
+                    // Кнопка Змінити
+                    PictureBox btnEdit = new PictureBox();
+                    btnEdit.Image = Properties.Resources.edit;
+                    btnEdit.Width = 24;
+                    btnEdit.Height = 24;
+                    btnEdit.SizeMode = PictureBoxSizeMode.Zoom;
+                    btnEdit.Cursor = Cursors.Hand;
+                    btnEdit.Tag = recipeId;
+                    btnEdit.Click += BtnEdit_Click;
+
+                    // Кнопка Видалити
+                    PictureBox btnDelete = new PictureBox();
+                    btnDelete.Image = Properties.Resources.delete;
+                    btnDelete.Width = 24;
+                    btnDelete.Height = 24;
+                    btnDelete.SizeMode = PictureBoxSizeMode.Zoom;
+                    btnDelete.Cursor = Cursors.Hand;
+                    btnDelete.Tag = recipeId;
+                    btnDelete.Click += BtnDelete_Click;
+
+                    // Панель для кнопок
+                    FlowLayoutPanel actionPanel = new FlowLayoutPanel();
+                    actionPanel.FlowDirection = FlowDirection.LeftToRight;
+                    actionPanel.Height = 30;
+                    actionPanel.Width = 140;
+                    actionPanel.Controls.Add(btnEdit);
+                    actionPanel.Controls.Add(btnDelete);
+
+                    // Додати в панель
+                    panel.Controls.Add(actionPanel);
                     panel.Controls.Add(label);
+                    panel.Controls.Add(pictureBox);
 
                     flowLayoutPanelRecipes.Controls.Add(panel);
                 }
@@ -133,6 +156,52 @@ namespace HealthyMealPlanning
                 conn.Close();
             }
         }
+
+        // Кнопка Редагувати рецепт
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            if (sender is Control control && control.Tag is int recipeId)
+            {
+                frmCreateRecipe editForm = new frmCreateRecipe(recipeId); // Передати id рецепта
+                editForm.ShowDialog();
+                LoadUserRecipes(); // Перезавантажити після змін
+            }
+        }
+
+        // Кнопка Видалити рецепт
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            if (sender is Control control && control.Tag is int recipeId)
+            {
+                DialogResult result = MessageBox.Show("Ви дійсно хочете видалити цей рецепт?",
+                                                      "Підтвердження видалення",
+                                                      MessageBoxButtons.YesNo,
+                                                      MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        using (MySqlConnection conn = DBUtils.GetDBConnection())
+                        {
+                            conn.Open();
+                            string deleteSql = "delete from recipes where id = @Id and user_id = @UserId";
+                            MySqlCommand cmd = new MySqlCommand(deleteSql, conn);
+                            cmd.Parameters.AddWithValue("@Id", recipeId);
+                            cmd.Parameters.AddWithValue("@UserId", Session.UserId);
+                            cmd.ExecuteNonQuery();
+
+                            MessageBox.Show("Рецепт успішно видалено!");
+                            LoadUserRecipes(); // Перезавантажити список
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Помилка при видаленні: " + ex.Message);
+                    }
+                }
+            }
+        }
+
 
         private void LoadUserProfile()
         {
@@ -179,19 +248,19 @@ namespace HealthyMealPlanning
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedTab.Text == "Activity")
+            if (tabControl1.SelectedTab.Text == "Активність")
             {
                 LoadFavoriteRecipes();
                 LoadSavedRecipes();
                 LoadUserReviews();
             }
 
-            if (tabControl1.SelectedTab.Text == "View own recipes")
+            if (tabControl1.SelectedTab.Text == "Власні рецепти")
             {
                 LoadUserRecipes();
             }
 
-            if (tabControl1.SelectedTab.Text == "Manage profile")
+            if (tabControl1.SelectedTab.Text == "Налаштування профілю")
             {
                 LoadUserProfile();
             }

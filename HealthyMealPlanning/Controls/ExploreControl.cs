@@ -229,7 +229,7 @@ namespace HealthyMealPlanning
             }
         }
 
-        private void LoadUserRecipes(int userId)
+        public void LoadUserRecipes(int userId)
         {
             pnlExplore.Controls.Clear();
 

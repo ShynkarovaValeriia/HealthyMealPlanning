@@ -59,9 +59,10 @@
             this.btnClose});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1500, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1500, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
             // 
             // btnLogo
             // 
@@ -69,7 +70,7 @@
             this.btnLogo.Image = global::HealthyMealPlanning.Properties.Resources.HealthyMealPlanningIcon;
             this.btnLogo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLogo.Name = "btnLogo";
-            this.btnLogo.Size = new System.Drawing.Size(29, 28);
+            this.btnLogo.Size = new System.Drawing.Size(29, 24);
             this.btnLogo.Text = "На головне меню";
             this.btnLogo.ToolTipText = "На головне меню";
             this.btnLogo.Click += new System.EventHandler(this.btnLogo_Click);
@@ -81,7 +82,7 @@
             this.btnClose.Image = global::HealthyMealPlanning.Properties.Resources.close;
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(29, 28);
+            this.btnClose.Size = new System.Drawing.Size(29, 24);
             this.btnClose.Text = "Скасувати";
             this.btnClose.ToolTipText = "Скасувати";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -90,7 +91,7 @@
             // 
             this.lblYourOpinion.AutoSize = true;
             this.lblYourOpinion.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYourOpinion.Location = new System.Drawing.Point(510, 51);
+            this.lblYourOpinion.Location = new System.Drawing.Point(501, 51);
             this.lblYourOpinion.Name = "lblYourOpinion";
             this.lblYourOpinion.Size = new System.Drawing.Size(484, 49);
             this.lblYourOpinion.TabIndex = 1;
@@ -100,7 +101,7 @@
             // 
             this.lblReviewFor.AutoSize = true;
             this.lblReviewFor.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReviewFor.Location = new System.Drawing.Point(437, 142);
+            this.lblReviewFor.Location = new System.Drawing.Point(416, 142);
             this.lblReviewFor.Name = "lblReviewFor";
             this.lblReviewFor.Size = new System.Drawing.Size(167, 40);
             this.lblReviewFor.TabIndex = 2;
@@ -110,7 +111,7 @@
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.Location = new System.Drawing.Point(437, 359);
+            this.lblDescription.Location = new System.Drawing.Point(416, 359);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(97, 40);
             this.lblDescription.TabIndex = 3;
@@ -120,10 +121,10 @@
             // 
             this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescription.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(444, 434);
+            this.txtDescription.Location = new System.Drawing.Point(416, 434);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(617, 242);
+            this.txtDescription.Size = new System.Drawing.Size(655, 242);
             this.txtDescription.TabIndex = 4;
             this.txtDescription.Text = "Поділіться своїм досвідом. Чи є якісь поради щодо покращення цього рецепту?";
             // 
@@ -133,9 +134,9 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(444, 742);
+            this.btnSave.Location = new System.Drawing.Point(416, 742);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(617, 83);
+            this.btnSave.Size = new System.Drawing.Size(655, 83);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Зберегти";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -149,16 +150,16 @@
             this.pnlRatings.Controls.Add(this.pbStar2);
             this.pnlRatings.Controls.Add(this.pbStar1);
             this.pnlRatings.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlRatings.Location = new System.Drawing.Point(444, 214);
+            this.pnlRatings.Location = new System.Drawing.Point(416, 214);
             this.pnlRatings.Name = "pnlRatings";
-            this.pnlRatings.Size = new System.Drawing.Size(617, 98);
+            this.pnlRatings.Size = new System.Drawing.Size(655, 98);
             this.pnlRatings.TabIndex = 8;
             // 
             // pbStar5
             // 
             this.pbStar5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbStar5.Image = global::HealthyMealPlanning.Properties.Resources.star_empty;
-            this.pbStar5.Location = new System.Drawing.Point(491, 19);
+            this.pbStar5.Location = new System.Drawing.Point(514, 19);
             this.pbStar5.Name = "pbStar5";
             this.pbStar5.Size = new System.Drawing.Size(60, 60);
             this.pbStar5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -168,7 +169,7 @@
             // pbStar4
             // 
             this.pbStar4.Image = global::HealthyMealPlanning.Properties.Resources.star_empty;
-            this.pbStar4.Location = new System.Drawing.Point(383, 19);
+            this.pbStar4.Location = new System.Drawing.Point(406, 19);
             this.pbStar4.Name = "pbStar4";
             this.pbStar4.Size = new System.Drawing.Size(60, 60);
             this.pbStar4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -178,7 +179,7 @@
             // pbStar3
             // 
             this.pbStar3.Image = global::HealthyMealPlanning.Properties.Resources.star_empty;
-            this.pbStar3.Location = new System.Drawing.Point(275, 19);
+            this.pbStar3.Location = new System.Drawing.Point(298, 19);
             this.pbStar3.Name = "pbStar3";
             this.pbStar3.Size = new System.Drawing.Size(60, 60);
             this.pbStar3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -188,7 +189,7 @@
             // pbStar2
             // 
             this.pbStar2.Image = global::HealthyMealPlanning.Properties.Resources.star_empty;
-            this.pbStar2.Location = new System.Drawing.Point(167, 19);
+            this.pbStar2.Location = new System.Drawing.Point(190, 19);
             this.pbStar2.Name = "pbStar2";
             this.pbStar2.Size = new System.Drawing.Size(60, 60);
             this.pbStar2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -198,7 +199,7 @@
             // pbStar1
             // 
             this.pbStar1.Image = global::HealthyMealPlanning.Properties.Resources.star_empty;
-            this.pbStar1.Location = new System.Drawing.Point(59, 19);
+            this.pbStar1.Location = new System.Drawing.Point(82, 19);
             this.pbStar1.Name = "pbStar1";
             this.pbStar1.Size = new System.Drawing.Size(60, 60);
             this.pbStar1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -222,6 +223,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReview";
             this.Load += new System.EventHandler(this.frmReview_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmReview_MouseDown);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.pnlRatings.ResumeLayout(false);

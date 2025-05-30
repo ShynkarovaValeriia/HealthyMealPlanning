@@ -129,36 +129,40 @@
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
+            this.lblCategory.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.Location = new System.Drawing.Point(411, 123);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(158, 40);
+            this.lblCategory.Size = new System.Drawing.Size(145, 37);
             this.lblCategory.TabIndex = 6;
             this.lblCategory.Text = "Категорія:";
             // 
             // lblDifficulty
             // 
             this.lblDifficulty.AutoSize = true;
+            this.lblDifficulty.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDifficulty.Location = new System.Drawing.Point(412, 200);
             this.lblDifficulty.Name = "lblDifficulty";
-            this.lblDifficulty.Size = new System.Drawing.Size(179, 40);
+            this.lblDifficulty.Size = new System.Drawing.Size(163, 37);
             this.lblDifficulty.TabIndex = 5;
             this.lblDifficulty.Text = "Складність:";
             // 
             // lblPortionsNumber
             // 
             this.lblPortionsNumber.AutoSize = true;
+            this.lblPortionsNumber.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPortionsNumber.Location = new System.Drawing.Point(412, 299);
             this.lblPortionsNumber.Name = "lblPortionsNumber";
-            this.lblPortionsNumber.Size = new System.Drawing.Size(253, 40);
+            this.lblPortionsNumber.Size = new System.Drawing.Size(231, 37);
             this.lblPortionsNumber.TabIndex = 4;
             this.lblPortionsNumber.Text = "Кількість порцій:";
             // 
             // lblCookingTime
             // 
             this.lblCookingTime.AutoSize = true;
+            this.lblCookingTime.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCookingTime.Location = new System.Drawing.Point(412, 251);
             this.lblCookingTime.Name = "lblCookingTime";
-            this.lblCookingTime.Size = new System.Drawing.Size(273, 40);
+            this.lblCookingTime.Size = new System.Drawing.Size(250, 37);
             this.lblCookingTime.TabIndex = 3;
             this.lblCookingTime.Text = "Час приготування:";
             // 
@@ -174,9 +178,10 @@
             // lblAuthor
             // 
             this.lblAuthor.AutoSize = true;
+            this.lblAuthor.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAuthor.Location = new System.Drawing.Point(412, 19);
             this.lblAuthor.Name = "lblAuthor";
-            this.lblAuthor.Size = new System.Drawing.Size(108, 40);
+            this.lblAuthor.Size = new System.Drawing.Size(100, 37);
             this.lblAuthor.TabIndex = 1;
             this.lblAuthor.Text = "Автор:";
             // 
@@ -185,6 +190,7 @@
             this.pbRecipeImage.Location = new System.Drawing.Point(19, 3);
             this.pbRecipeImage.Name = "pbRecipeImage";
             this.pbRecipeImage.Size = new System.Drawing.Size(369, 290);
+            this.pbRecipeImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbRecipeImage.TabIndex = 0;
             this.pbRecipeImage.TabStop = false;
             // 
@@ -322,6 +328,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(1500, 27);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
             // 
             // btnLogo
             // 
@@ -371,6 +378,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRecipe";
             this.Load += new System.EventHandler(this.frmRecipe_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmRecipe_MouseDown);
             this.pnlPreviewRecipe.ResumeLayout(false);
             this.pnlPreviewRecipe.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRecipeImage)).EndInit();

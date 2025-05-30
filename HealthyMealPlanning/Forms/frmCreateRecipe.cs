@@ -9,16 +9,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace HealthyMealPlanning
 {
     public partial class frmCreateRecipe : Form
     {
+        // Зовнішні методи для роботи з WinAPI
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HTCAPTION = 0x2;
+
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
         private string selectedImagePath = null;
+        private int? editingRecipeId = null;
 
         public frmCreateRecipe()
         {
             InitializeComponent();
+        }
+
+        public frmCreateRecipe(int recipeId)
+        {
+            InitializeComponent();
+            editingRecipeId = recipeId;
+            lblAddRecipe.Text = "Змінити рецепт";
+            LoadRecipeForEditing(recipeId);
         }
 
         private void btnLogo_Click(object sender, EventArgs e)
@@ -47,7 +67,7 @@ namespace HealthyMealPlanning
         }
 
         // Кнопка Збереження нового рецепту
-        private void btnSave_Click(object sender, EventArgs e)
+        public void btnSave_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtName.Text) ||
                 string.IsNullOrWhiteSpace(txtDescription.Text) ||
@@ -78,6 +98,46 @@ namespace HealthyMealPlanning
 
             // Шлях для збереження у БД
             string dbImagePath = "Resources/" + imageFileName;
+
+            if (editingRecipeId.HasValue)
+            {
+                // Редагування
+                try
+                {
+                    using (MySqlConnection conn = DBUtils.GetDBConnection())
+                    {
+                        conn.Open();
+                        string updateSql = @"update recipes set 
+                    name = @Name, description = @Description, ingredients = @Ingredients, 
+                    cooking_time = @CookingTime, portions_number = @Portions,
+                    image_path = @ImagePath, difficulty = @Difficulty, category = @Category
+                    where id = @Id and user_id = @UserId";
+
+                        MySqlCommand cmd = new MySqlCommand(updateSql, conn);
+                        cmd.Parameters.AddWithValue("@Name", recipeName);
+                        cmd.Parameters.AddWithValue("@Description", description);
+                        cmd.Parameters.AddWithValue("@Ingredients", ingredients);
+                        cmd.Parameters.AddWithValue("@CookingTime", cookingTime);
+                        cmd.Parameters.AddWithValue("@Portions", portionsNumber);
+                        cmd.Parameters.AddWithValue("@ImagePath", dbImagePath);
+                        cmd.Parameters.AddWithValue("@Difficulty", difficulty);
+                        cmd.Parameters.AddWithValue("@Category", category);
+                        cmd.Parameters.AddWithValue("@Id", editingRecipeId.Value);
+                        cmd.Parameters.AddWithValue("@UserId", Session.UserId);
+
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Рецепт оновлено!");
+                        this.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Помилка при оновленні: " + ex.Message);
+                }
+
+                return;
+            }
 
             try
             {
@@ -133,6 +193,54 @@ namespace HealthyMealPlanning
             cbDifficulty.SelectedIndex = -1;
             cbCategory.SelectedIndex = -1;
             selectedImagePath = null;
+        }
+
+        // Редагування рецепта
+        private void LoadRecipeForEditing(int recipeId)
+        {
+            using (MySqlConnection conn = DBUtils.GetDBConnection())
+            {
+                conn.Open();
+                string sql = "select * from recipes where id = @Id and user_id = @UserId";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@Id", recipeId);
+                cmd.Parameters.AddWithValue("@UserId", Session.UserId);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        txtName.Text = reader["name"].ToString();
+                        txtDescription.Text = reader["description"].ToString();
+                        txtIngredients.Text = reader["ingredients"].ToString();
+                        txtCookingTime.Text = reader["cooking_time"].ToString();
+                        numUpDownPortionsNumber.Value = Convert.ToInt32(reader["portions_number"]);
+                        cbDifficulty.SelectedItem = reader["difficulty"].ToString();
+                        cbCategory.SelectedItem = reader["category"].ToString();
+                        selectedImagePath = Path.Combine(Application.StartupPath, reader["image_path"].ToString());
+                    }
+                }
+            }
+        }
+
+
+        // Переміщення форми
+        private void frmCreateRecipe_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+            }
+        }
+
+        private void toolStrip1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+            }
         }
     }
 }

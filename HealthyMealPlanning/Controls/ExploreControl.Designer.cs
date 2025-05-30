@@ -58,9 +58,9 @@
             // pnlExplore
             // 
             this.pnlExplore.AutoScroll = true;
-            this.pnlExplore.Location = new System.Drawing.Point(85, 146);
+            this.pnlExplore.Location = new System.Drawing.Point(19, 113);
             this.pnlExplore.Name = "pnlExplore";
-            this.pnlExplore.Size = new System.Drawing.Size(1330, 727);
+            this.pnlExplore.Size = new System.Drawing.Size(1478, 719);
             this.pnlExplore.TabIndex = 3;
             // 
             // ExploreControl

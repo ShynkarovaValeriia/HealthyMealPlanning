@@ -72,6 +72,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(1500, 27);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
             // 
             // btnLogo
             // 
@@ -107,6 +108,7 @@
             this.Name = "frmSelectRecipe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSelectRecipe";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmSelectRecipe_MouseDown);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

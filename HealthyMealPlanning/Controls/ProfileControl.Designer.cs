@@ -32,12 +32,12 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pnlFavoriteRecipes = new System.Windows.Forms.Panel();
             this.lblReview = new System.Windows.Forms.Label();
             this.lblSavedRecipes = new System.Windows.Forms.Label();
             this.lblFavoriteRecipes = new System.Windows.Forms.Label();
-            this.pnlSavedRecipes = new System.Windows.Forms.Panel();
-            this.pnlReview = new System.Windows.Forms.Panel();
+            this.pnlFavoriteRecipes = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlReview = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlSavedRecipes = new System.Windows.Forms.FlowLayoutPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnAddOwnRecipe = new System.Windows.Forms.Button();
             this.flowLayoutPanelRecipes = new System.Windows.Forms.FlowLayoutPanel();
@@ -88,12 +88,12 @@
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
-            this.tabPage1.Controls.Add(this.pnlFavoriteRecipes);
             this.tabPage1.Controls.Add(this.lblReview);
             this.tabPage1.Controls.Add(this.lblSavedRecipes);
             this.tabPage1.Controls.Add(this.lblFavoriteRecipes);
-            this.tabPage1.Controls.Add(this.pnlSavedRecipes);
+            this.tabPage1.Controls.Add(this.pnlFavoriteRecipes);
             this.tabPage1.Controls.Add(this.pnlReview);
+            this.tabPage1.Controls.Add(this.pnlSavedRecipes);
             this.tabPage1.Location = new System.Drawing.Point(4, 42);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -102,20 +102,11 @@
             this.tabPage1.Text = "Активність";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // pnlFavoriteRecipes
-            // 
-            this.pnlFavoriteRecipes.AutoScroll = true;
-            this.pnlFavoriteRecipes.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlFavoriteRecipes.Location = new System.Drawing.Point(6, 65);
-            this.pnlFavoriteRecipes.Name = "pnlFavoriteRecipes";
-            this.pnlFavoriteRecipes.Size = new System.Drawing.Size(1460, 150);
-            this.pnlFavoriteRecipes.TabIndex = 4;
-            // 
             // lblReview
             // 
             this.lblReview.AutoSize = true;
             this.lblReview.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReview.Location = new System.Drawing.Point(6, 473);
+            this.lblReview.Location = new System.Drawing.Point(6, 601);
             this.lblReview.Name = "lblReview";
             this.lblReview.Size = new System.Drawing.Size(120, 40);
             this.lblReview.TabIndex = 2;
@@ -125,7 +116,7 @@
             // 
             this.lblSavedRecipes.AutoSize = true;
             this.lblSavedRecipes.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSavedRecipes.Location = new System.Drawing.Point(6, 241);
+            this.lblSavedRecipes.Location = new System.Drawing.Point(6, 300);
             this.lblSavedRecipes.Name = "lblSavedRecipes";
             this.lblSavedRecipes.Size = new System.Drawing.Size(287, 40);
             this.lblSavedRecipes.TabIndex = 1;
@@ -141,23 +132,35 @@
             this.lblFavoriteRecipes.TabIndex = 0;
             this.lblFavoriteRecipes.Text = "Улюблені рецепти";
             // 
-            // pnlSavedRecipes
+            // pnlFavoriteRecipes
             // 
-            this.pnlSavedRecipes.AutoScroll = true;
-            this.pnlSavedRecipes.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlSavedRecipes.Location = new System.Drawing.Point(6, 297);
-            this.pnlSavedRecipes.Name = "pnlSavedRecipes";
-            this.pnlSavedRecipes.Size = new System.Drawing.Size(1460, 150);
-            this.pnlSavedRecipes.TabIndex = 5;
+            this.pnlFavoriteRecipes.AutoScroll = true;
+            this.pnlFavoriteRecipes.AutoSize = true;
+            this.pnlFavoriteRecipes.Location = new System.Drawing.Point(6, 65);
+            this.pnlFavoriteRecipes.MaximumSize = new System.Drawing.Size(1460, 1460);
+            this.pnlFavoriteRecipes.Name = "pnlFavoriteRecipes";
+            this.pnlFavoriteRecipes.Size = new System.Drawing.Size(1460, 200);
+            this.pnlFavoriteRecipes.TabIndex = 7;
             // 
             // pnlReview
             // 
             this.pnlReview.AutoScroll = true;
-            this.pnlReview.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlReview.Location = new System.Drawing.Point(6, 528);
+            this.pnlReview.AutoSize = true;
+            this.pnlReview.Location = new System.Drawing.Point(6, 656);
+            this.pnlReview.MaximumSize = new System.Drawing.Size(1460, 1460);
             this.pnlReview.Name = "pnlReview";
-            this.pnlReview.Size = new System.Drawing.Size(1460, 150);
-            this.pnlReview.TabIndex = 6;
+            this.pnlReview.Size = new System.Drawing.Size(1460, 200);
+            this.pnlReview.TabIndex = 0;
+            // 
+            // pnlSavedRecipes
+            // 
+            this.pnlSavedRecipes.AutoScroll = true;
+            this.pnlSavedRecipes.AutoSize = true;
+            this.pnlSavedRecipes.Location = new System.Drawing.Point(6, 356);
+            this.pnlSavedRecipes.MaximumSize = new System.Drawing.Size(1460, 1460);
+            this.pnlSavedRecipes.Name = "pnlSavedRecipes";
+            this.pnlSavedRecipes.Size = new System.Drawing.Size(1460, 200);
+            this.pnlSavedRecipes.TabIndex = 8;
             // 
             // tabPage2
             // 
@@ -190,9 +193,9 @@
             // flowLayoutPanelRecipes
             // 
             this.flowLayoutPanelRecipes.AutoScroll = true;
-            this.flowLayoutPanelRecipes.Location = new System.Drawing.Point(6, 139);
+            this.flowLayoutPanelRecipes.Location = new System.Drawing.Point(6, 116);
             this.flowLayoutPanelRecipes.Name = "flowLayoutPanelRecipes";
-            this.flowLayoutPanelRecipes.Size = new System.Drawing.Size(1460, 486);
+            this.flowLayoutPanelRecipes.Size = new System.Drawing.Size(1460, 509);
             this.flowLayoutPanelRecipes.TabIndex = 0;
             // 
             // tabPage3
@@ -359,7 +362,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelRecipes;
         private System.Windows.Forms.PictureBox pbPicture;
         private System.Windows.Forms.Label lblChangeUsername;
         private System.Windows.Forms.TextBox txtChangeEmail;
@@ -373,11 +375,12 @@
         private System.Windows.Forms.Label lblSavedRecipes;
         private System.Windows.Forms.Label lblFavoriteRecipes;
         private System.Windows.Forms.Label lblReview;
-        private System.Windows.Forms.Panel pnlFavoriteRecipes;
-        private System.Windows.Forms.Panel pnlSavedRecipes;
-        private System.Windows.Forms.Panel pnlReview;
         private System.Windows.Forms.Button btnAddOwnRecipe;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.FlowLayoutPanel pnlFavoriteRecipes;
+        private System.Windows.Forms.FlowLayoutPanel pnlReview;
+        private System.Windows.Forms.FlowLayoutPanel pnlSavedRecipes;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelRecipes;
     }
 }

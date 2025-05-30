@@ -4,11 +4,22 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Runtime.InteropServices;
 
 namespace HealthyMealPlanning
 {
     public partial class frmSelectRecipe : Form
     {
+        // Зовнішні методи для роботи з WinAPI
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HTCAPTION = 0x2;
+
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
         private DateTime selectedDate;
 
         public frmSelectRecipe(DateTime date)
@@ -119,6 +130,25 @@ namespace HealthyMealPlanning
                 {
                     MessageBox.Show("Помилка при завантаженні рецептів: " + ex.Message);
                 }
+            }
+        }
+
+        // Переміщення форми
+        private void frmSelectRecipe_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+            }
+        }
+
+        private void toolStrip1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
             }
         }
     }

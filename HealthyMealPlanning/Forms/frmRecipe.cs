@@ -6,14 +6,26 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace HealthyMealPlanning
 {
     public partial class frmRecipe : Form
     {
+        // Зовнішні методи для роботи з WinAPI
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HTCAPTION = 0x2;
+
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
         private int recipeId;
         private bool isFavorite = false;
         private bool isSaved = false;
@@ -63,11 +75,11 @@ namespace HealthyMealPlanning
                 if (reader.Read())
                 {
                     lblNameRecipe.Text = reader["name"].ToString();
-                    lblAuthor.Text = "By " + reader["full_name"].ToString();
-                    lblCategory.Text = "Category: " + reader["category"].ToString();
-                    lblDifficulty.Text = "Difficulty: " + reader["difficulty"].ToString();
-                    lblCookingTime.Text = "Cooking time: " + reader["cooking_time"].ToString();
-                    lblPortionsNumber.Text = "Portions number: " + reader["portions_number"].ToString();
+                    lblAuthor.Text = "Автор: " + reader["full_name"].ToString();
+                    lblCategory.Text = "Категорія: " + reader["category"].ToString();
+                    lblDifficulty.Text = "Складність: " + reader["difficulty"].ToString();
+                    lblCookingTime.Text = "Час приготування: " + reader["cooking_time"].ToString() + " хвилин";
+                    lblPortionsNumber.Text = "Кількість порцій: " + reader["portions_number"].ToString();
 
                     string imagePath = reader["image_path"].ToString();
 
@@ -428,6 +440,25 @@ namespace HealthyMealPlanning
             finally
             {
                 conn.Close();
+            }
+        }
+
+        // Переміщення форми
+        private void frmRecipe_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+            }
+        }
+
+        private void toolStrip1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
             }
         }
     }

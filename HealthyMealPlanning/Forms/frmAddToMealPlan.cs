@@ -1,13 +1,25 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Drawing;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using System.Runtime.InteropServices;
 
 namespace HealthyMealPlanning
 {
     public partial class frmAddToMealPlan : Form
     {
+        // Зовнішні методи для роботи з WinAPI
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HTCAPTION = 0x2;
+
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
         private int userId;
         private int recipeId;
         private string recipeName;
@@ -61,10 +73,10 @@ namespace HealthyMealPlanning
         {
             string selectedMealType = "";
 
-            if (rbBreakfast.Checked) selectedMealType = "Breakfast";
-            else if (rbLunch.Checked) selectedMealType = "Lunch";
-            else if (rbSnacks.Checked) selectedMealType = "Snacks";
-            else if (rbDinner.Checked) selectedMealType = "Dinner";
+            if (rbBreakfast.Checked) selectedMealType = "Сніданок";
+            else if (rbLunch.Checked) selectedMealType = "Обід";
+            else if (rbSnacks.Checked) selectedMealType = "Закуски";
+            else if (rbDinner.Checked) selectedMealType = "Вечеря";
 
             using (MySqlConnection conn = DBUtils.GetDBConnection())
             {
@@ -94,6 +106,25 @@ namespace HealthyMealPlanning
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        // Переміщення форми
+        private void frmAddToMealPlan_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+            }
+        }
+
+        private void toolStrip1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+            }
         }
     }
 }

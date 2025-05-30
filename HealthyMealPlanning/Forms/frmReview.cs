@@ -5,14 +5,26 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace HealthyMealPlanning
 {
     public partial class frmReview : Form
     {
+        // Зовнішні методи для роботи з WinAPI
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HTCAPTION = 0x2;
+
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
         private int recipeId;
         private int userId;
         private int selectedRating = 0;
@@ -64,7 +76,7 @@ namespace HealthyMealPlanning
                 cmd.Parameters.AddWithValue("@RecipeId", recipeId);
 
                 object result = cmd.ExecuteScalar();
-                lblReviewFor.Text = "Review for: " + result?.ToString();
+                lblReviewFor.Text = "Огляд для: " + result?.ToString();
             }
             catch (Exception ex)
             {
@@ -197,6 +209,25 @@ namespace HealthyMealPlanning
             finally
             {
                 conn.Close();
+            }
+        }
+
+        // Переміщення форми
+        private void frmReview_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+            }
+        }
+
+        private void toolStrip1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
             }
         }
     }

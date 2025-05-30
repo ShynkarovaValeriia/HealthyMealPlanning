@@ -65,6 +65,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(1500, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
             // 
             // btnLogo
             // 
@@ -92,12 +93,12 @@
             this.cbCategory.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Items.AddRange(new object[] {
-            "Dessert",
-            "Fruits",
-            "Main dish",
-            "Salads",
-            "Soups",
-            "Vegetables"});
+            "Десерт",
+            "Фрукти",
+            "Основна страва",
+            "Салати",
+            "Супи",
+            "Овочі"});
             this.cbCategory.Location = new System.Drawing.Point(810, 648);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(326, 48);
@@ -119,9 +120,9 @@
             this.cbDifficulty.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDifficulty.FormattingEnabled = true;
             this.cbDifficulty.Items.AddRange(new object[] {
-            "Easy",
-            "Medium",
-            "Difficult"});
+            "Просто",
+            "Помірно",
+            "Складно"});
             this.cbDifficulty.Location = new System.Drawing.Point(810, 483);
             this.cbDifficulty.Name = "cbDifficulty";
             this.cbDifficulty.Size = new System.Drawing.Size(326, 48);
@@ -320,6 +321,7 @@
             this.Name = "frmCreateRecipe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCreateRecipe";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmCreateRecipe_MouseDown);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDownPortionsNumber)).EndInit();

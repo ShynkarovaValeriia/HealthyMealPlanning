@@ -149,6 +149,7 @@
             this.toolStrip1.Size = new System.Drawing.Size(1500, 27);
             this.toolStrip1.TabIndex = 8;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
             // 
             // btnLogo
             // 
@@ -190,6 +191,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddToMealPlan";
             this.Load += new System.EventHandler(this.frmAddToMealPlan_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmAddToMealPlan_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecipe)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
