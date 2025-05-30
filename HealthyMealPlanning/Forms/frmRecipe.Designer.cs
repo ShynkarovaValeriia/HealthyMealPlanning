@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecipe));
             this.pnlPreviewRecipe = new System.Windows.Forms.Panel();
             this.btnFavorite = new System.Windows.Forms.Button();
             this.btnAddPlan = new System.Windows.Forms.Button();
@@ -93,6 +94,7 @@
             // 
             // btnFavorite
             // 
+            this.btnFavorite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFavorite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFavorite.Image = global::HealthyMealPlanning.Properties.Resources.favorite_empty;
             this.btnFavorite.Location = new System.Drawing.Point(1222, 9);
@@ -105,6 +107,7 @@
             // 
             // btnAddPlan
             // 
+            this.btnAddPlan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPlan.Image = global::HealthyMealPlanning.Properties.Resources.addplan;
             this.btnAddPlan.Location = new System.Drawing.Point(1290, 9);
@@ -116,6 +119,7 @@
             // 
             // btnSave
             // 
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Image = global::HealthyMealPlanning.Properties.Resources.save_empty;
             this.btnSave.Location = new System.Drawing.Point(1358, 9);
@@ -306,6 +310,7 @@
             // btnCreateReview
             // 
             this.btnCreateReview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(145)))), ((int)(((byte)(0)))));
+            this.btnCreateReview.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreateReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateReview.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateReview.ForeColor = System.Drawing.Color.White;
@@ -365,6 +370,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1500, 900);
             this.Controls.Add(this.btnCreateReview);
             this.Controls.Add(this.lblReviews);
@@ -374,6 +380,7 @@
             this.Controls.Add(this.pnlIngredients);
             this.Controls.Add(this.pnlPreviewRecipe);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRecipe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRecipe";

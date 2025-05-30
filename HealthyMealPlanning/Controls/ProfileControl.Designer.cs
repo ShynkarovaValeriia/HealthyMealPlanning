@@ -51,13 +51,25 @@
             this.lblChangeFullname = new System.Windows.Forms.Label();
             this.txtChangeUsername = new System.Windows.Forms.TextBox();
             this.lblChangeUsername = new System.Windows.Forms.Label();
+            this.tabAdminPanel = new System.Windows.Forms.TabPage();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnLoadTable = new System.Windows.Forms.Button();
+            this.cmbTables = new System.Windows.Forms.ComboBox();
+            this.dataGridViewAdmin = new System.Windows.Forms.DataGridView();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnLogout = new System.Windows.Forms.Button();
             this.pbPicture = new System.Windows.Forms.PictureBox();
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip4 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabAdminPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,6 +88,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabAdminPanel);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabControl1.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 221);
@@ -308,6 +321,99 @@
             this.lblChangeUsername.TabIndex = 2;
             this.lblChangeUsername.Text = "Ім\'я користувача";
             // 
+            // tabAdminPanel
+            // 
+            this.tabAdminPanel.Controls.Add(this.btnDelete);
+            this.tabAdminPanel.Controls.Add(this.btnEdit);
+            this.tabAdminPanel.Controls.Add(this.btnAdd);
+            this.tabAdminPanel.Controls.Add(this.btnLoadTable);
+            this.tabAdminPanel.Controls.Add(this.cmbTables);
+            this.tabAdminPanel.Controls.Add(this.dataGridViewAdmin);
+            this.tabAdminPanel.Location = new System.Drawing.Point(4, 42);
+            this.tabAdminPanel.Name = "tabAdminPanel";
+            this.tabAdminPanel.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAdminPanel.Size = new System.Drawing.Size(1492, 633);
+            this.tabAdminPanel.TabIndex = 4;
+            this.tabAdminPanel.Text = "Панель адміністратора";
+            this.tabAdminPanel.UseVisualStyleBackColor = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(17, 433);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(267, 65);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.Text = "Видалити";
+            this.toolTip4.SetToolTip(this.btnDelete, "Видалити запис");
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click_1);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(17, 341);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(267, 65);
+            this.btnEdit.TabIndex = 4;
+            this.btnEdit.Text = "Редагувати";
+            this.toolTip3.SetToolTip(this.btnEdit, "Редагувати запис");
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(17, 249);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(267, 65);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Text = "Додати";
+            this.toolTip2.SetToolTip(this.btnAdd, "Додати запис");
+            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnLoadTable
+            // 
+            this.btnLoadTable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(145)))), ((int)(((byte)(0)))));
+            this.btnLoadTable.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoadTable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoadTable.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadTable.ForeColor = System.Drawing.Color.White;
+            this.btnLoadTable.Location = new System.Drawing.Point(17, 99);
+            this.btnLoadTable.Name = "btnLoadTable";
+            this.btnLoadTable.Size = new System.Drawing.Size(267, 65);
+            this.btnLoadTable.TabIndex = 2;
+            this.btnLoadTable.Text = "Завантажити";
+            this.btnLoadTable.UseVisualStyleBackColor = false;
+            this.btnLoadTable.Click += new System.EventHandler(this.btnLoadTable_Click);
+            // 
+            // cmbTables
+            // 
+            this.cmbTables.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cmbTables.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTables.FormattingEnabled = true;
+            this.cmbTables.Location = new System.Drawing.Point(17, 18);
+            this.cmbTables.Name = "cmbTables";
+            this.cmbTables.Size = new System.Drawing.Size(267, 48);
+            this.cmbTables.TabIndex = 1;
+            // 
+            // dataGridViewAdmin
+            // 
+            this.dataGridViewAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAdmin.Location = new System.Drawing.Point(305, 18);
+            this.dataGridViewAdmin.Name = "dataGridViewAdmin";
+            this.dataGridViewAdmin.RowHeadersWidth = 51;
+            this.dataGridViewAdmin.RowTemplate.Height = 24;
+            this.dataGridViewAdmin.Size = new System.Drawing.Size(1171, 599);
+            this.dataGridViewAdmin.TabIndex = 0;
+            // 
             // btnLogout
             // 
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -349,6 +455,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabAdminPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAdmin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -382,5 +490,15 @@
         private System.Windows.Forms.FlowLayoutPanel pnlReview;
         private System.Windows.Forms.FlowLayoutPanel pnlSavedRecipes;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelRecipes;
+        private System.Windows.Forms.TabPage tabAdminPanel;
+        private System.Windows.Forms.DataGridView dataGridViewAdmin;
+        private System.Windows.Forms.ComboBox cmbTables;
+        private System.Windows.Forms.Button btnLoadTable;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ToolTip toolTip2;
+        private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.ToolTip toolTip4;
     }
 }

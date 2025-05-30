@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.ckbRemember = new System.Windows.Forms.CheckBox();
+            this.chkShowPassword = new System.Windows.Forms.CheckBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblRegisterNow = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -90,17 +91,18 @@
             this.txtPassword.Size = new System.Drawing.Size(551, 48);
             this.txtPassword.TabIndex = 5;
             // 
-            // ckbRemember
+            // chkShowPassword
             // 
-            this.ckbRemember.AutoSize = true;
-            this.ckbRemember.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ckbRemember.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbRemember.Location = new System.Drawing.Point(469, 497);
-            this.ckbRemember.Name = "ckbRemember";
-            this.ckbRemember.Size = new System.Drawing.Size(288, 44);
-            this.ckbRemember.TabIndex = 6;
-            this.ckbRemember.Text = "Запам\'ятати мене";
-            this.ckbRemember.UseVisualStyleBackColor = true;
+            this.chkShowPassword.AutoSize = true;
+            this.chkShowPassword.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.chkShowPassword.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkShowPassword.Location = new System.Drawing.Point(469, 497);
+            this.chkShowPassword.Name = "chkShowPassword";
+            this.chkShowPassword.Size = new System.Drawing.Size(275, 44);
+            this.chkShowPassword.TabIndex = 6;
+            this.chkShowPassword.Text = "Показати пароль";
+            this.chkShowPassword.UseVisualStyleBackColor = true;
+            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
             // 
             // btnLogin
             // 
@@ -171,13 +173,14 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lblRegisterNow);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.ckbRemember);
+            this.Controls.Add(this.chkShowPassword);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmLogin";
@@ -196,7 +199,7 @@
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.CheckBox ckbRemember;
+        private System.Windows.Forms.CheckBox chkShowPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lblRegisterNow;
         private System.Windows.Forms.ToolStrip toolStrip1;

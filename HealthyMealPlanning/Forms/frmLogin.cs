@@ -28,6 +28,13 @@ namespace HealthyMealPlanning
         public frmLogin()
         {
             InitializeComponent();
+            txtPassword.UseSystemPasswordChar = true;
+        }
+
+        // Відображення паролю
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !chkShowPassword.Checked;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

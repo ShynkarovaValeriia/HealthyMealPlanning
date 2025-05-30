@@ -99,7 +99,7 @@
             "Салати",
             "Супи",
             "Овочі"});
-            this.cbCategory.Location = new System.Drawing.Point(810, 648);
+            this.cbCategory.Location = new System.Drawing.Point(810, 655);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(326, 48);
             this.cbCategory.TabIndex = 53;
@@ -108,7 +108,7 @@
             // 
             this.lblCategory.AutoSize = true;
             this.lblCategory.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategory.Location = new System.Drawing.Point(803, 575);
+            this.lblCategory.Location = new System.Drawing.Point(803, 582);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(149, 40);
             this.lblCategory.TabIndex = 52;
@@ -116,14 +116,15 @@
             // 
             // cbDifficulty
             // 
-            this.cbDifficulty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbDifficulty.BackColor = System.Drawing.SystemColors.Window;
+            this.cbDifficulty.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbDifficulty.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDifficulty.FormattingEnabled = true;
             this.cbDifficulty.Items.AddRange(new object[] {
             "Просто",
             "Помірно",
             "Складно"});
-            this.cbDifficulty.Location = new System.Drawing.Point(810, 483);
+            this.cbDifficulty.Location = new System.Drawing.Point(810, 490);
             this.cbDifficulty.Name = "cbDifficulty";
             this.cbDifficulty.Size = new System.Drawing.Size(326, 48);
             this.cbDifficulty.TabIndex = 50;
@@ -132,7 +133,7 @@
             // 
             this.lblDifficulty.AutoSize = true;
             this.lblDifficulty.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDifficulty.Location = new System.Drawing.Point(803, 422);
+            this.lblDifficulty.Location = new System.Drawing.Point(803, 429);
             this.lblDifficulty.Name = "lblDifficulty";
             this.lblDifficulty.Size = new System.Drawing.Size(170, 40);
             this.lblDifficulty.TabIndex = 49;
@@ -141,10 +142,11 @@
             // btnAddPhoto
             // 
             this.btnAddPhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(145)))), ((int)(((byte)(0)))));
+            this.btnAddPhoto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddPhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPhoto.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPhoto.ForeColor = System.Drawing.Color.White;
-            this.btnAddPhoto.Location = new System.Drawing.Point(275, 261);
+            this.btnAddPhoto.Location = new System.Drawing.Point(275, 268);
             this.btnAddPhoto.Name = "btnAddPhoto";
             this.btnAddPhoto.Size = new System.Drawing.Size(326, 129);
             this.btnAddPhoto.TabIndex = 44;
@@ -155,10 +157,11 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(145)))), ((int)(((byte)(0)))));
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(494, 763);
+            this.btnSave.Location = new System.Drawing.Point(494, 770);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(474, 90);
             this.btnSave.TabIndex = 42;
@@ -170,7 +173,7 @@
             // 
             this.lblportions.AutoSize = true;
             this.lblportions.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblportions.Location = new System.Drawing.Point(1160, 183);
+            this.lblportions.Location = new System.Drawing.Point(1160, 190);
             this.lblportions.Name = "lblportions";
             this.lblportions.Size = new System.Drawing.Size(102, 40);
             this.lblportions.TabIndex = 41;
@@ -180,7 +183,7 @@
             // 
             this.numUpDownPortionsNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numUpDownPortionsNumber.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numUpDownPortionsNumber.Location = new System.Drawing.Point(810, 181);
+            this.numUpDownPortionsNumber.Location = new System.Drawing.Point(810, 188);
             this.numUpDownPortionsNumber.Name = "numUpDownPortionsNumber";
             this.numUpDownPortionsNumber.Size = new System.Drawing.Size(326, 48);
             this.numUpDownPortionsNumber.TabIndex = 40;
@@ -189,7 +192,7 @@
             // 
             this.lblPortionsNumber.AutoSize = true;
             this.lblPortionsNumber.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPortionsNumber.Location = new System.Drawing.Point(803, 120);
+            this.lblPortionsNumber.Location = new System.Drawing.Point(803, 127);
             this.lblPortionsNumber.Name = "lblPortionsNumber";
             this.lblPortionsNumber.Size = new System.Drawing.Size(244, 40);
             this.lblPortionsNumber.TabIndex = 39;
@@ -199,7 +202,7 @@
             // 
             this.txtCookingTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCookingTime.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCookingTime.Location = new System.Drawing.Point(810, 331);
+            this.txtCookingTime.Location = new System.Drawing.Point(810, 338);
             this.txtCookingTime.Name = "txtCookingTime";
             this.txtCookingTime.Size = new System.Drawing.Size(326, 48);
             this.txtCookingTime.TabIndex = 38;
@@ -208,7 +211,7 @@
             // 
             this.lblCookingTime.AutoSize = true;
             this.lblCookingTime.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCookingTime.Location = new System.Drawing.Point(803, 267);
+            this.lblCookingTime.Location = new System.Drawing.Point(803, 274);
             this.lblCookingTime.Name = "lblCookingTime";
             this.lblCookingTime.Size = new System.Drawing.Size(264, 40);
             this.lblCookingTime.TabIndex = 37;
@@ -218,7 +221,7 @@
             // 
             this.lblminutes.AutoSize = true;
             this.lblminutes.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblminutes.Location = new System.Drawing.Point(1160, 336);
+            this.lblminutes.Location = new System.Drawing.Point(1160, 343);
             this.lblminutes.Name = "lblminutes";
             this.lblminutes.Size = new System.Drawing.Size(118, 40);
             this.lblminutes.TabIndex = 36;
@@ -228,7 +231,7 @@
             // 
             this.txtIngredients.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtIngredients.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIngredients.Location = new System.Drawing.Point(275, 648);
+            this.txtIngredients.Location = new System.Drawing.Point(275, 655);
             this.txtIngredients.Name = "txtIngredients";
             this.txtIngredients.Size = new System.Drawing.Size(342, 48);
             this.txtIngredients.TabIndex = 35;
@@ -237,7 +240,7 @@
             // 
             this.lblIngredients.AutoSize = true;
             this.lblIngredients.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngredients.Location = new System.Drawing.Point(268, 575);
+            this.lblIngredients.Location = new System.Drawing.Point(268, 582);
             this.lblIngredients.Name = "lblIngredients";
             this.lblIngredients.Size = new System.Drawing.Size(177, 40);
             this.lblIngredients.TabIndex = 34;
@@ -247,7 +250,7 @@
             // 
             this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDescription.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(275, 484);
+            this.txtDescription.Location = new System.Drawing.Point(275, 491);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(342, 48);
             this.txtDescription.TabIndex = 33;
@@ -256,7 +259,7 @@
             // 
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.Location = new System.Drawing.Point(268, 422);
+            this.lblDescription.Location = new System.Drawing.Point(268, 429);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(88, 40);
             this.lblDescription.TabIndex = 32;
@@ -266,7 +269,7 @@
             // 
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(275, 175);
+            this.txtName.Location = new System.Drawing.Point(275, 182);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(326, 48);
             this.txtName.TabIndex = 31;
@@ -276,7 +279,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(268, 114);
+            this.lblName.Location = new System.Drawing.Point(268, 121);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(100, 40);
             this.lblName.TabIndex = 30;
@@ -286,7 +289,7 @@
             // 
             this.lblAddRecipe.AutoSize = true;
             this.lblAddRecipe.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddRecipe.Location = new System.Drawing.Point(266, 36);
+            this.lblAddRecipe.Location = new System.Drawing.Point(266, 43);
             this.lblAddRecipe.Name = "lblAddRecipe";
             this.lblAddRecipe.Size = new System.Drawing.Size(280, 49);
             this.lblAddRecipe.TabIndex = 29;
@@ -296,6 +299,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1500, 900);
             this.Controls.Add(this.cbCategory);
             this.Controls.Add(this.lblCategory);

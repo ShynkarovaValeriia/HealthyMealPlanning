@@ -148,8 +148,15 @@
   <data name="lblSunday.Text" xml:space="preserve">
     <value>Sunday</value>
   </data>
+  <data name="pnlFriday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>916, 100</value>
+  </data>
   <data name="&gt;&gt;lblSunday.Name" xml:space="preserve">
     <value>lblSunday</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pnlWednesday.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
   <data name="&gt;&gt;btnAddThursday.Name" xml:space="preserve">
     <value>btnAddThursday</value>
@@ -193,15 +200,11 @@
   <data name="&gt;&gt;btnAddSaturday.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblTuesday.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lblSunday.Size" type="System.Drawing.Size, System.Drawing">
     <value>53, 16</value>
-  </data>
-  <data name="lblSunday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>280, 1018</value>
   </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>1479, 900</value>
@@ -227,11 +230,17 @@
   <data name="&gt;&gt;pnlThursday.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;lblFriday.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="pnlSunday.Size" type="System.Drawing.Size, System.Drawing">
     <value>916, 100</value>
   </data>
   <data name="pnlThursday.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
+  </data>
+  <data name="btnAddMonday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1132, 73</value>
   </data>
   <data name="pnlMonday.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -245,8 +254,8 @@
   <data name="&gt;&gt;pnlFriday.Name" xml:space="preserve">
     <value>pnlFriday</value>
   </data>
-  <data name="&gt;&gt;lblSaturday.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PlannerControl</value>
   </data>
   <data name="&gt;&gt;lblFriday.Parent" xml:space="preserve">
     <value>$this</value>
@@ -265,6 +274,9 @@
   </data>
   <data name="btnAddThursday.Size" type="System.Drawing.Size, System.Drawing">
     <value>38, 27</value>
+  </data>
+  <data name="&gt;&gt;calendar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MonthCalendar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="contextMenuAdd.Size" type="System.Drawing.Size, System.Drawing">
     <value>143, 28</value>
@@ -302,11 +314,8 @@
   <data name="&gt;&gt;pnlSaturday.Name" xml:space="preserve">
     <value>pnlSaturday</value>
   </data>
-  <data name="&gt;&gt;lblWednesday.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>PlannerControl</value>
+  <data name="&gt;&gt;btnAddMonday.Name" xml:space="preserve">
+    <value>btnAddMonday</value>
   </data>
   <data name="btnAddSaturday.Location" type="System.Drawing.Point, System.Drawing">
     <value>1132, 860</value>
@@ -347,6 +356,9 @@
   <data name="&gt;&gt;btnAddSaturday.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="calendar.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
   <data name="&gt;&gt;calendar.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
@@ -370,9 +382,6 @@
   </data>
   <data name="&gt;&gt;btnAddFriday.Name" xml:space="preserve">
     <value>btnAddFriday</value>
-  </data>
-  <data name="lblTuesday.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 16</value>
@@ -419,17 +428,11 @@
   <data name="lblWednesday.Location" type="System.Drawing.Point, System.Drawing">
     <value>280, 380</value>
   </data>
-  <data name="btnAddSaturday.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
   <data name="&gt;&gt;pnlFriday.ZOrder" xml:space="preserve">
     <value>22</value>
   </data>
   <data name="pnlSunday.Location" type="System.Drawing.Point, System.Drawing">
     <value>266, 1051</value>
-  </data>
-  <data name="&gt;&gt;btnAddFriday.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlSaturday.Parent" xml:space="preserve">
     <value>$this</value>
@@ -446,17 +449,11 @@
   <data name="lblMealPlan.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;btnAddSunday.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="&gt;&gt;addRecipeToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblMonday.Text" xml:space="preserve">
     <value>Monday</value>
-  </data>
-  <data name="&gt;&gt;btnAddMonday.ZOrder" xml:space="preserve">
-    <value>13</value>
   </data>
   <data name="&gt;&gt;btnAddMonday.Parent" xml:space="preserve">
     <value>$this</value>
@@ -491,8 +488,8 @@
   <data name="&gt;&gt;lblSunday.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="lblSaturday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 16</value>
+  <data name="&gt;&gt;lblSaturday.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;pnlTuesday.Parent" xml:space="preserve">
     <value>$this</value>
@@ -505,6 +502,9 @@
   </data>
   <data name="&gt;&gt;pnlTuesday.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnlSunday.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
   <data name="lblSaturday.Location" type="System.Drawing.Point, System.Drawing">
     <value>280, 865</value>
@@ -551,8 +551,8 @@
   <data name="btnAddThursday.Location" type="System.Drawing.Point, System.Drawing">
     <value>1132, 531</value>
   </data>
-  <data name="pnlSunday.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="&gt;&gt;btnAddFriday.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;btnAddWednesday.ZOrder" xml:space="preserve">
     <value>9</value>
@@ -587,8 +587,8 @@
   <data name="pnlSaturday.Size" type="System.Drawing.Size, System.Drawing">
     <value>916, 100</value>
   </data>
-  <data name="&gt;&gt;btnAddMonday.Name" xml:space="preserve">
-    <value>btnAddMonday</value>
+  <data name="btnAddSaturday.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
   </data>
   <data name="&gt;&gt;lblMonday.Parent" xml:space="preserve">
     <value>$this</value>
@@ -605,17 +605,17 @@
   <data name="&gt;&gt;lblThursday.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblFriday.Type" xml:space="preserve">
+  <data name="&gt;&gt;lblWednesday.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;calendar.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MonthCalendar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;btnAddSunday.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="btnAddMonday.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="pnlWednesday.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="lblTuesday.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;btnAddWednesday.Name" xml:space="preserve">
     <value>btnAddWednesday</value>
@@ -626,8 +626,8 @@
   <data name="&gt;&gt;btnAddWednesday.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="btnAddMonday.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1132, 73</value>
+  <data name="&gt;&gt;btnAddMonday.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
   <data name="btnAddTuesday.Location" type="System.Drawing.Point, System.Drawing">
     <value>1132, 220</value>
@@ -662,8 +662,8 @@
   <data name="&gt;&gt;pnlSaturday.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="pnlFriday.Size" type="System.Drawing.Size, System.Drawing">
-    <value>916, 100</value>
+  <data name="lblSaturday.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 16</value>
   </data>
   <data name="&gt;&gt;calendar.ZOrder" xml:space="preserve">
     <value>15</value>
@@ -680,8 +680,8 @@
   <data name="&gt;&gt;pnlThursday.Name" xml:space="preserve">
     <value>pnlThursday</value>
   </data>
-  <data name="calendar.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="lblSunday.Location" type="System.Drawing.Point, System.Drawing">
+    <value>280, 1018</value>
   </data>
   <metadata name="contextMenuAdd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

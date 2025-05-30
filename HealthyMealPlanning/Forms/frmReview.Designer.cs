@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReview));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnLogo = new System.Windows.Forms.ToolStripButton();
             this.btnClose = new System.Windows.Forms.ToolStripButton();
@@ -131,6 +132,7 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(145)))), ((int)(((byte)(0)))));
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
@@ -158,6 +160,7 @@
             // pbStar5
             // 
             this.pbStar5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbStar5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbStar5.Image = global::HealthyMealPlanning.Properties.Resources.star_empty;
             this.pbStar5.Location = new System.Drawing.Point(514, 19);
             this.pbStar5.Name = "pbStar5";
@@ -168,6 +171,7 @@
             // 
             // pbStar4
             // 
+            this.pbStar4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbStar4.Image = global::HealthyMealPlanning.Properties.Resources.star_empty;
             this.pbStar4.Location = new System.Drawing.Point(406, 19);
             this.pbStar4.Name = "pbStar4";
@@ -178,6 +182,7 @@
             // 
             // pbStar3
             // 
+            this.pbStar3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbStar3.Image = global::HealthyMealPlanning.Properties.Resources.star_empty;
             this.pbStar3.Location = new System.Drawing.Point(298, 19);
             this.pbStar3.Name = "pbStar3";
@@ -188,6 +193,7 @@
             // 
             // pbStar2
             // 
+            this.pbStar2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbStar2.Image = global::HealthyMealPlanning.Properties.Resources.star_empty;
             this.pbStar2.Location = new System.Drawing.Point(190, 19);
             this.pbStar2.Name = "pbStar2";
@@ -198,6 +204,7 @@
             // 
             // pbStar1
             // 
+            this.pbStar1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbStar1.Image = global::HealthyMealPlanning.Properties.Resources.star_empty;
             this.pbStar1.Location = new System.Drawing.Point(82, 19);
             this.pbStar1.Name = "pbStar1";
@@ -210,6 +217,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1500, 900);
             this.Controls.Add(this.pnlRatings);
             this.Controls.Add(this.btnSave);
@@ -219,6 +227,7 @@
             this.Controls.Add(this.lblYourOpinion);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmReview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmReview";

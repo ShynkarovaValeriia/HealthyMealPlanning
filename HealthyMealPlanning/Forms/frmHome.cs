@@ -27,6 +27,7 @@ namespace HealthyMealPlanning
         public frmHome()
         {
             InitializeComponent();
+            LoadHomeControl();
         }
 
         private void btnLogo_Click(object sender, EventArgs e)
@@ -42,6 +43,11 @@ namespace HealthyMealPlanning
         }
 
         private void btnHome_Click(object sender, EventArgs e)
+        {
+            LoadHomeControl();
+        }
+
+        private void LoadHomeControl()
         {
             // Створюємо новий екземпляр контролу
             HomeControl home = new HomeControl();
@@ -92,6 +98,10 @@ namespace HealthyMealPlanning
             // Додаємо новий UserControl
             profile.Dock = DockStyle.Fill; // щоб заповнив панель
             pnlMain.Controls.Add(profile);
+
+            profile.LoadFavoriteRecipes();
+            profile.LoadSavedRecipes();
+            profile.LoadUserReviews();
         }
 
         // Переміщення форми

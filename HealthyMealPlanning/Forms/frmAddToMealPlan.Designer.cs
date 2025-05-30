@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddToMealPlan));
             this.pictureBoxRecipe = new System.Windows.Forms.PictureBox();
             this.lblRecipeName = new System.Windows.Forms.Label();
             this.rbBreakfast = new System.Windows.Forms.RadioButton();
@@ -100,7 +101,7 @@
             // rbDinner
             // 
             this.rbDinner.AutoSize = true;
-            this.rbDinner.BackColor = System.Drawing.SystemColors.Control;
+            this.rbDinner.BackColor = System.Drawing.Color.Transparent;
             this.rbDinner.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbDinner.Location = new System.Drawing.Point(415, 646);
             this.rbDinner.Name = "rbDinner";
@@ -112,7 +113,8 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCancel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
@@ -127,6 +129,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(145)))), ((int)(((byte)(0)))));
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
@@ -176,6 +179,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1500, 900);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.btnAdd);
@@ -187,6 +191,7 @@
             this.Controls.Add(this.lblRecipeName);
             this.Controls.Add(this.pictureBoxRecipe);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAddToMealPlan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddToMealPlan";

@@ -18,17 +18,16 @@ namespace HealthyMealPlanning
         {
             InitializeComponent();
             SetUsernameLabel();
-        }
 
-        private void SetUsernameLabel()
-        {
-            if (!string.IsNullOrEmpty(Session.Username))
+            // Приховати вкладку, якщо користувач не адміністратор
+            if (Session.UserId != 1)
             {
-                lblUsername.Text = Session.Username;
+                tabControl1.TabPages.Remove(tabAdminPanel);
             }
-            else
+
+            if (Session.UserId == 1)
             {
-                lblUsername.Text = "Користувач не авторизований";
+                InitializeAdminPanel();
             }
         }
 
@@ -366,7 +365,7 @@ namespace HealthyMealPlanning
         }
 
         // Завантаження відгуків користувача
-        private void LoadUserReviews()
+        public void LoadUserReviews()
         {
             pnlReview.Controls.Clear();
 
@@ -537,7 +536,7 @@ namespace HealthyMealPlanning
         }
 
         // Методи для завантаження обраних і збережених рецептів
-        private void LoadFavoriteRecipes()
+        public void LoadFavoriteRecipes()
         {
             pnlFavoriteRecipes.Controls.Clear();
 
@@ -577,7 +576,7 @@ namespace HealthyMealPlanning
             }
         }
 
-        private void LoadSavedRecipes()
+        public void LoadSavedRecipes()
         {
             pnlSavedRecipes.Controls.Clear();
 
@@ -674,6 +673,212 @@ namespace HealthyMealPlanning
         {
             frmCreateRecipe createForm = new frmCreateRecipe();
             createForm.Show();
+        }
+
+
+        // Лише для Адміністратора
+        private void SetUsernameLabel()
+        {
+            if (!string.IsNullOrEmpty(Session.Username))
+            {
+                lblUsername.Text = Session.Username;
+            }
+            else
+            {
+                lblUsername.Text = "Користувач не авторизований";
+            }
+        }
+
+        private void InitializeAdminPanel()
+        {
+            if (Session.UserId == 1) // Лише адміністратор
+            {
+                cmbTables.Items.AddRange(new string[]
+                {
+                    "users",
+                    "recipes",
+                    "saved_recipes",
+                    "favorites",
+                    "meal_plans",
+                    "ratings"
+                });
+
+                cmbTables.SelectedIndex = 0;
+            }
+        }
+
+        // Завантаження таблиці у DataGridView
+        private void btnLoadTable_Click(object sender, EventArgs e)
+        {
+            string selectedTable = cmbTables.SelectedItem?.ToString();
+            if (string.IsNullOrEmpty(selectedTable))
+            {
+                MessageBox.Show("Оберіть таблицю для завантаження.");
+                return;
+            }
+
+            LoadTable(selectedTable);
+        }
+
+        private void LoadTable(string tableName)
+        {
+            using (MySqlConnection conn = DBUtils.GetDBConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    string query = $"select * from {tableName}";
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+                    dataGridViewAdmin.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Помилка при завантаженні: " + ex.Message);
+                }
+            }
+        }
+        
+        private void btnDelete_Click_1(object sender, EventArgs e)
+        {
+            if (dataGridViewAdmin.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Оберіть рядок для видалення.");
+                return;
+            }
+
+            string table = cmbTables.SelectedItem.ToString();
+            DataGridViewRow selectedRow = dataGridViewAdmin.SelectedRows[0];
+
+            // Визначаємо первинний ключ
+            string pkField = GetPrimaryKeyField(table);
+            if (string.IsNullOrEmpty(pkField))
+            {
+                MessageBox.Show("Неможливо визначити первинний ключ.");
+                return;
+            }
+
+            object pkValue = selectedRow.Cells[pkField].Value;
+
+            DialogResult result = MessageBox.Show("Ви впевнені, що хочете видалити запис?", "Підтвердження", MessageBoxButtons.YesNo);
+            if (result != DialogResult.Yes) return;
+
+            using (MySqlConnection conn = DBUtils.GetDBConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    string deleteSql = $"delete from {table} where {pkField} = @pk";
+                    MySqlCommand cmd = new MySqlCommand(deleteSql, conn);
+                    cmd.Parameters.AddWithValue("@pk", pkValue);
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Запис видалено.");
+                    LoadTable(table); // Оновлення таблиці
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Помилка при видаленні: " + ex.Message);
+                }
+            }
+        }
+
+        private string GetPrimaryKeyField(string table)
+        {
+            switch (table)
+            {
+                case "users":
+                case "recipes":
+                case "ratings":
+                case "meal_plans":
+                    return "id";
+
+                case "favorites":
+                case "saved_recipes":
+                    return "user_id"; // тимчасово, бо це композитний ключ
+
+                default:
+                    return "";
+            }
+        }
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
+            if (dataGridViewAdmin.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Оберіть рядок для редагування.");
+                return;
+            }
+
+            string table = cmbTables.SelectedItem.ToString();
+            DataGridViewRow row = dataGridViewAdmin.SelectedRows[0];
+            string pkField = GetPrimaryKeyField(table);
+            object pkValue = row.Cells[pkField].Value;
+
+            List<string> setClauses = new List<string>();
+            List<MySqlParameter> parameters = new List<MySqlParameter>();
+
+            foreach (DataGridViewCell cell in row.Cells)
+            {
+                string column = cell.OwningColumn.Name;
+                object value = cell.Value;
+
+                if (column == pkField) continue;
+
+                setClauses.Add($"{column} = @{column}");
+                parameters.Add(new MySqlParameter($"@{column}", value ?? DBNull.Value));
+            }
+
+            string setClause = string.Join(", ", setClauses);
+
+            string updateSql = $"update {table} set {setClause} where {pkField} = @pk";
+
+            using (MySqlConnection conn = DBUtils.GetDBConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(updateSql, conn);
+                    cmd.Parameters.AddWithValue("@pk", pkValue);
+                    cmd.Parameters.AddRange(parameters.ToArray());
+
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Запис оновлено.");
+                    LoadTable(table);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Помилка при оновленні: " + ex.Message);
+                }
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string selectedTable = cmbTables.SelectedItem?.ToString();
+            if (string.IsNullOrEmpty(selectedTable))
+            {
+                MessageBox.Show("Оберіть таблицю для додавання.");
+                return;
+            }
+
+            switch (selectedTable)
+            {
+                case "recipes":
+                    frmCreateRecipe createForm = new frmCreateRecipe();
+                    createForm.FormClosed += (s, args) =>
+                    {
+                        LoadTable("recipes"); // Оновлюємо дані після створення
+                    };
+                    createForm.Show();
+                    break;
+
+                default:
+                    MessageBox.Show("Додавання нових записів поки що підтримується лише для таблиці рецептів.");
+                    break;
+            }
         }
     }
 }

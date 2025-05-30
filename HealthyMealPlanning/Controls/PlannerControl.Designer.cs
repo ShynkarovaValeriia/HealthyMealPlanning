@@ -136,6 +136,7 @@
             // calendar
             // 
             resources.ApplyResources(this.calendar, "calendar");
+            this.calendar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.calendar.MaxSelectionCount = 1;
             this.calendar.Name = "calendar";
             this.calendar.ShowTodayCircle = false;
@@ -158,6 +159,7 @@
             // btnAddSunday
             // 
             resources.ApplyResources(this.btnAddSunday, "btnAddSunday");
+            this.btnAddSunday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddSunday.Image = global::HealthyMealPlanning.Properties.Resources.add;
             this.btnAddSunday.Name = "btnAddSunday";
             this.btnAddSunday.UseVisualStyleBackColor = true;
@@ -166,6 +168,7 @@
             // btnAddSaturday
             // 
             resources.ApplyResources(this.btnAddSaturday, "btnAddSaturday");
+            this.btnAddSaturday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddSaturday.Image = global::HealthyMealPlanning.Properties.Resources.add;
             this.btnAddSaturday.Name = "btnAddSaturday";
             this.btnAddSaturday.UseVisualStyleBackColor = true;
@@ -174,6 +177,7 @@
             // btnAddFriday
             // 
             resources.ApplyResources(this.btnAddFriday, "btnAddFriday");
+            this.btnAddFriday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddFriday.Image = global::HealthyMealPlanning.Properties.Resources.add;
             this.btnAddFriday.Name = "btnAddFriday";
             this.btnAddFriday.UseVisualStyleBackColor = true;
@@ -182,6 +186,7 @@
             // btnAddThursday
             // 
             resources.ApplyResources(this.btnAddThursday, "btnAddThursday");
+            this.btnAddThursday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddThursday.Image = global::HealthyMealPlanning.Properties.Resources.add;
             this.btnAddThursday.Name = "btnAddThursday";
             this.btnAddThursday.UseVisualStyleBackColor = true;
@@ -190,6 +195,7 @@
             // btnAddWednesday
             // 
             resources.ApplyResources(this.btnAddWednesday, "btnAddWednesday");
+            this.btnAddWednesday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddWednesday.Image = global::HealthyMealPlanning.Properties.Resources.add;
             this.btnAddWednesday.Name = "btnAddWednesday";
             this.btnAddWednesday.UseVisualStyleBackColor = true;
@@ -198,6 +204,7 @@
             // btnAddTuesday
             // 
             resources.ApplyResources(this.btnAddTuesday, "btnAddTuesday");
+            this.btnAddTuesday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddTuesday.Image = global::HealthyMealPlanning.Properties.Resources.add;
             this.btnAddTuesday.Name = "btnAddTuesday";
             this.btnAddTuesday.UseVisualStyleBackColor = true;
@@ -206,6 +213,7 @@
             // btnAddMonday
             // 
             resources.ApplyResources(this.btnAddMonday, "btnAddMonday");
+            this.btnAddMonday.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddMonday.Image = global::HealthyMealPlanning.Properties.Resources.add;
             this.btnAddMonday.Name = "btnAddMonday";
             this.btnAddMonday.UseVisualStyleBackColor = true;
@@ -215,6 +223,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.pnlSaturday);
             this.Controls.Add(this.btnAddSunday);
             this.Controls.Add(this.btnAddSaturday);

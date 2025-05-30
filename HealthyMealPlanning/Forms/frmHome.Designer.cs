@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btnLogo = new System.Windows.Forms.ToolStripButton();
             this.btnClose = new System.Windows.Forms.ToolStripButton();
@@ -169,6 +170,7 @@
             this.Controls.Add(this.pnlHome);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmHome";
