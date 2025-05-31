@@ -33,13 +33,13 @@ namespace HealthyMealPlanning
             DateTime monday = today.AddDays(delta);
 
             // Заповнюємо лейбли датами відповідно до днів тижня
-            lblMonday.Text = $"Monday {monday:dd.MM}";
-            lblTuesday.Text = $"Tuesday {monday.AddDays(1):dd.MM}";
-            lblWednesday.Text = $"Wednesday {monday.AddDays(2):dd.MM}";
-            lblThursday.Text = $"Thursday {monday.AddDays(3):dd.MM}";
-            lblFriday.Text = $"Friday {monday.AddDays(4):dd.MM}";
-            lblSaturday.Text = $"Saturday {monday.AddDays(5):dd.MM}";
-            lblSunday.Text = $"Sunday {monday.AddDays(6):dd.MM}";
+            lblMonday.Text = $"Понеділок {monday:dd.MM}";
+            lblTuesday.Text = $"Вівторок {monday.AddDays(1):dd.MM}";
+            lblWednesday.Text = $"Середа {monday.AddDays(2):dd.MM}";
+            lblThursday.Text = $"Четвер {monday.AddDays(3):dd.MM}";
+            lblFriday.Text = $"П'ятниця {monday.AddDays(4):dd.MM}";
+            lblSaturday.Text = $"Субота {monday.AddDays(5):dd.MM}";
+            lblSunday.Text = $"Неділя {monday.AddDays(6):dd.MM}";
 
             // Автоматичне оновлення при завантаженні
             UpdateWeekLabels(DateTime.Today);
@@ -54,13 +54,13 @@ namespace HealthyMealPlanning
             DateTime monday = selectedDate.AddDays(delta);
 
             // Заповнюємо лейбли на основі дати понеділка
-            lblMonday.Text = $"Monday {monday:dd.MM}";
-            lblTuesday.Text = $"Tuesday {monday.AddDays(1):dd.MM}";
-            lblWednesday.Text = $"Wednesday {monday.AddDays(2):dd.MM}";
-            lblThursday.Text = $"Thursday {monday.AddDays(3):dd.MM}";
-            lblFriday.Text = $"Friday {monday.AddDays(4):dd.MM}";
-            lblSaturday.Text = $"Saturday {monday.AddDays(5):dd.MM}";
-            lblSunday.Text = $"Sunday {monday.AddDays(6):dd.MM}";
+            lblMonday.Text = $"Понеділок {monday:dd.MM}";
+            lblTuesday.Text = $"Вівторок {monday.AddDays(1):dd.MM}";
+            lblWednesday.Text = $"Середа {monday.AddDays(2):dd.MM}";
+            lblThursday.Text = $"Четвер {monday.AddDays(3):dd.MM}";
+            lblFriday.Text = $"П'ятниця {monday.AddDays(4):dd.MM}";
+            lblSaturday.Text = $"Субота {monday.AddDays(5):dd.MM}";
+            lblSunday.Text = $"Неділя {monday.AddDays(6):dd.MM}";
 
             // Задання Tag кожній кнопці під час завантаження
             btnAddMonday.Tag = monday;
@@ -206,7 +206,7 @@ namespace HealthyMealPlanning
         {
             Panel panel = new Panel
             {
-                Width = 320,
+                Width = 520,
                 Height = 70,
                 BorderStyle = BorderStyle.FixedSingle,
                 Margin = new Padding(5),
@@ -236,7 +236,7 @@ namespace HealthyMealPlanning
             Label lblName = new Label
             {
                 Text = name,
-                Font = new Font("Segoe UI", 10, FontStyle.Bold),
+                Font = new Font("Calibri", 14, FontStyle.Regular),
                 Location = new Point(75, 5),
                 AutoSize = true
             };
@@ -244,7 +244,7 @@ namespace HealthyMealPlanning
             Label lblMealType = new Label
             {
                 Text = mealType,
-                Font = new Font("Segoe UI", 9, FontStyle.Italic),
+                Font = new Font("Calibri", 14, FontStyle.Regular),
                 ForeColor = Color.Gray,
                 Location = new Point(75, 30),
                 AutoSize = true
@@ -263,6 +263,5 @@ namespace HealthyMealPlanning
 
             return panel;
         }
-
     }
 }

@@ -159,6 +159,7 @@ namespace HealthyMealPlanning
             Label label = new Label
             {
                 Text = title,
+                Font = new Font("Calibri", 14, FontStyle.Regular),
                 TextAlign = ContentAlignment.MiddleCenter,
                 Dock = DockStyle.Bottom,
                 Height = 40
@@ -318,12 +319,13 @@ namespace HealthyMealPlanning
                 Text = authorName,
                 TextAlign = ContentAlignment.MiddleCenter,
                 Dock = DockStyle.Top,
-                Font = new Font("Segoe UI", 9, FontStyle.Bold)
+                Font = new Font("Calibri", 12, FontStyle.Bold),
             };
 
             Label lblRecipeName = new Label
             {
                 Text = recipeName,
+                Font = new Font("Calibri", 14, FontStyle.Regular),
                 TextAlign = ContentAlignment.MiddleCenter,
                 Dock = DockStyle.Top,
                 Height = 30
@@ -340,6 +342,59 @@ namespace HealthyMealPlanning
             lblRecipeName.Click += (s, e) => onClick?.Invoke();
 
             return panel;
+        }
+
+        public void LoadRecipesByCategory(string category)
+        {
+            pnlExplore.Controls.Clear();
+
+            using (MySqlConnection conn = DBUtils.GetDBConnection())
+            {
+                try
+                {
+                    conn.Open();
+
+                    string query = "select id, name, image_path, category from recipes where category = @category";
+                    using (var cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@category", category);
+
+                        using (var reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                int recipeId = reader.GetInt32("id");
+                                string name = reader.GetString("name");
+                                string imagePath = reader.GetString("image_path");
+                                string categoryName = reader.GetString("category");
+
+                                Image recipeImage;
+                                try
+                                {
+                                    string fullPath = Path.Combine(Application.StartupPath, imagePath);
+                                    recipeImage = File.Exists(fullPath) ? Image.FromFile(fullPath) : Properties.Resources.placeholder;
+                                }
+                                catch
+                                {
+                                    recipeImage = Properties.Resources.placeholder;
+                                }
+
+                                Panel panel = CreateRecipeItemWithAuthor(recipeImage, categoryName, name, () =>
+                                {
+                                    frmRecipe recipeForm = new frmRecipe(recipeId);
+                                    recipeForm.ShowDialog();
+                                });
+
+                                pnlExplore.Controls.Add(panel);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Помилка при завантаженні рецептів категорії: " + ex.Message);
+                }
+            }
         }
     }
 }

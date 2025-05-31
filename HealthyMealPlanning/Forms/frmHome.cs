@@ -23,6 +23,8 @@ namespace HealthyMealPlanning
 
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        
+        public Panel MainPanel => pnlMain;
 
         public frmHome()
         {

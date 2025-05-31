@@ -124,7 +124,7 @@
             this.lblRegisterNow.AutoSize = true;
             this.lblRegisterNow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRegisterNow.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegisterNow.Location = new System.Drawing.Point(514, 736);
+            this.lblRegisterNow.Location = new System.Drawing.Point(496, 736);
             this.lblRegisterNow.Name = "lblRegisterNow";
             this.lblRegisterNow.Size = new System.Drawing.Size(460, 35);
             this.lblRegisterNow.TabIndex = 9;

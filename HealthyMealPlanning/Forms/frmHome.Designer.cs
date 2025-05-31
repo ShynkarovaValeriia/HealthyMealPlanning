@@ -97,9 +97,9 @@
             this.btnProfile.FlatAppearance.BorderSize = 2;
             this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfile.Image = global::HealthyMealPlanning.Properties.Resources.profile;
-            this.btnProfile.Location = new System.Drawing.Point(1119, 0);
+            this.btnProfile.Location = new System.Drawing.Point(1125, 0);
             this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(378, 100);
+            this.btnProfile.Size = new System.Drawing.Size(375, 100);
             this.btnProfile.TabIndex = 3;
             this.btnProfile.UseVisualStyleBackColor = true;
             this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
@@ -112,9 +112,9 @@
             this.btnPlanner.FlatAppearance.BorderSize = 2;
             this.btnPlanner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPlanner.Image = global::HealthyMealPlanning.Properties.Resources.planner;
-            this.btnPlanner.Location = new System.Drawing.Point(761, 0);
+            this.btnPlanner.Location = new System.Drawing.Point(750, 0);
             this.btnPlanner.Name = "btnPlanner";
-            this.btnPlanner.Size = new System.Drawing.Size(358, 100);
+            this.btnPlanner.Size = new System.Drawing.Size(375, 100);
             this.btnPlanner.TabIndex = 2;
             this.btnPlanner.UseVisualStyleBackColor = true;
             this.btnPlanner.Click += new System.EventHandler(this.btnPlanner_Click);
@@ -127,9 +127,9 @@
             this.btnExplore.FlatAppearance.BorderSize = 2;
             this.btnExplore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExplore.Image = global::HealthyMealPlanning.Properties.Resources.explore;
-            this.btnExplore.Location = new System.Drawing.Point(381, 0);
+            this.btnExplore.Location = new System.Drawing.Point(375, 0);
             this.btnExplore.Name = "btnExplore";
-            this.btnExplore.Size = new System.Drawing.Size(380, 100);
+            this.btnExplore.Size = new System.Drawing.Size(375, 100);
             this.btnExplore.TabIndex = 1;
             this.btnExplore.UseVisualStyleBackColor = true;
             this.btnExplore.Click += new System.EventHandler(this.btnExplore_Click);
@@ -144,7 +144,7 @@
             this.btnHome.Image = global::HealthyMealPlanning.Properties.Resources.home;
             this.btnHome.Location = new System.Drawing.Point(0, 0);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(381, 100);
+            this.btnHome.Size = new System.Drawing.Size(375, 100);
             this.btnHome.TabIndex = 0;
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);

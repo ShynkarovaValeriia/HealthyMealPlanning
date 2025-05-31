@@ -119,7 +119,7 @@
             // 
             this.lblReview.AutoSize = true;
             this.lblReview.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReview.Location = new System.Drawing.Point(6, 601);
+            this.lblReview.Location = new System.Drawing.Point(6, 733);
             this.lblReview.Name = "lblReview";
             this.lblReview.Size = new System.Drawing.Size(120, 40);
             this.lblReview.TabIndex = 2;
@@ -129,7 +129,7 @@
             // 
             this.lblSavedRecipes.AutoSize = true;
             this.lblSavedRecipes.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSavedRecipes.Location = new System.Drawing.Point(6, 300);
+            this.lblSavedRecipes.Location = new System.Drawing.Point(6, 370);
             this.lblSavedRecipes.Name = "lblSavedRecipes";
             this.lblSavedRecipes.Size = new System.Drawing.Size(287, 40);
             this.lblSavedRecipes.TabIndex = 1;
@@ -147,32 +147,29 @@
             // 
             // pnlFavoriteRecipes
             // 
-            this.pnlFavoriteRecipes.AutoScroll = true;
             this.pnlFavoriteRecipes.AutoSize = true;
             this.pnlFavoriteRecipes.Location = new System.Drawing.Point(6, 65);
             this.pnlFavoriteRecipes.MaximumSize = new System.Drawing.Size(1460, 1460);
             this.pnlFavoriteRecipes.Name = "pnlFavoriteRecipes";
-            this.pnlFavoriteRecipes.Size = new System.Drawing.Size(1460, 200);
+            this.pnlFavoriteRecipes.Size = new System.Drawing.Size(1460, 250);
             this.pnlFavoriteRecipes.TabIndex = 7;
             // 
             // pnlReview
             // 
-            this.pnlReview.AutoScroll = true;
             this.pnlReview.AutoSize = true;
-            this.pnlReview.Location = new System.Drawing.Point(6, 656);
+            this.pnlReview.Location = new System.Drawing.Point(6, 788);
             this.pnlReview.MaximumSize = new System.Drawing.Size(1460, 1460);
             this.pnlReview.Name = "pnlReview";
-            this.pnlReview.Size = new System.Drawing.Size(1460, 200);
+            this.pnlReview.Size = new System.Drawing.Size(1460, 250);
             this.pnlReview.TabIndex = 0;
             // 
             // pnlSavedRecipes
             // 
-            this.pnlSavedRecipes.AutoScroll = true;
             this.pnlSavedRecipes.AutoSize = true;
-            this.pnlSavedRecipes.Location = new System.Drawing.Point(6, 356);
+            this.pnlSavedRecipes.Location = new System.Drawing.Point(6, 426);
             this.pnlSavedRecipes.MaximumSize = new System.Drawing.Size(1460, 1460);
             this.pnlSavedRecipes.Name = "pnlSavedRecipes";
-            this.pnlSavedRecipes.Size = new System.Drawing.Size(1460, 200);
+            this.pnlSavedRecipes.Size = new System.Drawing.Size(1460, 250);
             this.pnlSavedRecipes.TabIndex = 8;
             // 
             // tabPage2

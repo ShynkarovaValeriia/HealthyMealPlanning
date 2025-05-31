@@ -33,7 +33,7 @@ namespace HealthyMealPlanning
                 try
                 {
                     conn.Open();
-                    string query = @"SELECT DISTINCT u.id, u.full_name
+                    string query = @"SELECT DISTINCT u.id, u.username
                              FROM users u
                              JOIN recipes r ON u.id = r.user_id";
 
@@ -44,7 +44,7 @@ namespace HealthyMealPlanning
                         while (reader.Read())
                         {
                             int userId = reader.GetInt32("id");
-                            string fullName = reader.GetString("full_name");
+                            string fullName = reader.GetString("username");
 
                             Panel panel = new Panel
                             {
@@ -57,20 +57,21 @@ namespace HealthyMealPlanning
                             {
                                 Image = Properties.Resources.account_circle,
                                 SizeMode = PictureBoxSizeMode.Zoom,
-                                Width = 80,
-                                Height = 80,
-                                Top = 0,
-                                Left = 10,
+                                Width = 60,
+                                Height = 60,
+                                Top = 5,
+                                Left = 20,
                                 Cursor = Cursors.Hand
                             };
 
                             Label label = new Label
                             {
                                 Text = fullName,
+                                Font = new Font("Calibri", 16, FontStyle.Regular),
                                 AutoSize = false,
                                 TextAlign = ContentAlignment.MiddleCenter,
                                 Dock = DockStyle.Bottom,
-                                Height = 40
+                                Height = 50
                             };
 
                             picture.Click += (s, e) =>
@@ -125,19 +126,19 @@ namespace HealthyMealPlanning
 
                             Panel recipePanel = new Panel
                             {
-                                Width = 150,
+                                Width = 200,
                                 Height = 180,
                                 Margin = new Padding(10),
-                                BorderStyle = BorderStyle.FixedSingle
+                                BackColor = Color.White
                             };
 
                             PictureBox recipeImage = new PictureBox
                             {
                                 SizeMode = PictureBoxSizeMode.Zoom,
-                                Width = 130,
-                                Height = 100,
-                                Top = 10,
-                                Left = 10
+                                Width = 160,
+                                Height = 140,
+                                Dock = DockStyle.Top,
+                                Cursor = Cursors.Hand
                             };
 
                             try
@@ -156,15 +157,13 @@ namespace HealthyMealPlanning
                             Label lblName = new Label
                             {
                                 Text = name,
-                                Top = 115,
-                                Left = 10,
-                                Width = 130,
-                                Height = 30,
-                                TextAlign = ContentAlignment.TopCenter
+                                Font = new Font("Calibri", 14, FontStyle.Regular),
+                                AutoSize = false,
+                                Height = 40,
+                                TextAlign = ContentAlignment.MiddleCenter,
+                                Dock = DockStyle.Bottom,
+                                Cursor = Cursors.Hand
                             };
-
-                            recipeImage.Cursor = Cursors.Hand;
-                            lblName.Cursor = Cursors.Hand;
 
                             recipeImage.Click += (s, e) =>
                             {
@@ -237,5 +236,50 @@ namespace HealthyMealPlanning
             }
         }
 
+        // Відображення рецептів за певною категорією
+        private void ShowExploreByCategory(string category)
+        {
+            // Отримати головну форму
+            Form parentForm = this.FindForm();
+            if (parentForm is frmHome homeForm)
+            {
+                ExploreControl explore = new ExploreControl();
+                explore.Dock = DockStyle.Fill;
+                homeForm.MainPanel.Controls.Clear();
+                homeForm.MainPanel.Controls.Add(explore);
+
+                explore.LoadRecipesByCategory(category);
+            }
+        }
+
+        private void pnlDesserts_Click(object sender, EventArgs e)
+        {
+            ShowExploreByCategory("Десерт");
+        }
+
+        private void pnlFruits_Click(object sender, EventArgs e)
+        {
+            ShowExploreByCategory("Фрукти");
+        }
+
+        private void pnlMaindish_Click(object sender, EventArgs e)
+        {
+            ShowExploreByCategory("Основна страва");
+        }
+
+        private void pnlSalads_Click(object sender, EventArgs e)
+        {
+            ShowExploreByCategory("Салати");
+        }
+
+        private void pnlSoups_Click(object sender, EventArgs e)
+        {
+            ShowExploreByCategory("Супи");
+        }
+
+        private void pnlVegetables_Click(object sender, EventArgs e)
+        {
+            ShowExploreByCategory("Овочі");
+        }
     }
 }

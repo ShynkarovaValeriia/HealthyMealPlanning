@@ -46,7 +46,7 @@
             // btnSearch
             // 
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Image = global::HealthyMealPlanning.Properties.Resources.explore;
             this.btnSearch.Location = new System.Drawing.Point(917, 48);
             this.btnSearch.Name = "btnSearch";

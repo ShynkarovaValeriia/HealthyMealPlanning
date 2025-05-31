@@ -164,7 +164,7 @@ namespace HealthyMealPlanning
                 Label lbl = new Label();
                 lbl.Text = ingredient.Trim();
                 lbl.AutoSize = true;
-                lbl.Font = new Font("Segoe UI", 10);
+                lbl.Font = new Font("Calibri", 16, FontStyle.Regular);
                 lbl.Margin = new Padding(3);
                 pnlIngredients.Controls.Add(lbl);
             }
@@ -172,18 +172,18 @@ namespace HealthyMealPlanning
 
         private void DisplayDescription(string description)
         {
-            pnlDescription.Controls.Clear(); // Очистити попередні дані
+            pnlDescription.Controls.Clear();
+
+            if (string.IsNullOrWhiteSpace(description))
+                return;
 
             Label lblDescription = new Label();
             lblDescription.Text = description.Trim();
-            lblDescription.Font = new Font("Segoe UI", 10);
-            lblDescription.AutoSize = false;
-            lblDescription.Dock = DockStyle.Fill;
+            lblDescription.Font = new Font("Calibri", 16, FontStyle.Regular);
+            lblDescription.AutoSize = true;
+            lblDescription.MaximumSize = new Size(pnlDescription.Width - 20, 0);
             lblDescription.Padding = new Padding(10);
-            lblDescription.BackColor = Color.WhiteSmoke;
-            lblDescription.ForeColor = Color.Black;
 
-            // Якщо хочеш прокручування
             pnlDescription.AutoScroll = true;
 
             pnlDescription.Controls.Add(lblDescription);
@@ -236,7 +236,7 @@ namespace HealthyMealPlanning
                         // Ім'я та дата
                         Label lblInfo = new Label();
                         lblInfo.Text = $"{fullName}, {date}";
-                        lblInfo.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+                        lblInfo.Font = new Font("Calibri", 16, FontStyle.Regular);
                         lblInfo.Location = new Point(10, 10);
                         lblInfo.AutoSize = true;
 
@@ -257,7 +257,7 @@ namespace HealthyMealPlanning
                         // Коментар
                         Label lblComment = new Label();
                         lblComment.Text = comment;
-                        lblComment.Font = new Font("Segoe UI", 9);
+                        lblComment.Font = new Font("Calibri", 18, FontStyle.Regular);
                         lblComment.Location = new Point(10, 60);
                         lblComment.AutoSize = true;
                         lblComment.MaximumSize = new Size(reviewPanel.Width - 20, 0);

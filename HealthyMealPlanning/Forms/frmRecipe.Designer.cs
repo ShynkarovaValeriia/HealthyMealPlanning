@@ -47,9 +47,7 @@
             this.pbStar3 = new System.Windows.Forms.PictureBox();
             this.pbStar4 = new System.Windows.Forms.PictureBox();
             this.pbStar5 = new System.Windows.Forms.PictureBox();
-            this.pnlIngredients = new System.Windows.Forms.Panel();
             this.lblIngredients = new System.Windows.Forms.Label();
-            this.pnlDescription = new System.Windows.Forms.Panel();
             this.lblInstructions = new System.Windows.Forms.Label();
             this.pnlReviews = new System.Windows.Forms.Panel();
             this.btnCreateReview = new System.Windows.Forms.Button();
@@ -60,6 +58,8 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip3 = new System.Windows.Forms.ToolTip(this.components);
+            this.pnlIngredients = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlDescription = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlPreviewRecipe.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRecipeImage)).BeginInit();
             this.pnlAverageRatings.SuspendLayout();
@@ -68,8 +68,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbStar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStar4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStar5)).BeginInit();
-            this.pnlIngredients.SuspendLayout();
-            this.pnlDescription.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,7 +87,7 @@
             this.pnlPreviewRecipe.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnlPreviewRecipe.Location = new System.Drawing.Point(12, 34);
             this.pnlPreviewRecipe.Name = "pnlPreviewRecipe";
-            this.pnlPreviewRecipe.Size = new System.Drawing.Size(1476, 354);
+            this.pnlPreviewRecipe.Size = new System.Drawing.Size(1464, 354);
             this.pnlPreviewRecipe.TabIndex = 0;
             // 
             // btnFavorite
@@ -97,7 +95,7 @@
             this.btnFavorite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFavorite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFavorite.Image = global::HealthyMealPlanning.Properties.Resources.favorite_empty;
-            this.btnFavorite.Location = new System.Drawing.Point(1222, 9);
+            this.btnFavorite.Location = new System.Drawing.Point(1222, 13);
             this.btnFavorite.Name = "btnFavorite";
             this.btnFavorite.Size = new System.Drawing.Size(50, 50);
             this.btnFavorite.TabIndex = 10;
@@ -110,7 +108,7 @@
             this.btnAddPlan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddPlan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPlan.Image = global::HealthyMealPlanning.Properties.Resources.addplan;
-            this.btnAddPlan.Location = new System.Drawing.Point(1290, 9);
+            this.btnAddPlan.Location = new System.Drawing.Point(1290, 13);
             this.btnAddPlan.Name = "btnAddPlan";
             this.btnAddPlan.Size = new System.Drawing.Size(50, 50);
             this.btnAddPlan.TabIndex = 9;
@@ -122,7 +120,7 @@
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Image = global::HealthyMealPlanning.Properties.Resources.save_empty;
-            this.btnSave.Location = new System.Drawing.Point(1358, 9);
+            this.btnSave.Location = new System.Drawing.Point(1358, 13);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(50, 50);
             this.btnSave.TabIndex = 8;
@@ -191,7 +189,7 @@
             // 
             // pbRecipeImage
             // 
-            this.pbRecipeImage.Location = new System.Drawing.Point(19, 3);
+            this.pbRecipeImage.Location = new System.Drawing.Point(19, 5);
             this.pbRecipeImage.Name = "pbRecipeImage";
             this.pbRecipeImage.Size = new System.Drawing.Size(369, 290);
             this.pbRecipeImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -260,51 +258,35 @@
             this.pbStar5.TabIndex = 14;
             this.pbStar5.TabStop = false;
             // 
-            // pnlIngredients
-            // 
-            this.pnlIngredients.AutoScroll = true;
-            this.pnlIngredients.Controls.Add(this.lblIngredients);
-            this.pnlIngredients.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlIngredients.Location = new System.Drawing.Point(12, 394);
-            this.pnlIngredients.Name = "pnlIngredients";
-            this.pnlIngredients.Size = new System.Drawing.Size(388, 135);
-            this.pnlIngredients.TabIndex = 1;
-            // 
             // lblIngredients
             // 
             this.lblIngredients.AutoSize = true;
-            this.lblIngredients.Location = new System.Drawing.Point(22, 26);
+            this.lblIngredients.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngredients.Location = new System.Drawing.Point(64, 399);
             this.lblIngredients.Name = "lblIngredients";
-            this.lblIngredients.Size = new System.Drawing.Size(177, 40);
+            this.lblIngredients.Size = new System.Drawing.Size(183, 41);
             this.lblIngredients.TabIndex = 0;
             this.lblIngredients.Text = "Інгредієнти";
-            // 
-            // pnlDescription
-            // 
-            this.pnlDescription.AutoScroll = true;
-            this.pnlDescription.Controls.Add(this.lblInstructions);
-            this.pnlDescription.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlDescription.Location = new System.Drawing.Point(406, 394);
-            this.pnlDescription.Name = "pnlDescription";
-            this.pnlDescription.Size = new System.Drawing.Size(1082, 135);
-            this.pnlDescription.TabIndex = 2;
             // 
             // lblInstructions
             // 
             this.lblInstructions.AutoSize = true;
-            this.lblInstructions.Location = new System.Drawing.Point(51, 26);
+            this.lblInstructions.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstructions.Location = new System.Drawing.Point(424, 399);
             this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(151, 40);
+            this.lblInstructions.Size = new System.Drawing.Size(155, 41);
             this.lblInstructions.TabIndex = 0;
             this.lblInstructions.Text = "Інструкції";
             // 
             // pnlReviews
             // 
             this.pnlReviews.AutoScroll = true;
+            this.pnlReviews.AutoSize = true;
             this.pnlReviews.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlReviews.Location = new System.Drawing.Point(12, 632);
+            this.pnlReviews.Location = new System.Drawing.Point(31, 742);
+            this.pnlReviews.MaximumSize = new System.Drawing.Size(1464, 1464);
             this.pnlReviews.Name = "pnlReviews";
-            this.pnlReviews.Size = new System.Drawing.Size(1476, 256);
+            this.pnlReviews.Size = new System.Drawing.Size(1445, 206);
             this.pnlReviews.TabIndex = 3;
             // 
             // btnCreateReview
@@ -314,7 +296,7 @@
             this.btnCreateReview.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateReview.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateReview.ForeColor = System.Drawing.Color.White;
-            this.btnCreateReview.Location = new System.Drawing.Point(1068, 554);
+            this.btnCreateReview.Location = new System.Drawing.Point(1068, 664);
             this.btnCreateReview.Name = "btnCreateReview";
             this.btnCreateReview.Size = new System.Drawing.Size(364, 65);
             this.btnCreateReview.TabIndex = 1;
@@ -330,7 +312,7 @@
             this.btnClose});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1500, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1479, 27);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
@@ -360,25 +342,48 @@
             // 
             this.lblReviews.AutoSize = true;
             this.lblReviews.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReviews.Location = new System.Drawing.Point(34, 566);
+            this.lblReviews.Location = new System.Drawing.Point(64, 676);
             this.lblReviews.Name = "lblReviews";
             this.lblReviews.Size = new System.Drawing.Size(129, 40);
             this.lblReviews.TabIndex = 5;
             this.lblReviews.Text = "Відгуки:";
             // 
+            // pnlIngredients
+            // 
+            this.pnlIngredients.AutoScroll = true;
+            this.pnlIngredients.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.pnlIngredients.Location = new System.Drawing.Point(31, 443);
+            this.pnlIngredients.Name = "pnlIngredients";
+            this.pnlIngredients.Size = new System.Drawing.Size(348, 135);
+            this.pnlIngredients.TabIndex = 6;
+            this.pnlIngredients.WrapContents = false;
+            // 
+            // pnlDescription
+            // 
+            this.pnlDescription.AutoScroll = true;
+            this.pnlDescription.AutoSize = true;
+            this.pnlDescription.Location = new System.Drawing.Point(406, 443);
+            this.pnlDescription.MaximumSize = new System.Drawing.Size(1082, 388);
+            this.pnlDescription.Name = "pnlDescription";
+            this.pnlDescription.Size = new System.Drawing.Size(1070, 135);
+            this.pnlDescription.TabIndex = 7;
+            // 
             // frmRecipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1500, 900);
+            this.Controls.Add(this.lblIngredients);
+            this.Controls.Add(this.lblInstructions);
+            this.Controls.Add(this.pnlIngredients);
             this.Controls.Add(this.btnCreateReview);
             this.Controls.Add(this.lblReviews);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.pnlReviews);
-            this.Controls.Add(this.pnlDescription);
-            this.Controls.Add(this.pnlIngredients);
             this.Controls.Add(this.pnlPreviewRecipe);
+            this.Controls.Add(this.pnlDescription);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRecipe";
@@ -395,10 +400,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbStar3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStar4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbStar5)).EndInit();
-            this.pnlIngredients.ResumeLayout(false);
-            this.pnlIngredients.PerformLayout();
-            this.pnlDescription.ResumeLayout(false);
-            this.pnlDescription.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -416,9 +417,7 @@
         private System.Windows.Forms.Label lblCategory;
         private System.Windows.Forms.Label lblDifficulty;
         private System.Windows.Forms.Label lblPortionsNumber;
-        private System.Windows.Forms.Panel pnlIngredients;
         private System.Windows.Forms.Label lblIngredients;
-        private System.Windows.Forms.Panel pnlDescription;
         private System.Windows.Forms.Label lblInstructions;
         private System.Windows.Forms.Panel pnlReviews;
         private System.Windows.Forms.Button btnCreateReview;
@@ -438,5 +437,7 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ToolTip toolTip2;
         private System.Windows.Forms.ToolTip toolTip3;
+        private System.Windows.Forms.FlowLayoutPanel pnlIngredients;
+        private System.Windows.Forms.FlowLayoutPanel pnlDescription;
     }
 }

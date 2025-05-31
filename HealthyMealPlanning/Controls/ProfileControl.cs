@@ -70,15 +70,15 @@ namespace HealthyMealPlanning
                     string imagePath = reader.GetString("image_path");
 
                     Panel panel = new Panel();
-                    panel.Width = 150;
-                    panel.Height = 240;
+                    panel.Width = 200;
+                    panel.Height = 180;
                     panel.Margin = new Padding(10);
                     panel.Tag = recipeId;
-                    panel.BorderStyle = BorderStyle.FixedSingle;
+                    panel.Cursor = Cursors.Hand;
 
-                    // Картинка
+                    // Зображення рецепта
                     PictureBox pictureBox = new PictureBox();
-                    pictureBox.Width = 140;
+                    pictureBox.Width = 180;
                     pictureBox.Height = 140;
                     pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
                     pictureBox.Tag = recipeId;
@@ -96,14 +96,20 @@ namespace HealthyMealPlanning
                         pictureBox.Image = Properties.Resources.placeholder;
                     }
 
+                    // Нижня панель з назвою та кнопками
+                    Panel bottomPanel = new Panel();
+                    bottomPanel.Width = 150;
+                    bottomPanel.Height = 60;
+                    bottomPanel.Dock = DockStyle.Bottom;
+
                     // Назва рецепта
                     Label label = new Label();
                     label.Text = recipeName;
-                    label.TextAlign = ContentAlignment.MiddleCenter;
-                    label.Dock = DockStyle.Top;
-                    label.Height = 40;
-                    label.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-                    label.MaximumSize = new Size(140, 40);
+                    label.Font = new Font("Calibri", 18, FontStyle.Regular);
+                    label.AutoSize = false;
+                    label.Size = new Size(90, 60);
+                    label.Location = new Point(0, 0);
+                    label.TextAlign = ContentAlignment.MiddleLeft;
                     label.AutoEllipsis = true;
                     label.Tag = recipeId;
                     label.Click += PanelRecipe_Click;
@@ -128,20 +134,25 @@ namespace HealthyMealPlanning
                     btnDelete.Tag = recipeId;
                     btnDelete.Click += BtnDelete_Click;
 
-                    // Панель для кнопок
+                    // Панель кнопок
                     FlowLayoutPanel actionPanel = new FlowLayoutPanel();
                     actionPanel.FlowDirection = FlowDirection.LeftToRight;
-                    actionPanel.Height = 30;
-                    actionPanel.Width = 140;
+                    actionPanel.Size = new Size(60, 60);
+                    actionPanel.Location = new Point(130, 15);
                     actionPanel.Controls.Add(btnEdit);
                     actionPanel.Controls.Add(btnDelete);
 
-                    // Додати в панель
-                    panel.Controls.Add(actionPanel);
-                    panel.Controls.Add(label);
-                    panel.Controls.Add(pictureBox);
+                    // Додаємо в нижню панель
+                    bottomPanel.Controls.Add(label);
+                    bottomPanel.Controls.Add(actionPanel);
 
+                    // Додати все до головної панелі
+                    panel.Controls.Add(pictureBox);
+                    panel.Controls.Add(bottomPanel);
+
+                    // Додати до списку
                     flowLayoutPanelRecipes.Controls.Add(panel);
+
                 }
 
                 reader.Close();
@@ -416,15 +427,15 @@ namespace HealthyMealPlanning
 
                     // Назва рецепта
                     Label lblRecipe = new Label();
-                    lblRecipe.Text = "Recipe: " + recipeName;
-                    lblRecipe.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                    lblRecipe.Text = "Рецепт: " + recipeName;
+                    lblRecipe.Font = new Font("Calibri", 14, FontStyle.Regular);
                     lblRecipe.Location = new Point(10, 5);
                     lblRecipe.AutoSize = true;
 
                     // Дата
                     Label lblDate = new Label();
                     lblDate.Text = date.ToString("yyyy-MM-dd");
-                    lblDate.Font = new Font("Segoe UI", 9, FontStyle.Italic);
+                    lblDate.Font = new Font("Calibri", 14, FontStyle.Regular);
                     lblDate.Location = new Point(10, 30);
                     lblDate.AutoSize = true;
 
@@ -448,9 +459,9 @@ namespace HealthyMealPlanning
                     // Коментар
                     Label lblComment = new Label();
                     lblComment.Text = comment;
-                    lblComment.Location = new Point(180, 30);
+                    lblComment.Location = new Point(10, 70);
                     lblComment.Size = new Size(reviewPanel.Width - 280, 60);
-                    lblComment.Font = new Font("Segoe UI", 9);
+                    lblComment.Font = new Font("Calibri", 14, FontStyle.Regular);
                     lblComment.AutoEllipsis = true;
 
                     // Кнопка Edit
@@ -620,15 +631,16 @@ namespace HealthyMealPlanning
         private Panel CreateRecipePanel(string name, string imagePath, int recipeId)
         {
             Panel panel = new Panel();
-            panel.Width = 150;
-            panel.Height = 200;
+            panel.Width = 200;
+            panel.Height = 180;
             panel.Margin = new Padding(10);
             panel.Cursor = Cursors.Hand;
 
             PictureBox pictureBox = new PictureBox();
-            pictureBox.Width = 140;
+            pictureBox.Width = 180;
             pictureBox.Height = 140;
             pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox.Dock = DockStyle.Top;
 
             try
             {
@@ -647,9 +659,7 @@ namespace HealthyMealPlanning
             label.TextAlign = ContentAlignment.MiddleCenter;
             label.Dock = DockStyle.Bottom;
             label.Height = 40;
-            label.Font = new Font("Segoe UI", 10, FontStyle.Bold);
-            label.MaximumSize = new Size(140, 40);
-            label.AutoEllipsis = true;
+            label.Font = new Font("Calibri", 14, FontStyle.Regular);
 
             panel.Controls.Add(pictureBox);
             panel.Controls.Add(label);
