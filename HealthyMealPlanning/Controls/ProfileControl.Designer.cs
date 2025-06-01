@@ -403,6 +403,7 @@
             // 
             // dataGridViewAdmin
             // 
+            this.dataGridViewAdmin.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAdmin.Location = new System.Drawing.Point(305, 18);
             this.dataGridViewAdmin.Name = "dataGridViewAdmin";

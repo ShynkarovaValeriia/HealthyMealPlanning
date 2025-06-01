@@ -80,7 +80,7 @@ namespace HealthyMealPlanning
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Помилка завантаження назви рецепта: " + ex.Message);
+                MessageBox.Show("Помилка завантаження назви рецепта: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -129,7 +129,7 @@ namespace HealthyMealPlanning
 
             if (selectedRating == 0)
             {
-                MessageBox.Show("Оцініть рецепт від 1 до 5 зірок.");
+                MessageBox.Show("Оцініть рецепт від 1 до 5 зірок.", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -166,12 +166,14 @@ namespace HealthyMealPlanning
                 }
 
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Відгук збережено.");
+                MessageBox.Show("Відгук збережено.", "Успішне збереження", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
+                frmRecipe recipeForm = new frmRecipe(recipeId);
+                recipeForm.ShowDialog();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Помилка при збереженні: " + ex.Message);
+                MessageBox.Show("Помилка при збереженні: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -204,7 +206,7 @@ namespace HealthyMealPlanning
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Помилка при завантаженні відгуку: " + ex.Message);
+                MessageBox.Show("Помилка при завантаженні відгуку: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

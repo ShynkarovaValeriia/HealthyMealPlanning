@@ -42,7 +42,7 @@
             // 
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(546, 48);
+            this.txtSearch.Location = new System.Drawing.Point(546, 55);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(376, 48);
             this.txtSearch.TabIndex = 0;
@@ -53,7 +53,7 @@
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSearch.Image = global::HealthyMealPlanning.Properties.Resources.explore;
-            this.btnSearch.Location = new System.Drawing.Point(917, 48);
+            this.btnSearch.Location = new System.Drawing.Point(917, 55);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(48, 49);
             this.btnSearch.TabIndex = 1;
@@ -64,20 +64,20 @@
             // 
             this.flowLayoutPanelResults.AutoScroll = true;
             this.flowLayoutPanelResults.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanelResults.Location = new System.Drawing.Point(19, 113);
+            this.flowLayoutPanelResults.Location = new System.Drawing.Point(19, 120);
             this.flowLayoutPanelResults.Name = "flowLayoutPanelResults";
             this.flowLayoutPanelResults.Size = new System.Drawing.Size(1478, 719);
             this.flowLayoutPanelResults.TabIndex = 2;
             // 
             // toolStrip1
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnLogo,
             this.btnClose});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1500, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1500, 37);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             this.toolStrip1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.toolStrip1_MouseDown);
@@ -88,7 +88,7 @@
             this.btnLogo.Image = global::HealthyMealPlanning.Properties.Resources.HealthyMealPlanningIcon;
             this.btnLogo.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLogo.Name = "btnLogo";
-            this.btnLogo.Size = new System.Drawing.Size(29, 24);
+            this.btnLogo.Size = new System.Drawing.Size(34, 34);
             this.btnLogo.Text = "toolStripButton1";
             this.btnLogo.Click += new System.EventHandler(this.btnLogo_Click);
             // 
@@ -99,7 +99,7 @@
             this.btnClose.Image = global::HealthyMealPlanning.Properties.Resources.close;
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(29, 24);
+            this.btnClose.Size = new System.Drawing.Size(34, 34);
             this.btnClose.Text = "toolStripButton1";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 

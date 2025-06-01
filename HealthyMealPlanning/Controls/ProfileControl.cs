@@ -105,7 +105,7 @@ namespace HealthyMealPlanning
                     // Назва рецепта
                     Label label = new Label();
                     label.Text = recipeName;
-                    label.Font = new Font("Calibri", 18, FontStyle.Regular);
+                    label.Font = new Font("Calibri", 14, FontStyle.Regular);
                     label.AutoSize = false;
                     label.Size = new Size(90, 60);
                     label.Location = new Point(0, 0);
@@ -159,7 +159,7 @@ namespace HealthyMealPlanning
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Помилка при завантаженні рецептів: " + ex.Message);
+                MessageBox.Show("Помилка при завантаженні рецептів: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -200,13 +200,13 @@ namespace HealthyMealPlanning
                             cmd.Parameters.AddWithValue("@UserId", Session.UserId);
                             cmd.ExecuteNonQuery();
 
-                            MessageBox.Show("Рецепт успішно видалено!");
+                            MessageBox.Show("Рецепт успішно видалено!", "Успішне збереження", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             LoadUserRecipes(); // Перезавантажити список
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Помилка при видаленні: " + ex.Message);
+                        MessageBox.Show("Помилка при видаленні: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -218,7 +218,7 @@ namespace HealthyMealPlanning
             int userId = Session.UserId;
             if (userId == 0)
             {
-                MessageBox.Show("Сесія недійсна. Увійдіть знову.");
+                MessageBox.Show("Сесія недійсна. Увійдіть знову.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -242,13 +242,13 @@ namespace HealthyMealPlanning
                     }
                     else
                     {
-                        MessageBox.Show("Користувача не знайдено.");
+                        MessageBox.Show("Користувача не знайдено.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Помилка при завантаженні профілю: " + ex.Message);
+                MessageBox.Show("Помилка при завантаженні профілю: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -298,7 +298,7 @@ namespace HealthyMealPlanning
             int userId = Session.UserId;
             if (userId == 0)
             {
-                MessageBox.Show("Сесія недійсна. Увійдіть знову.");
+                MessageBox.Show("Сесія недійсна. Увійдіть знову.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -336,7 +336,7 @@ namespace HealthyMealPlanning
 
             if (updates.Count == 0)
             {
-                MessageBox.Show("Введіть хоча б одне поле для зміни.");
+                MessageBox.Show("Введіть хоча б одне поле для зміни.", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -354,7 +354,7 @@ namespace HealthyMealPlanning
 
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Дані успішно оновлено!");
+                    MessageBox.Show("Дані успішно оновлено!", "Успішне збереження", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Оновлюємо сесію, якщо потрібно
                     if (!string.IsNullOrEmpty(newUsername)) Session.Username = newUsername;
@@ -362,12 +362,12 @@ namespace HealthyMealPlanning
                 }
                 else
                 {
-                    MessageBox.Show("Оновлення не вдалося. Спробуйте ще раз.");
+                    MessageBox.Show("Оновлення не вдалося. Спробуйте ще раз.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("Помилка: " + ex.Message);
+                MessageBox.Show("Помилка: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -488,7 +488,7 @@ namespace HealthyMealPlanning
                     btnDelete.Click += (s, e) =>
                     {
                         var result = MessageBox.Show("Ви впевнені, що хочете видалити цей відгук?",
-                                                     "Підтвердження", MessageBoxButtons.YesNo);
+                                                     "Підтвердження", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                         if (result == DialogResult.Yes)
                         {
                             DeleteReview(reviewId);
@@ -514,7 +514,7 @@ namespace HealthyMealPlanning
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Помилка при завантаженні відгуків: " + ex.Message);
+                MessageBox.Show("Помилка при завантаженні відгуків: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -538,7 +538,7 @@ namespace HealthyMealPlanning
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Помилка при видаленні відгуку: " + ex.Message);
+                MessageBox.Show("Помилка при видаленні відгуку: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -582,7 +582,7 @@ namespace HealthyMealPlanning
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при завантаженні обраних рецептів: " + ex.Message);
+                    MessageBox.Show("Помилка при завантаженні обраних рецептів: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -622,7 +622,7 @@ namespace HealthyMealPlanning
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при завантаженні збережених рецептів: " + ex.Message);
+                    MessageBox.Show("Помилка при завантаженні збережених рецептів: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -723,7 +723,7 @@ namespace HealthyMealPlanning
             string selectedTable = cmbTables.SelectedItem?.ToString();
             if (string.IsNullOrEmpty(selectedTable))
             {
-                MessageBox.Show("Оберіть таблицю для завантаження.");
+                MessageBox.Show("Оберіть таблицю для завантаження.", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -745,7 +745,7 @@ namespace HealthyMealPlanning
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при завантаженні: " + ex.Message);
+                    MessageBox.Show("Помилка при завантаженні: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -754,7 +754,7 @@ namespace HealthyMealPlanning
         {
             if (dataGridViewAdmin.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Оберіть рядок для видалення.");
+                MessageBox.Show("Оберіть рядок для видалення.", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -765,13 +765,13 @@ namespace HealthyMealPlanning
             string pkField = GetPrimaryKeyField(table);
             if (string.IsNullOrEmpty(pkField))
             {
-                MessageBox.Show("Неможливо визначити первинний ключ.");
+                MessageBox.Show("Неможливо визначити первинний ключ.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             object pkValue = selectedRow.Cells[pkField].Value;
 
-            DialogResult result = MessageBox.Show("Ви впевнені, що хочете видалити запис?", "Підтвердження", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Ви впевнені, що хочете видалити запис?", "Підтвердження", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result != DialogResult.Yes) return;
 
             using (MySqlConnection conn = DBUtils.GetDBConnection())
@@ -784,12 +784,12 @@ namespace HealthyMealPlanning
                     cmd.Parameters.AddWithValue("@pk", pkValue);
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Запис видалено.");
+                    MessageBox.Show("Запис видалено.", "Успішне видалення", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadTable(table); // Оновлення таблиці
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при видаленні: " + ex.Message);
+                    MessageBox.Show("Помилка при видаленні: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -817,7 +817,7 @@ namespace HealthyMealPlanning
         {
             if (dataGridViewAdmin.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Оберіть рядок для редагування.");
+                MessageBox.Show("Оберіть рядок для редагування.", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -855,12 +855,12 @@ namespace HealthyMealPlanning
 
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Запис оновлено.");
+                    MessageBox.Show("Запис оновлено.", "Успішне збереження", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadTable(table);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при оновленні: " + ex.Message);
+                    MessageBox.Show("Помилка при оновленні: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -870,7 +870,7 @@ namespace HealthyMealPlanning
             string selectedTable = cmbTables.SelectedItem?.ToString();
             if (string.IsNullOrEmpty(selectedTable))
             {
-                MessageBox.Show("Оберіть таблицю для додавання.");
+                MessageBox.Show("Оберіть таблицю для додавання.", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -886,7 +886,7 @@ namespace HealthyMealPlanning
                     break;
 
                 default:
-                    MessageBox.Show("Додавання нових записів поки що підтримується лише для таблиці рецептів.");
+                    MessageBox.Show("Додавання нових записів поки що підтримується лише для таблиці рецептів.", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     break;
             }
         }

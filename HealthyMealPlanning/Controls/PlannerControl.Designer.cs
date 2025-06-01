@@ -160,13 +160,16 @@
             this.contextMenuAdd.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addRecipeToolStripMenuItem});
             this.contextMenuAdd.Name = "contextMenuAdd";
-            this.contextMenuAdd.Size = new System.Drawing.Size(143, 28);
+            this.contextMenuAdd.Size = new System.Drawing.Size(229, 36);
             // 
             // addRecipeToolStripMenuItem
             // 
+            this.addRecipeToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addRecipeToolStripMenuItem.Image = global::HealthyMealPlanning.Properties.Resources.add;
+            this.addRecipeToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addRecipeToolStripMenuItem.Name = "addRecipeToolStripMenuItem";
-            this.addRecipeToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
-            this.addRecipeToolStripMenuItem.Text = "Add food";
+            this.addRecipeToolStripMenuItem.Size = new System.Drawing.Size(228, 32);
+            this.addRecipeToolStripMenuItem.Text = "Додати рецепт";
             this.addRecipeToolStripMenuItem.Click += new System.EventHandler(this.addRecipeToolStripMenuItem_Click);
             // 
             // btnAddSunday
@@ -386,7 +389,7 @@
             this.Controls.Add(this.lblMonday);
             this.Controls.Add(this.lblMealPlan);
             this.Name = "PlannerControl";
-            this.Size = new System.Drawing.Size(1290, 858);
+            this.Size = new System.Drawing.Size(1248, 816);
             this.Load += new System.EventHandler(this.PlannerControl_Load);
             this.contextMenuAdd.ResumeLayout(false);
             this.ResumeLayout(false);

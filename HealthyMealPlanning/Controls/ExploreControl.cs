@@ -74,7 +74,7 @@ namespace HealthyMealPlanning
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при пошуку користувачів: " + ex.Message);
+                    MessageBox.Show("Помилка при пошуку користувачів: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -127,13 +127,13 @@ namespace HealthyMealPlanning
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при пошуку рецептів: " + ex.Message);
+                    MessageBox.Show("Помилка при пошуку рецептів: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
             if (totalResults == 0)
             {
-                MessageBox.Show("Нічого не знайдено.");
+                MessageBox.Show("Нічого не знайдено.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -225,7 +225,7 @@ namespace HealthyMealPlanning
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при завантаженні рецептів: " + ex.Message);
+                    MessageBox.Show("Помилка при завантаженні рецептів: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -290,7 +290,7 @@ namespace HealthyMealPlanning
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при завантаженні рецептів користувача: " + ex.Message);
+                    MessageBox.Show("Помилка при завантаженні рецептів користувача: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -392,7 +392,7 @@ namespace HealthyMealPlanning
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при завантаженні рецептів категорії: " + ex.Message);
+                    MessageBox.Show("Помилка при завантаженні рецептів категорії: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

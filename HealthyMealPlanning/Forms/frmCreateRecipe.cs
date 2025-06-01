@@ -77,7 +77,7 @@ namespace HealthyMealPlanning
                 cbCategory.SelectedItem == null ||
                 selectedImagePath == null)
             {
-                MessageBox.Show("Будь ласка, заповніть усі поля і виберіть зображення.");
+                MessageBox.Show("Будь ласка, заповніть усі поля і виберіть зображення.", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -127,13 +127,13 @@ namespace HealthyMealPlanning
 
                         cmd.ExecuteNonQuery();
 
-                        MessageBox.Show("Рецепт оновлено!");
+                        MessageBox.Show("Рецепт оновлено!", "Успішне збереження", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при оновленні: " + ex.Message);
+                    MessageBox.Show("Помилка при оновленні: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 return;
@@ -167,7 +167,7 @@ namespace HealthyMealPlanning
                         cmd.ExecuteNonQuery();
                         long insertedId = cmd.LastInsertedId;
 
-                        MessageBox.Show("Рецепт успішно збережено!");
+                        MessageBox.Show("Рецепт успішно збережено!", "Успішне збереження", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         ClearForm();
 
                         // Відкрити форму рецепта
@@ -179,7 +179,7 @@ namespace HealthyMealPlanning
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Помилка при збереженні рецепта: " + ex.Message);
+                MessageBox.Show("Помилка при збереженні рецепта: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

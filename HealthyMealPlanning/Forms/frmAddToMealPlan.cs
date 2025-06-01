@@ -93,12 +93,12 @@ namespace HealthyMealPlanning
                     cmd.Parameters.AddWithValue("@mealType", selectedMealType);
 
                     cmd.ExecuteNonQuery();
-                    MessageBox.Show("Рецепт додано до плану!");
+                    MessageBox.Show("Рецепт додано до плану!", "Успішне збереження", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.DialogResult = DialogResult.OK;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при збереженні: " + ex.Message);
+                    MessageBox.Show("Помилка при збереженні: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

@@ -102,13 +102,13 @@ namespace HealthyMealPlanning
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при пошуку рецептів: " + ex.Message);
+                    MessageBox.Show("Помилка при пошуку рецептів: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
             if (totalResults == 0)
             {
-                MessageBox.Show("Нічого не знайдено.");
+                MessageBox.Show("Нічого не знайдено.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

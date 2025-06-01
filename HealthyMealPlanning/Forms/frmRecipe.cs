@@ -105,7 +105,7 @@ namespace HealthyMealPlanning
                 }
                 else
                 {
-                    MessageBox.Show("Рецептів не знайдено.");
+                    MessageBox.Show("Рецептів не знайдено.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 reader.Close();
@@ -140,7 +140,7 @@ namespace HealthyMealPlanning
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Помилка: " + ex.Message);
+                MessageBox.Show("Помилка: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -193,6 +193,7 @@ namespace HealthyMealPlanning
         {
             frmReview reviewForm = new frmReview(recipeId, Session.UserId);
             reviewForm.ShowDialog();
+            this.Close();
         }
 
         // Метод для завантаження відгуків
@@ -273,7 +274,7 @@ namespace HealthyMealPlanning
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Помилка при завантаженні відгуків: " + ex.Message);
+                MessageBox.Show("Помилка при завантаженні відгуків: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -308,7 +309,7 @@ namespace HealthyMealPlanning
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Помилка при завантаженні рейтингу: " + ex.Message);
+                MessageBox.Show("Помилка при завантаженні рейтингу: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -347,7 +348,7 @@ namespace HealthyMealPlanning
             int userId = Session.UserId;
             if (userId == 0)
             {
-                MessageBox.Show("Будь ласка, увійдіть у систему.");
+                MessageBox.Show("Будь ласка, увійдіть у систему.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -384,7 +385,7 @@ namespace HealthyMealPlanning
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Помилка при оновленні обраного: " + ex.Message);
+                MessageBox.Show("Помилка при оновленні обраного: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -398,7 +399,7 @@ namespace HealthyMealPlanning
             int userId = Session.UserId;
             if (userId == 0)
             {
-                MessageBox.Show("Будь ласка, увійдіть у систему.");
+                MessageBox.Show("Будь ласка, увійдіть у систему.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -435,7 +436,7 @@ namespace HealthyMealPlanning
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Помилка при оновленні збереженого: " + ex.Message);
+                MessageBox.Show("Помилка при оновленні збереженого: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

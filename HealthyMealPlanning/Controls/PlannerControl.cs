@@ -196,7 +196,7 @@ namespace HealthyMealPlanning
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при завантаженні плану харчування: " + ex.Message);
+                    MessageBox.Show("Помилка при завантаженні плану харчування: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -207,7 +207,7 @@ namespace HealthyMealPlanning
             Panel panel = new Panel
             {
                 Width = 520,
-                Height = 70,
+                Height = 90,
                 BorderStyle = BorderStyle.FixedSingle,
                 Margin = new Padding(5),
                 Tag = recipeId
@@ -250,9 +250,63 @@ namespace HealthyMealPlanning
                 AutoSize = true
             };
 
+            ComboBox cmbActions = new ComboBox
+            {
+                Location = new Point(400, 30),
+                Width = 110,
+                DropDownStyle = ComboBoxStyle.DropDownList,
+                Tag = recipeId
+            };
+
+            cmbActions.Items.Add("Опції");
+            cmbActions.Items.Add("Змінити тип страви");
+            cmbActions.Items.Add("Видалити");
+            cmbActions.SelectedIndex = 0;
+
+            // Подія вибору дії
+            cmbActions.SelectedIndexChanged += (s, e) =>
+            {
+                if (cmbActions.SelectedIndex == 0) return;
+
+                string selectedAction = cmbActions.SelectedItem.ToString();
+                if (selectedAction == "Змінити тип страви")
+                {
+                    // Отримаємо дату цього рецепта
+                    DateTime? planDate = GetRecipePlanDate(recipeId);
+
+                    if (planDate == null)
+                    {
+                        MessageBox.Show("Не вдалося визначити дату рецепта.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Видалимо старий запис
+                    DeleteMealPlan(recipeId);
+
+                    // Відкриваємо форму додавання заново
+                    frmAddToMealPlan form = new frmAddToMealPlan(Session.UserId, recipeId, name, imagePath, planDate.Value);
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        UpdateWeekLabels(DateTime.Today);
+                    }
+                }
+                else if (selectedAction == "Видалити")
+                {
+                    DialogResult result = MessageBox.Show("Ви впевнені, що хочете видалити цей рецепт з плану?", "Підтвердження", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        DeleteMealPlan(recipeId);
+                        UpdateWeekLabels(DateTime.Today); // Перезавантажити
+                    }
+                }
+
+                cmbActions.SelectedIndex = 0; // Скидання назад
+            };
+
             panel.Controls.Add(picture);
             panel.Controls.Add(lblName);
             panel.Controls.Add(lblMealType);
+            panel.Controls.Add(cmbActions);
 
             panel.Cursor = Cursors.Hand;
             panel.Click += (s, e) =>
@@ -263,5 +317,49 @@ namespace HealthyMealPlanning
 
             return panel;
         }
+
+        private void DeleteMealPlan(int recipeId)
+        {
+            using (MySqlConnection conn = DBUtils.GetDBConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "delete from meal_plans where recipe_id = @id and user_id = @userId";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@id", recipeId);
+                    cmd.Parameters.AddWithValue("@userId", Session.UserId);
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Помилка при видаленні: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private DateTime? GetRecipePlanDate(int recipeId)
+        {
+            using (MySqlConnection conn = DBUtils.GetDBConnection())
+            {
+                try
+                {
+                    conn.Open();
+                    string query = "select plan_date from meal_plans where user_id = @userId and recipe_id = @recipeId limit 1";
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@userId", Session.UserId);
+                    cmd.Parameters.AddWithValue("@recipeId", recipeId);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && DateTime.TryParse(result.ToString(), out DateTime date))
+                        return date;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Помилка при отриманні дати: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            return null;
+        }
+
     }
 }

@@ -49,7 +49,7 @@ namespace HealthyMealPlanning
 
             if (username == "" || password == "")
             {
-                MessageBox.Show("Будь ласка, введіть ім'я користувача та пароль.", "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Будь ласка, введіть ім'я користувача та пароль.", "Попередження", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

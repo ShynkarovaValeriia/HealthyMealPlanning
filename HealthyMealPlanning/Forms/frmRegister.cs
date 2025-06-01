@@ -93,8 +93,23 @@ namespace HealthyMealPlanning
 
                 if (rowsInserted > 0)
                 {
+                    // Отримуємо user_id та повне ім’я новоствореного користувача
+                    string getUserQuery = "select id, full_name from users where username = @Username";
+                    MySqlCommand getUserCmd = new MySqlCommand(getUserQuery, conn);
+                    getUserCmd.Parameters.AddWithValue("@Username", username);
+
+                    using (MySqlDataReader reader = getUserCmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            Session.UserId = reader.GetInt32("id");
+                            Session.Username = username;
+                            Session.FullName = reader.GetString("full_name");
+                        }
+                    }
+
                     ClearForm();
-                    this.Close();
+                    this.Hide();
                     new frmHome().Show();
                 }
                 else

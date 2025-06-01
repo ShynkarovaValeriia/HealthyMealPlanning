@@ -87,7 +87,7 @@ namespace HealthyMealPlanning
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при завантаженні авторів: " + ex.Message);
+                    MessageBox.Show("Помилка при завантаженні авторів: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -206,7 +206,7 @@ namespace HealthyMealPlanning
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при завантаженні рецептів: " + ex.Message);
+                    MessageBox.Show("Помилка при завантаженні рецептів: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -227,11 +227,11 @@ namespace HealthyMealPlanning
                     cmd.Parameters.AddWithValue("@RecipeId", recipeId);
                     cmd.ExecuteNonQuery();
 
-                    MessageBox.Show("Рецепт додано в обране!");
+                    MessageBox.Show("Рецепт додано в обране!", "Успіхішне збереження", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Помилка при додаванні в обране: " + ex.Message);
+                    MessageBox.Show("Помилка при додаванні в обране: " + ex.Message, "Помилка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
